@@ -1,0 +1,27 @@
+.content{
+    float: left;
+}
+@media (orientation: portrait) {
+    .content-resp{
+        margin: 5px;
+        width: calc(100% - 10px);
+    }
+}
+@media (orientation: landscape) and (max-width: 800px){
+    .content-resp{
+        margin: 10px;
+        width: calc(100% - 20px);
+    }
+}
+@media (orientation: landscape) and (max-width: 1200px){
+    .content-resp{
+        margin: 15px;
+        width: calc(100% - 30px);
+    }
+}
+@media (orientation: landscape) and (min-width: 1201px){
+    .content-resp{
+        margin: 20px;
+        width: calc(100% - 40px);
+    }
+}

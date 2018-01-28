@@ -4,6 +4,7 @@ import './App.css';
 
 import Header from './Header/Header';
 import Drawer from './Drawer/Drawer';
+import Content from './Content/Content';
 
 class App extends Component {
   render() {
@@ -11,6 +12,7 @@ class App extends Component {
       <div className="App">
           <Header/>
           <Drawer/>
+          <Content/>
       </div>
     );
   }
