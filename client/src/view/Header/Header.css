@@ -1,9 +1,12 @@
 .header{
+    border-bottom: 1px solid lightgrey;
+    margin-top: 10px;
 }
 @media (orientation: portrait) {
     .header-resp{
-        padding: 10px;
         width: calc(100% - 20px);
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }
 @media (orientation: landscape) and (max-width: 800px) {
@@ -27,13 +30,12 @@
 }
 @media (min-width: 1px) {
     .app-title-resp{
-        font-size: larger;
+        font-size: x-large;
     }
 }
 @media (min-width: 401px) {
     .app-title-resp{
-        font-size: x-large;
-        padding-left: 1.5em;
+        padding-left: 1.8em;
     }
 }
 @media (min-width: 801px) {
@@ -54,6 +56,7 @@
     outline: none;
     position: fixed;
     z-index: 100;
+    font-size: medium;
 }
 @media (orientation: portrait) {
     .drawer-btn-resp{
