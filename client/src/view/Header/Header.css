@@ -50,6 +50,7 @@
     height: 2em;
     border-radius: 2em;
     border: 1px solid gray;
+    outline: none;
 }
 @media (orientation: portrait) {
     .drawer-btn-resp{

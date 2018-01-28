@@ -3,7 +3,7 @@ import React from 'react';
 import './Drawer.css';
 
 const Drawer = () => (
-    <div className='drawer drawer-resp'>
+    <div id='app-drawer' className='drawer drawer-resp'>
     </div>
 )
 

@@ -1,25 +1,57 @@
 .drawer{
     position: absolute;
-    top: 0;
 }
 @media (orientation: portrait) {
     .drawer-resp{
         width: 70%;
         height: 60%;
-        right: 0;
+        right: 5px;
+        top: -62%;
         box-shadow: 0px 0px 2px gray;
+        border-radius: 10px 0 10px 10px;
     }
 }
 @media (orientation: landscape) and (max-width: 800px) {
     .drawer-resp{
         width: 40%;
-        height: 100%;
-        left: 0;
+        height: 85%;
+        left: -42%;
+        bottom: 0;
         box-shadow: 0px 0px 5px gray;
     }
 }
 @media (orientation: landscape) and (min-width: 801px) {
     .drawer-resp{
         display: none;
+    }
+}
+
+
+.drawer-opened{
+
+}
+@media (orientation: portrait) {
+    .drawer-opened-resp{
+        top: calc(2em + 5px);
+    }
+}
+@media (orientation: landscape) and (max-width: 800px) {
+    .drawer-opened-resp{
+        left: -2%;
+    }
+}
+
+
+.drawer-closed{
+
+}
+@media (orientation: portrait) {
+    .drawer-closed-resp{
+        top: -62%;
+    }
+}
+@media (orientation: landscape) and (max-width: 800px) {
+    .drawer-closed-resp{
+        left: -42%;
     }
 }
