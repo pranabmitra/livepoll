@@ -1,27 +1,30 @@
 .content{
     float: left;
+    margin-top: calc(5em + 10px);
 }
 @media (orientation: portrait) {
     .content-resp{
-        margin: 5px;
-        width: calc(100% - 10px);
+        margin-top: calc(4em + 10px);
+        margin-left: 10px;
+        width: calc(100% - 20px);
     }
 }
 @media (orientation: landscape) and (max-width: 800px){
     .content-resp{
-        margin: 10px;
-        width: calc(100% - 20px);
+        margin-top: calc(4.5em + 10px);
+        margin-left: 15px;
+        width: calc(100% - 30px);
     }
 }
 @media (orientation: landscape) and (max-width: 1200px){
     .content-resp{
-        margin: 15px;
-        width: calc(100% - 30px);
+        margin-left: 20px;
+        width: calc(100% - 40px);
     }
 }
 @media (orientation: landscape) and (min-width: 1201px){
     .content-resp{
-        margin: 20px;
-        width: calc(100% - 40px);
+        margin-left: 25px;
+        width: calc(100% - 50px);
     }
 }

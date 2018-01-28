@@ -1,24 +1,21 @@
 .header{
+    position: fixed;
+    width: 100%;
     border-bottom: 1px solid lightgrey;
-    margin-top: 10px;
 }
 @media (orientation: portrait) {
     .header-resp{
-        width: calc(100% - 20px);
-        margin-left: 10px;
-        margin-right: 10px;
+        height: 4em;
     }
 }
 @media (orientation: landscape) and (max-width: 800px) {
     .header-resp{
-        padding: 15px;
-        width: calc(100% - 30px);
+        height: 4.5em;
     }
 }
 @media (orientation: landscape) and (min-width: 801px) {
     .header-resp{
-        padding: 20px;
-        width: calc(100% - 40px);
+        height: 5em;
     }
 }
 
@@ -35,7 +32,7 @@
 }
 @media (min-width: 401px) {
     .app-title-resp{
-        padding-left: 1.8em;
+        /*padding-left: 1.8em;*/
     }
 }
 @media (min-width: 801px) {
@@ -54,18 +51,16 @@
     margin-right: 1em;
     border: 1px solid gray;
     outline: none;
-    position: fixed;
-    z-index: 100;
     font-size: medium;
 }
 @media (orientation: portrait) {
     .drawer-btn-resp{
-        right: 0px;
+        float: right;
     }
 }
 @media (orientation: landscape) and (max-width: 800px) {
     .drawer-btn-resp{
-        left: 0px;
+        float: left;
     }
 }
 @media (orientation: landscape) and (min-width: 801px) {

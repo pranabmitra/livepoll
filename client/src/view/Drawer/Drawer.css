@@ -1,11 +1,12 @@
 .drawer{
     position: fixed;
+    background-color: white;
 }
 @media (orientation: portrait) {
     .drawer-resp{
         width: 70%;
         height: 60%;
-        right: 5px;
+        right: 15px;
         top: -62%;
         box-shadow: 0px 0px 2px gray;
         border-radius: 10px 0 10px 10px;
@@ -14,10 +15,10 @@
 @media (orientation: landscape) and (max-width: 800px) {
     .drawer-resp{
         width: 40%;
-        height: 100%;
+        height: calc(100% - 4.5em - 1px);
         left: -42%;
         bottom: 0;
-        box-shadow: 0px 0px 5px gray;
+        border-right: 1px solid lightgrey;
     }
 }
 @media (orientation: landscape) and (min-width: 801px) {
@@ -32,7 +33,7 @@
 }
 @media (orientation: portrait) {
     .drawer-opened-resp{
-        top: calc(2em + 15px);
+        top: calc(4em);
     }
 }
 @media (orientation: landscape) and (max-width: 800px) {
