@@ -1,3 +1,25 @@
 .drawer{
-
+    position: absolute;
+    top: 0;
+}
+@media (orientation: portrait) {
+    .drawer-resp{
+        width: 70%;
+        height: 60%;
+        right: 0;
+        box-shadow: 0px 0px 2px gray;
+    }
+}
+@media (orientation: landscape) and (max-width: 800px) {
+    .drawer-resp{
+        width: 40%;
+        height: 100%;
+        left: 0;
+        box-shadow: 0px 0px 5px gray;
+    }
+}
+@media (orientation: landscape) and (min-width: 801px) {
+    .drawer-resp{
+        display: none;
+    }
 }
