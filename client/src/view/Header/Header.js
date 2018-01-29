@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Header.css'
 import {toggleDrawer} from "../Drawer/drawer-utils";
-import {NavigationButtons} from './factory';
+import NavigationButtons from './partials/NavigationButtons';
 
 const Header = () => (
     <div className='header header-resp fl'>
