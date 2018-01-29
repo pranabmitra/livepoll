@@ -1,0 +1,35 @@
+.drawer-auth-badge{
+    width: 100%;
+    height: 40%;
+}
+
+.drawer-auth-badge-img{
+    margin: auto;
+    border-radius: 5px;
+    background-size: cover;
+    background-image: url("http://moziru.com/images/snoopy-clipart-heart-14.jpg");
+}
+@media (min-height: 1px) {
+    .drawer-auth-badge-img-resp{
+        width: 4em;
+        height: 4em;
+    }
+}
+@media (min-height: 401px) {
+    .drawer-auth-badge-img-resp{
+        width: 7em;
+        height: 7em;
+    }
+}
+@media (min-height: 601px) {
+    .drawer-auth-badge-img-resp{
+        width: 9em;
+        height: 9em;
+    }
+}
+@media (min-height: 801px) {
+    .drawer-auth-badge-img-resp{
+        width: 12em;
+        height: 12em;
+    }
+}

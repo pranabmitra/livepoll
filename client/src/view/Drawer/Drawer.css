@@ -12,7 +12,7 @@
         border-radius: 10px 0 10px 10px;
     }
 }
-@media (orientation: landscape) and (max-width: 800px) {
+@media (orientation: landscape) and (max-width: 1000px) {
     .drawer-resp{
         width: 40%;
         height: calc(100% - 4em - 1px);
@@ -22,7 +22,7 @@
         border-top: 1px solid lightgrey;
     }
 }
-@media (orientation: landscape) and (min-width: 801px) {
+@media (orientation: landscape) and (min-width: 1001px) {
     .drawer-resp{
         display: none;
     }
@@ -37,7 +37,7 @@
         top: calc(3.5em);
     }
 }
-@media (orientation: landscape) and (max-width: 800px) {
+@media (orientation: landscape) and (max-width: 1000px) {
     .drawer-opened-resp{
         left: -2%;
     }
@@ -52,8 +52,15 @@
         top: -62%;
     }
 }
-@media (orientation: landscape) and (max-width: 800px) {
+@media (orientation: landscape) and (max-width: 1000px) {
     .drawer-closed-resp{
         left: -42%;
     }
+}
+
+.drawer-content{
+    height: 90%;
+    width: 90%;
+    margin: 5%;
+    position: relative;
 }
