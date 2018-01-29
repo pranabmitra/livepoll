@@ -5,6 +5,7 @@ import './App.css';
 import Header from './Header/Header';
 import Drawer from './Drawer/Drawer';
 import Content from './Content/Content';
+import FloatingButtons from './FloatingButtons/FloatingButtons';
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
           <Header/>
           <Drawer/>
           <Content/>
+          <FloatingButtons/>
       </div>
     );
   }
