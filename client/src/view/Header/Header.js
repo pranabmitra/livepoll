@@ -9,7 +9,7 @@ const Header = () => (
         <br/>
         <button className='drawer-btn drawer-btn-resp fr' onClick={toggleDrawer}>&equiv;</button>
         <a className='app-title app-title-resp fl'>livepoll</a>
-        {/*<NavigationButtons/>*/}
+        <NavigationButtons/>
     </div>
 )
 

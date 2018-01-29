@@ -15,10 +15,11 @@
 @media (orientation: landscape) and (max-width: 800px) {
     .drawer-resp{
         width: 40%;
-        height: calc(100% - 4.5em - 1px);
+        height: calc(100% - 4em - 1px);
         left: -42%;
         bottom: 0;
         border-right: 1px solid lightgrey;
+        border-top: 1px solid lightgrey;
     }
 }
 @media (orientation: landscape) and (min-width: 801px) {

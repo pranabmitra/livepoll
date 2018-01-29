@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './NavigationButton.css';
+import './NavigationButtons.css';
 import {NAV_BUTTONS_DATA} from "../../../constants/routing";
 
 const NavigationButtons = () => (
