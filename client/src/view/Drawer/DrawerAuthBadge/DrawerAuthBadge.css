@@ -4,32 +4,57 @@
 }
 
 .drawer-auth-badge-img{
-    margin: auto;
+    border: 1px solid lightgray;
     border-radius: 5px;
     background-size: cover;
     background-image: url("http://moziru.com/images/snoopy-clipart-heart-14.jpg");
+    float: left;
 }
 @media (min-height: 1px) {
     .drawer-auth-badge-img-resp{
-        width: 4em;
-        height: 4em;
+        width: 3em;
+        height: 3em;
     }
 }
 @media (min-height: 401px) {
     .drawer-auth-badge-img-resp{
-        width: 7em;
-        height: 7em;
+        width: 5em;
+        height: 5em;
     }
 }
 @media (min-height: 601px) {
     .drawer-auth-badge-img-resp{
-        width: 9em;
-        height: 9em;
+        width: 5em;
+        height: 5em;
     }
 }
 @media (min-height: 801px) {
     .drawer-auth-badge-img-resp{
-        width: 12em;
-        height: 12em;
+        width: 8em;
+        height: 8em;
+    }
+}
+
+.drawer-auth-badge-txt{
+    float: left;
+    margin-left: 1em;
+    margin-top: .6em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #222222;
+}
+@media (min-height: 1px) {
+    .drawer-auth-badge-txt-resp{
+        font-size: medium;
+    }
+}
+@media (min-height: 401px) {
+    .drawer-auth-badge-txt-resp{
+        font-size: large;
+    }
+}
+@media (min-height: 601px) {
+    .drawer-auth-badge-txt-resp{
+        font-size: x-large;
     }
 }
