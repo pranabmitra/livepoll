@@ -8,7 +8,7 @@ const Header = () => (
     <div className='header header-resp fl'>
         <br/>
         <button className='drawer-btn drawer-btn-resp fr' onClick={toggleDrawer}>&equiv;</button>
-        <a className='app-title app-title-resp fl'>livepoll</a>
+        <a className='app-title app-title-resp fl' href='/'>livepoll</a>
         <NavigationButtons/>
     </div>
 )
