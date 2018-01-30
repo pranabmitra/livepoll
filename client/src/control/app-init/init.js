@@ -17,17 +17,17 @@ const initAppStateManagement = () => {
 
     // Realtime listener
     // TODO:: need to change state
-    firebase.auth().onAuthStateChanged(firebaseUser => {
-        if (firebaseUser) {
-            initialState.set('authState', Map({
-                isSignedIn: true,
-                signInDetails: firebaseUser,
-            }));
-            console.log(firebaseUser);
-        } else {
-            console.log('Not Logged in!');
-        }
-    });
+    // firebase.auth().onAuthStateChanged(firebaseUser => {
+    //     if (firebaseUser) {
+    //         initialState.set('authState', Map({
+    //             isSignedIn: true,
+    //             signInDetails: firebaseUser,
+    //         }));
+    //         console.log(firebaseUser);
+    //     } else {
+    //         console.log('Not Logged in!');
+    //     }
+    // });
 
     initAppStateStore(initialState);
     return Promise.resolve(1);

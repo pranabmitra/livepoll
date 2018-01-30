@@ -19,7 +19,7 @@ const mapStateToProps = (state) => {
         signInData,
         user;
     if (isSignedIn) {
-        signInData = state.getIn(['authState', 'signInDetails', 'signInData']);
+        signInData = state.getIn(['authState', 'signInData']);
         user = new User(signInData);
     }
     return {

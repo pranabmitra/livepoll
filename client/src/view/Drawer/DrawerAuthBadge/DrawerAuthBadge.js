@@ -29,12 +29,11 @@ const DrawerAuthBadge = (props) => {
 
 const mapStateToProps = (state) => {
     var isSignedIn = state.getIn(['authState', 'isSignedIn']),
-        signInMethod,
         signInData,
         user;
     if (isSignedIn) {
-        signInData = state.getIn(['authState', 'signInDetails', 'signInData']);
-        user = new User(signInMethod, signInData);
+        signInData = state.getIn(['authState', 'signInData']);
+        user = new User(signInData);
     }
     return {
         isSignedIn,

@@ -4,11 +4,7 @@ import {SIGNIN_METHODS} from "../../constants/auth";
 
 let initialAuthState = {
     isSignedIn: false,
-
-    signInDetails: {
-        signInMethod: SIGNIN_METHODS.NONE,
-        signInData: undefined
-    },
+    signInData: undefined,
 };
 
 export const initialViewState = {
