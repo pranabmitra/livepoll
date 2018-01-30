@@ -19,6 +19,9 @@ const SignInButton = (props) => {
             icon = '/images/icons/fb-logo.png';
             text = 'Facebook';
             break;
+
+        default:
+            return;
     }
 
     const iconStyle = {

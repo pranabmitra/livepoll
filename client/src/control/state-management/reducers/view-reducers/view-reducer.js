@@ -1,5 +1,3 @@
-import {fromJS} from 'immutable';
-
 import {ACTION_TOGGLE_DRAWER} from "../../action-creators/view-state/drawer-actions";
 import {reduceToggleDrawer} from "./drawer";
 import {initialViewState} from "../../initial-states";

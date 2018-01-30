@@ -29,15 +29,3 @@ export const signOut = (dispatch) => {
     return firebase.auth().signOut()
         .then(() => dispatch(actionSignOut()));
 }
-
-
-export const isSignedIn = () => {
-    return false;
-}
-
-export const getSignedInDetails = () => {
-    return {
-        signInMethod: SIGNIN_METHODS.NONE,
-        signInData: undefined,
-    }
-}

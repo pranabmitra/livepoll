@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import './HeaderAuthBadge.css';
 import SignInPopupButton from "../../AuthButtons/SignInPopupButton";
 import User from "../../../control/auth/auth-user";
-import {isSignedIn} from "../../../control/auth/auth-functions";
+
 
 const HeaderAuthBadge = (props) => (
     <React.Fragment>
