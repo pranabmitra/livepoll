@@ -1,14 +1,27 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
 import './Drawer.css';
 import DrawerAuthBadge from './DrawerAuthBadge/DrawerAuthBadge';
 
-const Drawer = () => (
-    <div id='app-drawer' className='drawer drawer-resp'>
-        <div className='drawer-content'>
-            <DrawerAuthBadge/>
-        </div>
-    </div>
-)
+const Drawer = (props) => {
+    var drawerClassName = 'drawer drawer-resp ';
 
-export default Drawer;
+    drawerClassName += props.isOpened ? 'drawer-opened drawer-opened-resp': 'drawer-closed drawer-closed-resp';
+
+    return (
+        <div className={drawerClassName}>
+            <div className='drawer-content'>
+                <DrawerAuthBadge/>
+            </div>
+        </div>
+    )
+}
+
+const mapStateToProps = state => {
+    return {
+        isOpened: state.getIn(['viewState', 'drawer', 'isOpened'])
+    }
+}
+
+export default connect(mapStateToProps)(Drawer);

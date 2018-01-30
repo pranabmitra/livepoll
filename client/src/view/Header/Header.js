@@ -1,14 +1,15 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
 import './Header.css';
 import {toggleDrawer} from "../Drawer/drawer-utils";
 import NavigationButtons from '../NavigationButtons/NavigationButtons';
 import HeaderAuthBadge from "./HeaderAuthBadge/HeaderAuthBadge";
 
-const Header = () => (
+const Header = (props) => (
     <div className='header header-resp fl'>
         <br/>
-        <button className='drawer-btn drawer-btn-resp fr' onClick={toggleDrawer}>&equiv;</button>
+        <button className='drawer-btn drawer-btn-resp fr' onClick={props.toggleDrawer}>&equiv;</button>
         <a className='app-title app-title-resp fl' href='/'>livepoll</a>
         <HeaderAuthBadge/>
         <NavigationButtons
@@ -20,4 +21,9 @@ const Header = () => (
     </div>
 )
 
-export default Header;
+const mapStateToProps = undefined;
+const mapDispatchToProps = (dispatch) => ({
+    toggleDrawer: toggleDrawer.bind(this, dispatch)
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

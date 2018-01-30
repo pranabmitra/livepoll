@@ -1,7 +1,7 @@
 import * as firebase from 'firebase';
 import {Map} from 'immutable';
 
-import appInitialState from "../state-management/initial-state";
+import initialAppState from "../state-management/initial-states";
 import * as livepollAuth from "../auth/auth-functions";
 import {initAppStateStore} from "../state-management/store";
 import {FIREBASE_CONFIG} from '../../constants/firebase';
@@ -13,7 +13,7 @@ const initFirebase = () => {
 }
 
 const initAppStateManagement = () => {
-    var initialState = appInitialState;
+    var initialState = initialAppState;
 
     if (livepollAuth.isSignedIn()) {
         initialState.set('authState', Map({
