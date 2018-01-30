@@ -5,20 +5,17 @@ import './auth-buttons.css';
 
 const SignInButton = (props) => {
     let icon,
-        text,
-        buttonSpecialClass;
+        text;
 
     switch (props.signInMethod) {
         case SIGNIN_METHODS.GOOGLE:
             icon = '/images/icons/google-logo.png';
             text = 'Google';
-            buttonSpecialClass = 'signin-btn-google';
             break;
 
         case SIGNIN_METHODS.FACEBOOK:
             icon = '/images/icons/fb-logo.png';
             text = 'Facebook';
-            buttonSpecialClass = 'signin-btn-fb';
             break;
     }
 
@@ -27,7 +24,7 @@ const SignInButton = (props) => {
     };
 
     return (
-        <button className={props.className + ' signin-btn fl ' + buttonSpecialClass}>
+        <button className={props.className + ' signin-btn fl'}>
             <div className='signin-icon signin-icon-resp' style={iconStyle}></div>
             <div className='signin-btn-text'>{text}</div>
         </button>
