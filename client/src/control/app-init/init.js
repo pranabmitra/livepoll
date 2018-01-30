@@ -1,6 +1,7 @@
 import * as firebase from 'firebase';
-import {initAppStateStore} from "../state-management/store";
+import {getAppStateStore, initAppStateStore} from "../state-management/store";
 import {FIREBASE_CONFIG} from '../../constants/firebase';
+import {actionSignIn} from "../state-management/action-creators/auth-actions";
 
 
 const initFirebase = () => {
@@ -9,27 +10,27 @@ const initFirebase = () => {
 }
 
 const initAppStateManagement = () => {
-    // Realtime listener
-    // TODO:: need to change state
-    // firebase.auth().onAuthStateChanged(firebaseUser => {
-    //     if (firebaseUser) {
-    //         initialState.set('authState', Map({
-    //             isSignedIn: true,
-    //             signInDetails: firebaseUser,
-    //         }));
-    //         console.log(firebaseUser);
-    //     } else {
-    //         console.log('Not Logged in!');
-    //     }
-    // });
-
     initAppStateStore();
     return Promise.resolve(1);
 }
 
+function initAuthChangeListener() {
+    const dispatch = getAppStateStore().dispatch;
+    return new Promise(resolve => {
+        firebase.auth().onAuthStateChanged(firebaseUser => {
+            if (firebaseUser) {
+                dispatch(actionSignIn(firebaseUser));
+            }
+            resolve(1);
+        });
+        if(firebase.auth().currentUser) dispatch(actionSignIn(firebase.auth().currentUser));
+    });
+}
+
 const initLivepollWebApp = () => {
     return initFirebase()
-        .then(initAppStateManagement);
+        .then(initAppStateManagement)
+        .then(initAuthChangeListener);
 }
 
 export default initLivepollWebApp;
