@@ -23,5 +23,5 @@ const mapStateToProps = state => {
         isOpened: state.getIn(['viewState', 'drawer', 'isOpened'])
     }
 }
-
-export default connect(mapStateToProps)(Drawer);
+const mapDispatchToProps = () => ({})
+export default connect(mapStateToProps, mapDispatchToProps)(Drawer);
