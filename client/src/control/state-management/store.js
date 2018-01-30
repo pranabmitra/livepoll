@@ -1,10 +1,12 @@
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import rootReducer from "./root-reducer";
+import loggerMiddleware from "./middlewares/logger";
 
 let store;
 
 export const initAppStateStore = (initialState)=>{
-    store = createStore(rootReducer, initialState);
+    const middlewares = applyMiddleware(loggerMiddleware);
+    store = createStore(rootReducer, initialState, middlewares);
 }
 
 export const getAppStateStore = () => {
