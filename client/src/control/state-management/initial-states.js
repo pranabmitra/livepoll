@@ -1,21 +1,12 @@
-import { fromJS } from 'immutable';
-import {SIGNIN_METHODS} from "../../constants/auth";
+import {fromJS} from 'immutable';
 
-
-let initialAuthState = {
+export const initialAuthState = fromJS({
     isSignedIn: false,
     signInData: undefined,
-};
+});
 
-export const initialViewState = {
+export const initialViewState = fromJS({
     drawer: {
         isOpened: false
     }
-};
-
-
-let initialAppState = fromJS({
-    authState: initialAuthState,
-    viewState: initialViewState,
 });
-export default initialAppState;

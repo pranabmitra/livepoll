@@ -1,12 +1,13 @@
 import { createStore, applyMiddleware } from 'redux';
 import rootReducer from "./root-reducer";
+import {Map} from 'immutable';
 import loggerMiddleware from "./middlewares/logger";
 
 let store;
 
-export const initAppStateStore = (initialState)=>{
+export const initAppStateStore = ()=>{
     const middlewares = applyMiddleware(loggerMiddleware);
-    store = createStore(rootReducer, initialState, middlewares);
+    store = createStore(rootReducer, Map(), middlewares);
 }
 
 export const getAppStateStore = () => {

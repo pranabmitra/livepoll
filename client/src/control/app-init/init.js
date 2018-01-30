@@ -1,8 +1,4 @@
 import * as firebase from 'firebase';
-import {Map} from 'immutable';
-
-import initialAppState from "../state-management/initial-states";
-import * as livepollAuth from "../auth/auth-functions";
 import {initAppStateStore} from "../state-management/store";
 import {FIREBASE_CONFIG} from '../../constants/firebase';
 
@@ -13,8 +9,6 @@ const initFirebase = () => {
 }
 
 const initAppStateManagement = () => {
-    var initialState = initialAppState;
-
     // Realtime listener
     // TODO:: need to change state
     // firebase.auth().onAuthStateChanged(firebaseUser => {
@@ -29,7 +23,7 @@ const initAppStateManagement = () => {
     //     }
     // });
 
-    initAppStateStore(initialState);
+    initAppStateStore();
     return Promise.resolve(1);
 }
 
