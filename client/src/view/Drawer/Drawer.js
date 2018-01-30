@@ -17,8 +17,8 @@ const Drawer = (props) => {
                 <DrawerAuthBadge/>
                 <NavigationButtons
                     containerClass='drawer-nav-container'
-                    buttonClass='drawer-nav-btn'
-                    iconClass='drawer-nav-btn-icon'
+                    buttonClass='drawer-nav-btn drawer-nav-btn-resp'
+                    iconClass='drawer-nav-btn-icon drawer-nav-btn-icon-resp'
                     titleClass=''/>
                 <SignoutButton className='drawer-signout-btn'/>
             </div>

@@ -83,6 +83,14 @@
     margin: 5px;
     float: left;
 }
+@media (orientation: landscape) {
+    .drawer-nav-btn-resp{
+        float: left;
+        width: calc(100% - 20px - 10px);
+        margin: auto;
+        border: none;
+    }
+}
 
 .drawer-nav-btn-icon{
     background-size: contain;
@@ -92,6 +100,12 @@
     float: left;
     margin-right: 5px;
 }
+@media (orientation: landscape) {
+    .drawer-nav-btn-icon-resp{
+        float: none;
+    }
+}
+
 
 .drawer-signout-btn{
     font-size: large;
