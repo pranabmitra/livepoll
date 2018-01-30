@@ -14,6 +14,7 @@
 @media (orientation: landscape) and (max-width: 1000px) {
     .drawer-resp{
         width: 40%;
+        height: calc(100% - 3.5em - 1px);
         left: -42%;
         bottom: 0;
         border-right: 1px solid lightgrey;
