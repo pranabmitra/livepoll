@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 
 import './Drawer.css';
 import DrawerAuthBadge from './DrawerAuthBadge/DrawerAuthBadge';
+import SignoutButton from "../AuthButtons/SignoutButton";
+import NavigationButtons from "../NavigationButtons/NavigationButtons";
 
 const Drawer = (props) => {
     var drawerClassName = 'drawer drawer-resp ';
@@ -13,6 +15,12 @@ const Drawer = (props) => {
         <div className={drawerClassName}>
             <div className='drawer-content'>
                 <DrawerAuthBadge/>
+                <NavigationButtons
+                    containerClass='drawer-nav-container'
+                    buttonClass='drawer-nav-btn'
+                    iconClass='drawer-nav-btn-icon'
+                    titleClass=''/>
+                <SignoutButton className='drawer-signout-btn'/>
             </div>
         </div>
     )
