@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux-immutable';
 import {Record} from 'immutable';
 
-import authReducer from "./reducers/auth-reducers";
+import authReducer from "./reducers/auth-reducers/auth-reducer";
 import viewReducer from "./reducers/view-reducers/view-reducer";
 import {initialViewState} from "./initial-states";
 
