@@ -9,7 +9,7 @@ class User {
     getFullName() {
         switch (this.signInMethod) {
             case SIGNIN_METHODS.GOOGLE:
-                return this.signInData.user.displayName;
+                return this.signInData.displayName;
             default:
                 return '';
         }
@@ -18,7 +18,7 @@ class User {
     getProfileImage() {
         switch (this.signInMethod) {
             case SIGNIN_METHODS.GOOGLE:
-                return this.signInData.user.photoURL;
+                return this.signInData.photoURL;
             default:
                 return '';
         }
