@@ -23,7 +23,10 @@ function initAuthChangeListener() {
             }
             resolve(1);
         });
-        if(firebase.auth().currentUser) dispatch(actionSignIn(firebase.auth().currentUser));
+        if(firebase.auth().currentUser) {
+            dispatch(actionSignIn(firebase.auth().currentUser));
+            resolve(1);
+        }
     });
 }
 

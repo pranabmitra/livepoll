@@ -1,7 +1,7 @@
 import * as firebase from 'firebase';
 
 import {SIGNIN_METHODS} from "../../constants/auth";
-import {actionSignIn} from "../state-management/action-creators/auth-actions";
+import {actionSignIn, actionSignOut} from "../state-management/action-creators/auth-actions";
 
 
 export const signIn = (dispatch, signInMethod) => {
@@ -19,20 +19,17 @@ export const signIn = (dispatch, signInMethod) => {
             return;
     }
 
-    const onSignInSuccess = (signInData)=>{
+    return firebase.auth().signInWithPopup(provider).then((signInData)=>{
         dispatch(actionSignIn(signInData.user));
-    }
-
-    try {
-        return firebase.auth().signInWithPopup(provider).then(onSignInSuccess);
-    } catch (err) {
-        window.alert('Signin failed');
-    }
+    });
 }
 
-export const signOut = () => {
 
+export const signOut = (dispatch) => {
+    return firebase.auth().signOut()
+        .then(() => dispatch(actionSignOut()));
 }
+
 
 export const isSignedIn = () => {
     return false;

@@ -9,10 +9,10 @@ import User from "../../../control/auth/auth-user";
 const DrawerAuthBadge = (props) => {
     if (!props.isSignedIn) {
         return (
-            <div>
-                Sign in with<br/><br/>
-                <SignInButton signInMethod={SIGNIN_METHODS.GOOGLE}/>
-                <SignInButton signInMethod={SIGNIN_METHODS.FACEBOOK}/>
+            <div className='drawer-auth-badge'>
+                Sign in with<br/>
+                <SignInButton className='drawer-signin-btn' signInMethod={SIGNIN_METHODS.GOOGLE}/>
+                <SignInButton className='drawer-signin-btn' signInMethod={SIGNIN_METHODS.FACEBOOK}/>
             </div>
         )
     }
