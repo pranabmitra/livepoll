@@ -52,16 +52,16 @@
 }
 @media (min-height: 1px) {
     .drawer-auth-badge-txt-resp{
-        font-size: medium;
+        font-size: small;
     }
 }
 @media (min-height: 401px) {
     .drawer-auth-badge-txt-resp{
-        font-size: large;
+        font-size: medium;
     }
 }
 @media (min-height: 601px) {
     .drawer-auth-badge-txt-resp{
-        font-size: x-large;
+        font-size: large;
     }
 }

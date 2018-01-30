@@ -14,6 +14,15 @@ class User {
                 return '';
         }
     }
+
+    getProfileImage() {
+        switch (this.signInMethod) {
+            case SIGNIN_METHODS.GOOGLE:
+                return this.signInData.user.photoURL;
+            default:
+                return '';
+        }
+    }
 }
 
 export default User;
