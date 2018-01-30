@@ -1,8 +1,7 @@
 import {SIGNIN_METHODS} from "../../constants/auth";
 
 class User {
-    constructor(signInMethod, signInData) {
-        this.signInMethod = signInMethod;
+    constructor(signInData) {
         this.signInData = signInData;
     }
 

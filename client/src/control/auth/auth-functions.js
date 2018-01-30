@@ -20,7 +20,7 @@ export const signIn = (dispatch, signInMethod) => {
     }
 
     const onSignInSuccess = (signInData)=>{
-        dispatch(actionSignIn(signInMethod, signInData.user));
+        dispatch(actionSignIn(signInData.user));
     }
 
     try {

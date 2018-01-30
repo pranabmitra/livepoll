@@ -33,7 +33,6 @@ const mapStateToProps = (state) => {
         signInData,
         user;
     if (isSignedIn) {
-        signInMethod = state.getIn(['authState', 'signInDetails', 'signInMethod']);
         signInData = state.getIn(['authState', 'signInDetails', 'signInData']);
         user = new User(signInMethod, signInData);
     }
