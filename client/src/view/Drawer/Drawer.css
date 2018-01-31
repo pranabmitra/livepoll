@@ -76,28 +76,22 @@
 }
 
 .drawer-nav-btn{
-    background-color: white;
-    border: 1px solid lightgray;
-    color: #222222;
-    text-decoration: none;
-    padding: 10px;
-    margin: 5px;
-    float: left;
+    padding: 5px !important;
+    margin: 5px !important;
+    float: left !important;
 }
 @media (orientation: landscape) {
     .drawer-nav-btn-resp{
-        float: left;
         width: calc(100% - 20px - 10px);
-        margin: auto;
-        border: none;
     }
 }
 
+.drawer-nav-btn-txt{
+    float: left;
+    padding: 5px !important;
+}
+
 .drawer-nav-btn-icon{
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 1em;
-    height: 1em;
     float: left;
     margin-right: 5px;
 }

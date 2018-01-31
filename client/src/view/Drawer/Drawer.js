@@ -20,7 +20,7 @@ const Drawer = (props) => {
                     containerClass='drawer-nav-container'
                     buttonClass='drawer-nav-btn drawer-nav-btn-resp'
                     iconClass='drawer-nav-btn-icon drawer-nav-btn-icon-resp'
-                    titleClass=''/>
+                    titleClass='drawer-nav-btn-txt'/>
                 <LPButton btnClass='fr'>Options</LPButton>
                 <SignoutButton className='drawer-signout-btn'/>
             </div>
