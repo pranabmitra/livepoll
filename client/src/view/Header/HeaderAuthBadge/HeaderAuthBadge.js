@@ -4,12 +4,22 @@ import {connect} from 'react-redux';
 import './HeaderAuthBadge.css';
 import SignInPopupButton from "../../AuthButtons/SignInPopupButton";
 import User from "../../../control/auth/auth-user";
+import {LPButton} from "../../view-factories/button-factory";
 
+const HeaderUserBadge = (props) => (
+    <LPButton
+        btnClass='header-user-badge'
+        btnIconClass='header-user-badge-icon'
+        btnTextClass='header-user-badge-txt header-user-badge-txt-resp'
+        iconUrl={props.user.getProfileImage()}>
+        {props.user.getFullName()}
+    </LPButton>
+)
 
 const HeaderAuthBadge = (props) => (
     <React.Fragment>
         {
-            props.isSignedIn ? <span className='fr'>{props.user.getFullName()}</span> : <SignInPopupButton className='fr'/>
+            props.isSignedIn ? <HeaderUserBadge user={props.user}/> : <SignInPopupButton className='fr'/>
         }
     </React.Fragment>
 )

@@ -1,13 +1,28 @@
 .lp-btn{
     background-color: white;
     color: #222222;
-    padding: 10px;
-    border-radius: 4px;
+    border-radius: 3px;
     border: 1px solid lightgrey;
     text-decoration: none;
+    cursor: pointer;
 }
 .lp-btn:hover{
-    border: 1px solid lightgrey;
+    background-color: lightgrey;
+}
+@media (min-width: 1px) {
+    .lp-btn-resp{
+        padding: 5px;
+    }
+}
+@media (min-width: 801px) and (min-height: 601px) {
+    .lp-btn-resp{
+        padding: 8px;
+    }
+}
+@media (min-width: 1201px) and (min-height: 801px) {
+    .lp-btn-resp{
+        padding: 12px;
+    }
 }
 
 .lp-btn-txt{
@@ -17,21 +32,16 @@
         font-size: small;
     }
 }
-@media (min-width: 501px) and (min-height: 501px) {
+@media (min-width: 801px) and (min-height: 601px) {
     .lp-btn-txt-resp{
         font-size: medium;
     }
 }
-@media (min-width: 801px) and (min-height: 801px) {
-    .lp-btn-txt-resp{
-        font-size: large;
-    }
-}
+
 
 
 .lp-btn-img{
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-size: cover;
 }
 @media (min-width: 1px) {
     .lp-btn-img-resp{
@@ -39,15 +49,9 @@
         height: 1.5em;
     }
 }
-@media (min-width: 501px) and (min-height: 501px){
+@media (min-width: 801px) and (min-height: 601px){
     .lp-btn-img-resp{
-        width: 2em;
-        height: 2em;
-    }
-}
-@media (min-width: 801px) and (min-height: 801px) {
-    .lp-btn-img-resp{
-        width: 3em;
-        height: 3em;
+        width: 1.7em;
+        height: 1.7em;
     }
 }

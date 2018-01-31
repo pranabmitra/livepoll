@@ -4,7 +4,7 @@
     overflow: hidden;
     background-color: white;
 }
-@media (orientation: portrait) {
+@media (orientation: portrait) and (max-width: 600px) {
     .header-resp{
         height: 6.2em;
         margin-left: 10px;
@@ -101,21 +101,6 @@
     float: left;
     border: none !important;
 }
-@media (min-width: 1px) {
-    .header-nav-btn-resp{
-        padding: 6px !important;
-    }
-}
-@media (min-width: 801px) {
-    .header-nav-btn-resp{
-        padding: 10px !important;
-    }
-}
-@media (min-width: 1201px) {
-    .header-nav-btn-resp{
-        padding: 15px !important;
-    }
-}
 
 
 .header-nav-btn-txt{
@@ -131,4 +116,14 @@
 
 .header-nav-btn-icon{
     float: left !important;
+}
+
+
+.header-signout-btn{
+
+}
+@media (orientation: portrait), (max-width: 800px) {
+    .header-signout-btn-resp{
+        display: none;
+    }
 }

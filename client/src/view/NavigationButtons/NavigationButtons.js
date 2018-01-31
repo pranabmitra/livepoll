@@ -16,7 +16,7 @@ const NavigationButtons = (props) => {
                         btnClass={buttonClass}
                         btnIconClass={iconClass}
                         btnTextClass={titleClass}
-                        iconUrl='images/icons/fake-icon.png'>
+                        iconUrl={navButtonData.ICON_URL}>
 
                         {navButtonData.TITLE}</LPButton>
                 ))

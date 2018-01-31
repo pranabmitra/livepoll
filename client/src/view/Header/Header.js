@@ -5,12 +5,14 @@ import './Header.css';
 import {toggleDrawer} from "../Drawer/drawer-utils";
 import NavigationButtons from '../NavigationButtons/NavigationButtons';
 import HeaderAuthBadge from "./HeaderAuthBadge/HeaderAuthBadge";
+import SignoutButton from "../AuthButtons/SignoutButton";
 
 const Header = (props) => (
     <div className='header header-resp fl'>
         <br/>
         <button className='drawer-btn drawer-btn-resp fr' onClick={props.toggleDrawer}>&equiv;</button>
         <a className='app-title app-title-resp fl' href='/'>livepoll</a>
+        <SignoutButton className='header-signout-btn header-signout-btn-resp fr'/>
         <HeaderAuthBadge/>
         <NavigationButtons
             containerClass='header-nav-pane header-nav-pane-resp'
