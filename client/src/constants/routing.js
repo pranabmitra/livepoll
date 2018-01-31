@@ -1,22 +1,28 @@
+export const ROUTES = {
+    HOME: '/',
+    PROFILE: '/profile',
+    MY_POLLS: '/mypolls',
+    POLLS_VOTED: '/voted'
+}
+
 export const NAV_BUTTONS_DATA = [
     {
         TITLE: 'Home',
-        HREF: '/',
+        HREF: ROUTES.HOME,
         ICON_URL: './images/icons/nav-home.png'
     },
     {
         TITLE: 'Create Poll',
-        HREF: '/create',
         ICON_URL: './images/icons/nav-create-poll.png'
     },
     {
         TITLE: 'My Polls',
-        HREF: '/mypolls',
+        HREF: ROUTES.MY_POLLS,
         ICON_URL: './images/icons/nav-my-polls.png'
     },
     {
         TITLE: 'Polls Voted',
-        HREF: '/voted',
+        HREF: ROUTES,
         ICON_URL: './images/icons/nav-polls-voted.png'
     },
 ];

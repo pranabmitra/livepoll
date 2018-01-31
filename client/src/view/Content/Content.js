@@ -1,19 +1,24 @@
 import React from 'react';
+import {Switch, Route} from 'react-router';
 
 import './Content.css';
+import {ROUTES} from "../../constants/routing";
+
+
+const UnsupportedSection = () => (
+    <div style={{margin: 'auto', width: '100%', float: 'left'}}>
+        Coming Soon...
+    </div>
+)
 
 const Content = () => (
     <div className='content content-resp'>
-        {
-            (()=>{
-                var fake =[];
-                for (var i=0; i<100; i++) {
-                    fake.push(<span key={i + '1'}>Content</span>);
-                    fake.push(<br key={i + '2'}/>);
-                }
-                return fake;
-            })()
-        }
+        <Switch>
+            <Route path={ROUTES.PROFILE} component={UnsupportedSection}/>
+            <Route path={ROUTES.MY_POLLS} component={UnsupportedSection}/>
+            <Route path={ROUTES.HOME} component={UnsupportedSection}/>
+            <Route path={ROUTES.POLLS_VOTED} component={UnsupportedSection}/>
+        </Switch>
     </div>
 )
 

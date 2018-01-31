@@ -6,6 +6,7 @@ import './DrawerAuthBadge.css';
 import SignInButton from "../../AuthButtons/SignInButton";
 import {SIGNIN_METHODS} from "../../../constants/auth";
 import User from "../../../control/auth/auth-user";
+import {ROUTES} from "../../../constants/routing";
 
 const DrawerAuthBadge = (props) => {
     if (!props.isSignedIn) {
@@ -22,7 +23,7 @@ const DrawerAuthBadge = (props) => {
         <div className='drawer-auth-badge'>
             <div className='drawer-auth-badge-img drawer-auth-badge-img-resp'
                  style={{backgroundImage: `url(${props.user.getProfileImage()})`}}></div>
-            <Link to='/profile' className='drawer-auth-badge-txt drawer-auth-badge-txt-resp'>{props.user.getFullName()}</Link>
+            <Link to={ROUTES.PROFILE} className='drawer-auth-badge-txt drawer-auth-badge-txt-resp'>{props.user.getFullName()}</Link>
         </div>
     )
 }
