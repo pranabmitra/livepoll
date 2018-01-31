@@ -6,7 +6,10 @@ import loggerMiddleware from "./middlewares/logger";
 let store;
 
 export const initAppStateStore = ()=>{
-    const middlewares = applyMiddleware(loggerMiddleware);
+    let middlewares;
+    if (process.env.NODE_ENV !== 'production') {
+        middlewares = applyMiddleware(loggerMiddleware);
+    }
     store = createStore(rootReducer, Map(), middlewares);
 }
 
