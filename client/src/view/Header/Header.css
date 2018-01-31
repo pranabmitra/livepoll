@@ -119,21 +119,7 @@
 
 .header-nav-btn-txt{
     float: left !important;
-}
-@media (min-width: 1px) {
-    .header-nav-btn-txt-resp{
-        margin: 5px;
-    }
-}
-@media (min-width: 801px) {
-    .header-nav-btn-txt-resp{
-        margin: 5px;
-    }
-}
-@media (min-width: 1201px) {
-    .header-nav-btn-txt-resp{
-        margin: 5px;
-    }
+    margin: 5px;
 }
 @media (orientation: landscape) and (max-width: 800px) {
     .header-nav-btn-txt-resp{
@@ -144,24 +130,4 @@
 
 .header-nav-btn-icon{
     float: left !important;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-@media (min-width: 1px) {
-    .header-nav-btn-icon-resp{
-        width: 20px;
-        height: 20px;
-    }
-}
-@media (min-width: 801px) {
-    .header-nav-btn-icon-resp{
-        width: 25px;
-        height: 25px;
-    }
-}
-@media (min-width: 1201px) {
-    .header-nav-btn-icon-resp{
-        width: 30px;
-        height: 30px;
-    }
 }
