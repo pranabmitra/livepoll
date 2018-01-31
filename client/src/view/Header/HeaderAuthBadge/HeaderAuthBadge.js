@@ -9,7 +9,7 @@ import User from "../../../control/auth/auth-user";
 const HeaderAuthBadge = (props) => (
     <React.Fragment>
         {
-            props.isSignedIn ? <div>{props.user.getFullName()}</div> : <SignInPopupButton className='fr'/>
+            props.isSignedIn ? <span className='fr'>{props.user.getFullName()}</span> : <SignInPopupButton className='fr'/>
         }
     </React.Fragment>
 )
@@ -18,10 +18,12 @@ const mapStateToProps = (state) => {
     var isSignedIn = state.getIn(['authState', 'isSignedIn']),
         signInData,
         user;
+
     if (isSignedIn) {
         signInData = state.getIn(['authState', 'signInData']);
         user = new User(signInData);
     }
+
     return {
         isSignedIn,
         user
