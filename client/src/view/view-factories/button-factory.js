@@ -14,10 +14,12 @@ export const TextWithImage = (props) => (
 export const LPButton = (props) => {
     let { btnClass, btnIconClass, iconUrl, children, btnTextClass, onClick, href } = props;
 
-    const content = (
+    const content = iconUrl ? (
         <TextWithImage iconClass={btnIconClass} iconUrl={iconUrl} textClass={btnTextClass}>
             {children}
         </TextWithImage>
+    ) : (
+        <div className={`lp-btn-txt lp-btn-txt-resp ${props.textClass || ''}`}>{props.children}</div>
     )
 
     return href ? (
