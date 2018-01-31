@@ -5,6 +5,7 @@ import './Drawer.css';
 import DrawerAuthBadge from './DrawerAuthBadge/DrawerAuthBadge';
 import SignoutButton from "../AuthButtons/SignoutButton";
 import NavigationButtons from "../NavigationButtons/NavigationButtons";
+import {LPButton} from "../view-factories/button-factory";
 
 const Drawer = (props) => {
     var drawerClassName = 'drawer drawer-resp ';
@@ -21,6 +22,7 @@ const Drawer = (props) => {
                     iconClass='drawer-nav-btn-icon drawer-nav-btn-icon-resp'
                     titleClass=''/>
                 <SignoutButton className='drawer-signout-btn'/>
+                <LPButton btnClass='fr'>Options</LPButton>
             </div>
         </div>
     )

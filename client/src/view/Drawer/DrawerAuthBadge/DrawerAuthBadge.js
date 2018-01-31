@@ -10,7 +10,7 @@ const DrawerAuthBadge = (props) => {
     if (!props.isSignedIn) {
         return (
             <div className='drawer-auth-badge'>
-                Sign in with<br/>
+                <span>Sign in</span><br/>
                 <SignInButton className='drawer-signin-btn' signInMethod={SIGNIN_METHODS.GOOGLE}/>
                 <SignInButton className='drawer-signin-btn' signInMethod={SIGNIN_METHODS.FACEBOOK}/>
             </div>
