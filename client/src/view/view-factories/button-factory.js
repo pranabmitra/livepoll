@@ -3,28 +3,30 @@ import {Link} from 'react-router-dom';
 
 import './button-factory.css';
 
+export const TextWithImage = (props) => (
+    <React.Fragment>
+        <div className={`lp-btn-img lp-btn-img-resp ${props.iconClass || ''}`} style={{backgroundImage: `url(${props.iconUrl})`}}></div>
+        <span>&nbsp;&nbsp;</span>
+        <div className={`lp-btn-txt lp-btn-txt-resp ${props.textClass || ''}`}>{props.children}</div>
+    </React.Fragment>
+)
+
 export const LPButton = (props) => {
     let { btnClass, btnIconClass, iconUrl, children, btnTextClass, onClick, href } = props;
 
-    const icon = !!iconUrl && (
-        <div className={`lp-btn-img lp-btn-img-resp ${btnIconClass || ''}`} style={{backgroundImage: `url(${iconUrl})`}}></div>
-    );
-
-    const gap = !!iconUrl && <span>&nbsp;&nbsp;</span>;
-
-    const title = <div className={`lp-btn-txt lp-btn-txt-resp ${btnTextClass || ''}`}>{children}</div>;
+    const content = (
+        <TextWithImage iconClass={btnIconClass} iconUrl={iconUrl} textClass={btnTextClass}>
+            {children}
+        </TextWithImage>
+    )
 
     return href ? (
         <Link className={`lp-btn lp-btn-resp ${btnClass || ''}`} to={href}>
-            { icon }
-            { gap }
-            { title }
+            {content}
         </Link>
     ) : (
         <button className={`lp-btn lp-btn-resp ${btnClass || ''}`} onClick={onClick}>
-            { icon }
-            { gap }
-            { title }
+            {content}
         </button>
     )
 }
