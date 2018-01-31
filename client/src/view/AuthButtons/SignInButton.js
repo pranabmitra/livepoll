@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import {SIGNIN_METHODS} from "../../constants/auth";
 import './auth-buttons.css';
 import {signIn} from "../../control/auth/auth-functions";
+import {LPButton} from "../view-factories/button-factory";
 
 const SignInButton = (props) => {
     let icon,
@@ -24,17 +25,17 @@ const SignInButton = (props) => {
             return;
     }
 
-    const iconStyle = {
-        backgroundImage: 'url(' + icon +')',
-    };
-
     const onClick = () => props.signIn(props.signInMethod);
 
     return (
-        <button className={props.className + ' signin-btn fl'} onClick={onClick}>
-            <div className='signin-icon signin-icon-resp' style={iconStyle}></div>
-            <div className='signin-btn-text'>{text}</div>
-        </button>
+        <LPButton
+            btnClass={props.className + ' signin-btn fl'}
+            btnTextClass='signin-btn-text'
+            btnIconClass='signin-icon'
+            iconUrl={icon}
+            onClick={onClick}>
+            {text}
+        </LPButton>
     )
 }
 

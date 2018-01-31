@@ -1,15 +1,5 @@
 .signin-btn {
-    color: white;
-    font-size: small;
-    text-align: center;
-    padding: 5px;
-    margin: 5px;
-    border-radius: 3px;
-    width: 5.5em;
-    height: 5.5em;
-    background-color: white;
-    border: none;
-    color: black;
+    border: none !important;
 }
 .signin-btn:hover{
     border: 1px solid lightgray;
@@ -17,32 +7,13 @@
 
 
 .signin-icon {
-    background-size: contain;
-    background-repeat: no-repeat;
     margin: auto;
 }
-@media (min-height: 1px) {
-    .signin-icon-resp{
-        width: 1em;
-        height: 1em;
-    }
-}
-@media (min-height: 501px) {
-    .signin-icon-resp{
-        width: 2em;
-        height: 2em;
-    }
-}
-@media (min-height: 801px) {
-    .signin-icon-resp{
-        width: 3em;
-        height: 3em;
-    }
-}
+
 
 .signin-btn-text{
     width: 100%;
-    margin-top: 7px;
+    margin-top: 7px !important;
 }
 
 

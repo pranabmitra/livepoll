@@ -10,7 +10,6 @@
 
 .lp-btn-txt{
     font-family: monospace;
-    float: left;
 }
 @media (min-width: 1px) {
     .lp-btn-txt-resp{
@@ -32,12 +31,11 @@
 .lp-btn-img{
     background-size: contain;
     background-repeat: no-repeat;
-    float: left;
 }
 @media (min-width: 1px) {
     .lp-btn-img-resp{
-        width: 1em;
-        height: 1em;
+        width: 1.5em;
+        height: 1.5em;
     }
 }
 @media (min-width: 501px) {
