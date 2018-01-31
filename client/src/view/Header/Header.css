@@ -98,31 +98,27 @@
 
 .header-nav-btn{
     float: left;
-    text-decoration: none;
-    color: #222222;
+    border: none !important;
 }
 @media (min-width: 1px) {
     .header-nav-btn-resp{
-        font-size: medium;
-        padding: 6.2px;
+        padding: 6px !important;
     }
 }
 @media (min-width: 801px) {
     .header-nav-btn-resp{
-        font-size: large;
-        padding: 10px;
+        padding: 10px !important;
     }
 }
 @media (min-width: 1201px) {
     .header-nav-btn-resp{
-        font-size: large;
-        padding: 15px;
+        padding: 15px !important;
     }
 }
 
 
 .header-nav-btn-txt{
-    float: left;
+    float: left !important;
 }
 @media (min-width: 1px) {
     .header-nav-btn-txt-resp{
@@ -147,7 +143,7 @@
 
 
 .header-nav-btn-icon{
-    float: left;
+    float: left !important;
     background-repeat: no-repeat;
     background-size: cover;
 }

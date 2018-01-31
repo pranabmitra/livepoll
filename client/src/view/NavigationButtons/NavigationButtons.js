@@ -1,18 +1,28 @@
 import React from 'react';
 
 import {NAV_BUTTONS_DATA} from "../../constants/routing";
+import {LPButton} from "../view-factories/button-factory";
 
-const NavigationButtons = (props) => (
-    <div className={props.containerClass}>
-        {
-            NAV_BUTTONS_DATA.map((navButtonData)=>(
-                <a className={props.buttonClass} key={navButtonData.HREF} href={navButtonData.HREF}>
-                    <i className={props.iconClass} style={{backgroundImage: 'url(images/icons/fake-icon.png)'}}></i>
-                    <span className={props.titleClass}>&nbsp;{navButtonData.TITLE}</span>
-                </a>
-            ))
-        }
-    </div>
-);
+const NavigationButtons = (props) => {
+    const {containerClass, buttonClass, iconClass, titleClass} = props;
+
+    return (
+        <div className={containerClass}>
+            {
+                NAV_BUTTONS_DATA.map((navButtonData)=>(
+                    <LPButton
+                        key={navButtonData.HREF}
+                        href={navButtonData.HREF}
+                        btnClass={buttonClass}
+                        btnIconClass={iconClass}
+                        btnTextClass={titleClass}
+                        iconUrl='images/icons/fake-icon.png'>
+
+                        {navButtonData.TITLE}</LPButton>
+                ))
+            }
+        </div>
+    )
+};
 
 export default NavigationButtons;

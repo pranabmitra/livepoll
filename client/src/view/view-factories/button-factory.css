@@ -4,8 +4,11 @@
     padding: 10px;
     border-radius: 4px;
     border: 1px solid lightgrey;
+    text-decoration: none;
 }
-
+.lp-btn:hover{
+    border: 1px solid lightgrey;
+}
 
 .lp-btn-txt{
     font-family: monospace;
