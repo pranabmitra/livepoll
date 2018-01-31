@@ -18,28 +18,9 @@
 
 
 .signin-pp-btn {
-    background-color: #222222;
-    color: white;
-    border: none;
-    border-radius: 3px;
-}
-@media (min-width: 1px) {
-    .signin-pp-btn-resp{
-        font-size: medium;
-        padding: 5px;
-    }
-}
-@media (min-width: 501px) {
-    .signin-pp-btn-resp{
-        font-size: large;
-        padding: 10px;
-    }
-}
-@media (min-width: 801px) {
-    .signin-pp-btn-resp{
-        font-size: x-large;
-        padding: 15px;
-    }
+    background-color: #222222 !important;
+    color: white !important;
+    border: none !important;
 }
 
 

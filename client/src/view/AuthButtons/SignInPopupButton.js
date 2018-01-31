@@ -1,9 +1,12 @@
 import React from 'react';
 
 import './auth-buttons.css'
+import {LPButton} from "../view-factories/button-factory";
 
 const SignInPopupButton = (props) => (
-    <button className= {props.className + ' signin-pp-btn signin-pp-btn-resp'}>Sign In</button>
+    <LPButton btnClass={props.className + ' signin-pp-btn signin-pp-btn-resp'}>
+        Sign In
+    </LPButton>
 );
 
 export default SignInPopupButton;
