@@ -7,12 +7,13 @@ import {toggleDrawer} from "../Drawer/drawer-utils";
 import NavigationButtons from '../NavigationButtons/NavigationButtons';
 import HeaderAuthBadge from "./HeaderAuthBadge/HeaderAuthBadge";
 import SignoutButton from "../AuthButtons/SignoutButton";
+import {ROUTES} from "../../constants/routing";
 
 const Header = (props) => (
     <div className='header header-resp fl'>
         <br/>
         <button className='drawer-btn drawer-btn-resp fr' onClick={props.toggleDrawer}>&equiv;</button>
-        <Link className='app-title app-title-resp fl' to='/'>livepoll</Link>
+        <Link className='app-title app-title-resp fl' to={ROUTES.HOME}>livepoll</Link>
         <SignoutButton className='header-signout-btn header-signout-btn-resp fr'/>
         <HeaderAuthBadge/>
         <NavigationButtons

@@ -11,7 +11,7 @@ const NavigationButtons = (props) => {
             {
                 NAV_BUTTONS_DATA.map((navButtonData)=>(
                     <LPButton
-                        key={navButtonData.HREF}
+                        key={navButtonData.TITLE}
                         href={navButtonData.HREF}
                         btnClass={buttonClass}
                         btnIconClass={iconClass}
