@@ -25,10 +25,8 @@
 
 
 .sign-out-btn{
-    background-color: #222222;
-    color: white;
-    border: none;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 3px;
+    background-color: #222222 !important;
+    color: white !important;
+    border: none !important;
+    margin-right: 10px;
 }

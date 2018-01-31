@@ -3,10 +3,11 @@ import {connect} from 'react-redux';
 
 import './auth-buttons.css';
 import {signOut} from "../../control/auth/auth-functions";
+import {LPButton} from "../view-factories/button-factory";
 
 
 const SignoutButton = (props) => (
-    props.isSignedIn && <button className={`${props.className} sign-out-btn`} onClick={props.onClick}>Sign Out</button>
+    props.isSignedIn && <LPButton btnClass={`${props.className} sign-out-btn fr`} onClick={props.onClick}>Sign Out</LPButton>
 )
 
 const mapStateToProps = (state)=>({
