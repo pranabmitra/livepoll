@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
 
 import './Header.css';
 import {toggleDrawer} from "../Drawer/drawer-utils";
@@ -11,7 +12,7 @@ const Header = (props) => (
     <div className='header header-resp fl'>
         <br/>
         <button className='drawer-btn drawer-btn-resp fr' onClick={props.toggleDrawer}>&equiv;</button>
-        <a className='app-title app-title-resp fl' href='/'>livepoll</a>
+        <Link className='app-title app-title-resp fl' to='/'>livepoll</Link>
         <SignoutButton className='header-signout-btn header-signout-btn-resp fr'/>
         <HeaderAuthBadge/>
         <NavigationButtons

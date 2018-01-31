@@ -11,6 +11,7 @@ const HeaderUserBadge = (props) => (
         btnClass='header-user-badge'
         btnIconClass='header-user-badge-icon'
         btnTextClass='header-user-badge-txt header-user-badge-txt-resp'
+        href='/profile'
         iconUrl={props.user.getProfileImage()}>
         {props.user.getFullName()}
     </LPButton>

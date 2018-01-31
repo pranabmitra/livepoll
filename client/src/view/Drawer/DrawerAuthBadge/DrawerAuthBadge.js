@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
 
 import './DrawerAuthBadge.css';
 import SignInButton from "../../AuthButtons/SignInButton";
@@ -21,7 +22,7 @@ const DrawerAuthBadge = (props) => {
         <div className='drawer-auth-badge'>
             <div className='drawer-auth-badge-img drawer-auth-badge-img-resp'
                  style={{backgroundImage: `url(${props.user.getProfileImage()})`}}></div>
-            <a href='/profile' className='drawer-auth-badge-txt drawer-auth-badge-txt-resp'>{props.user.getFullName()}</a>
+            <Link to='/profile' className='drawer-auth-badge-txt drawer-auth-badge-txt-resp'>{props.user.getFullName()}</Link>
         </div>
     )
 }

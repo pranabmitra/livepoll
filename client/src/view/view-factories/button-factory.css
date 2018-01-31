@@ -5,6 +5,7 @@
     border: 1px solid lightgrey;
     text-decoration: none;
     cursor: pointer;
+    outline: none;
 }
 .lp-btn:hover{
     background-color: lightgrey;
