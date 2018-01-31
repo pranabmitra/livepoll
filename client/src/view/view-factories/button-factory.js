@@ -15,7 +15,7 @@ export const LPButton = (props) => {
     const title = <div className={`lp-btn-txt lp-btn-txt-resp ${btnTextClass || ''}`}>{children}</div>;
 
     return href ? (
-        <Link className={`lp-btn lp-btn-resp ${btnClass || ''}`} onClick={onClick} to={href}>
+        <Link className={`lp-btn lp-btn-resp ${btnClass || ''}`} to={href}>
             { icon }
             { gap }
             { title }

@@ -22,7 +22,7 @@ export const NAV_BUTTONS_DATA = [
     },
     {
         TITLE: 'Polls Voted',
-        HREF: ROUTES,
+        HREF: ROUTES.POLLS_VOTED,
         ICON_URL: './images/icons/nav-polls-voted.png'
     },
 ];
