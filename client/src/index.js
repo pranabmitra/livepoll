@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import { BrowserRouter, Route } from 'react-router-dom'
+import { Route } from 'react-router-dom'
+import { ConnectedRouter } from 'react-router-redux';
+import createHistory from 'history/createBrowserHistory'
 
 import './index.css';
 import App from './view/App';
@@ -13,9 +15,9 @@ import {getAppStateStore} from "./control/state-management/store";
 const renderLivepollWebApp = () => {
     ReactDOM.render(
         <Provider store={getAppStateStore()}>
-            <BrowserRouter>
+            <ConnectedRouter history={createHistory()}>
                 <Route path='/' component={App}/>
-            </BrowserRouter>
+            </ConnectedRouter>
         </Provider>
         , document.getElementById('app-root'));
 

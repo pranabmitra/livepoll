@@ -2,6 +2,8 @@ import { createStore, applyMiddleware } from 'redux';
 import rootReducer from "./root-reducer";
 import {Map} from 'immutable';
 import thunkMiddleware from 'redux-thunk';
+import {routerMiddleware} from 'react-router-redux';
+import createHistory from 'history/createBrowserHistory'
 
 import loggerMiddleware from "./middlewares/logger";
 
@@ -15,6 +17,7 @@ export const initAppStateStore = ()=>{
     }
 
     middlewares.push(thunkMiddleware);
+    middlewares.push(routerMiddleware(createHistory()));
     store = createStore(rootReducer, Map(), applyMiddleware(...middlewares));
 }
 
