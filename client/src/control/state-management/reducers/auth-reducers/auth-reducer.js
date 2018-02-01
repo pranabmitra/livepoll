@@ -1,4 +1,4 @@
-import {ACTION_SIGN_IN, ACTION_SIGN_OUT} from "../../action-creators/auth-actions";
+import {ACTION_SIGN_IN_SUCCESS, ACTION_SIGN_OUT_SUCCESS} from "../../action-creators/auth-actions";
 import {initialAuthState} from "../../initial-states";
 
 const reduceSignIn = (state, signInData) => {
@@ -13,10 +13,10 @@ const reduceSignOut = (state) => {
 
 const authReducer = (state = initialAuthState, action) => {
     switch (action.type) {
-        case ACTION_SIGN_IN:
+        case ACTION_SIGN_IN_SUCCESS:
             return reduceSignIn(state, action.signInData);
 
-        case ACTION_SIGN_OUT:
+        case ACTION_SIGN_OUT_SUCCESS:
             return reduceSignOut(state);
 
         default:

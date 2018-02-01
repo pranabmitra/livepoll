@@ -2,12 +2,12 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import './auth-buttons.css';
-import {signOut} from "../../control/auth/auth-functions";
 import {LPButton} from "../view-factories/button-factory";
+import {actionSignOut} from "../../control/state-management/action-creators/auth-actions";
 
 
 const SignoutButton = (props) => (
-    props.isSignedIn && <LPButton btnClass={`${props.className} sign-out-btn fr`} onClick={props.onClick}>Sign Out</LPButton>
+    props.isSignedIn && <LPButton btnClass={`${props.className} sign-out-btn fr`} onClick={props.signOut}>Sign Out</LPButton>
 )
 
 const mapStateToProps = (state)=>({
@@ -16,7 +16,7 @@ const mapStateToProps = (state)=>({
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onClick: () => signOut(dispatch)
+        signOut: () => dispatch(actionSignOut())
     }
 }
 

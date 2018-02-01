@@ -1,7 +1,7 @@
 import * as firebase from 'firebase';
 import {getAppStateStore, initAppStateStore} from "../state-management/store";
 import {FIREBASE_CONFIG} from '../../constants/firebase';
-import {actionSignIn} from "../state-management/action-creators/auth-actions";
+import {actionSignInSuccess} from "../state-management/action-creators/auth-actions";
 
 
 const initFirebase = () => {
@@ -19,12 +19,12 @@ function initAuthChangeListener() {
     return new Promise(resolve => {
         firebase.auth().onAuthStateChanged(firebaseUser => {
             if (firebaseUser) {
-                dispatch(actionSignIn(firebaseUser));
+                dispatch(actionSignInSuccess(firebaseUser));
             }
             resolve(1);
         });
         if(firebase.auth().currentUser) {
-            dispatch(actionSignIn(firebase.auth().currentUser));
+            dispatch(actionSignInSuccess(firebase.auth().currentUser));
             resolve(1);
         }
     });

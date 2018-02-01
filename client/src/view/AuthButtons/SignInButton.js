@@ -3,8 +3,8 @@ import {connect} from 'react-redux';
 
 import {SIGNIN_METHODS} from "../../constants/auth";
 import './auth-buttons.css';
-import {signIn} from "../../control/auth/auth-functions";
 import {LPButton} from "../view-factories/button-factory";
+import {actionSignIn} from "../../control/state-management/action-creators/auth-actions";
 
 const SignInButton = (props) => {
     let icon,
@@ -43,7 +43,7 @@ const mapStateToProps = () => ({});
 
 const mapDispatchToProps = (dispatch) => ({
     signIn: (signInMethod) => {
-        signIn(dispatch, signInMethod);
+        dispatch(actionSignIn(signInMethod));
     }
 });
 

@@ -1,10 +1,9 @@
 import * as firebase from 'firebase';
 
 import {SIGNIN_METHODS} from "../../constants/auth";
-import {actionSignIn, actionSignOut} from "../state-management/action-creators/auth-actions";
 
 
-export const signIn = (dispatch, signInMethod) => {
+export const signIn = (signInMethod) => {
     var provider;
 
     switch (signInMethod) {
@@ -19,13 +18,10 @@ export const signIn = (dispatch, signInMethod) => {
             return;
     }
 
-    return firebase.auth().signInWithPopup(provider).then((signInData)=>{
-        dispatch(actionSignIn(signInData.user));
-    });
+    return firebase.auth().signInWithPopup(provider).then(signInData => signInData.user);
 }
 
 
-export const signOut = (dispatch) => {
-    return firebase.auth().signOut()
-        .then(() => dispatch(actionSignOut()));
+export const signOut = () => {
+    return firebase.auth().signOut();
 }

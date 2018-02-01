@@ -1,16 +1,19 @@
 import { createStore, applyMiddleware } from 'redux';
 import rootReducer from "./root-reducer";
 import {Map} from 'immutable';
+import thunkMiddleware from 'redux-thunk';
+
 import loggerMiddleware from "./middlewares/logger";
 
 let store;
 
 export const initAppStateStore = ()=>{
-    let middlewares;
+    let middlewares = [];
     if (process.env.NODE_ENV !== 'production') {
-        middlewares = applyMiddleware(loggerMiddleware);
+        middlewares.push(loggerMiddleware);
     }
-    store = createStore(rootReducer, Map(), middlewares);
+    middlewares.push(thunkMiddleware);
+    store = createStore(rootReducer, Map(), applyMiddleware.apply(this, middlewares));
 }
 
 export const getAppStateStore = () => {
