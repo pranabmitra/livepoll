@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 
 import './index.css';
 import App from './view/App';
@@ -14,7 +14,7 @@ const renderLivepollWebApp = () => {
     ReactDOM.render(
         <Provider store={getAppStateStore()}>
             <BrowserRouter>
-                <App/>
+                <Route path='/' component={App}/>
             </BrowserRouter>
         </Provider>
         , document.getElementById('app-root'));
