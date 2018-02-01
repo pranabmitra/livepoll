@@ -2,8 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import './auth-buttons.css';
-import {LPButton} from "../view-factories/button-factory";
 import {actionSignOut} from "../../control/state-management/action-creators/auth-actions";
+import LPButton from "../view-factories/LPButton";
 
 
 const SignoutButton = (props) => (

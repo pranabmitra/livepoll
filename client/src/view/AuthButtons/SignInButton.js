@@ -3,8 +3,8 @@ import {connect} from 'react-redux';
 
 import {SIGNIN_METHODS} from "../../constants/auth";
 import './auth-buttons.css';
-import {LPButton} from "../view-factories/button-factory";
 import {actionSignIn} from "../../control/state-management/action-creators/auth-actions";
+import LPButton from "../view-factories/LPButton";
 
 const SignInButton = (props) => {
     let icon,

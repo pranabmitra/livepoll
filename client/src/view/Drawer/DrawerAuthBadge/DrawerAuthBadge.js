@@ -1,13 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Link} from 'react-router-dom';
 
 import './DrawerAuthBadge.css';
 import SignInButton from "../../AuthButtons/SignInButton";
 import {SIGNIN_METHODS} from "../../../constants/auth";
 import User from "../../../control/auth/auth-user";
-import {ROUTES} from "../../../constants/routing";
-import {LPButton} from "../../view-factories/button-factory";
 
 const DrawerAuthBadge = (props) => {
     if (!props.isSignedIn) {

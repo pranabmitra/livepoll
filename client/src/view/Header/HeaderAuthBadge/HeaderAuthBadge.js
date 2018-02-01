@@ -4,8 +4,8 @@ import {connect} from 'react-redux';
 import './HeaderAuthBadge.css';
 import SignInPopupButton from "../../AuthButtons/SignInPopupButton";
 import User from "../../../control/auth/auth-user";
-import {LPLinkButton} from "../../view-factories/button-factory";
 import {ROUTES} from "../../../constants/routing";
+import LPLinkButton from "../../view-factories/LPLinkButton";
 
 const HeaderUserBadge = (props) => (
     <LPLinkButton

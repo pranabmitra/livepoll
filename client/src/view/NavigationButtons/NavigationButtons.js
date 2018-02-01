@@ -1,7 +1,8 @@
 import React from 'react';
 
 import {NAV_BUTTONS_DATA} from "../../constants/routing";
-import {LPButton, LPLinkButton} from "../view-factories/button-factory";
+import LPLinkButton from "../view-factories/LPLinkButton";
+import LPButton from "../view-factories/LPButton";
 
 const NavigationButtons = (props) => {
     const {containerClass, buttonClass, iconClass, titleClass} = props;

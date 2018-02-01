@@ -5,7 +5,7 @@ import './Drawer.css';
 import DrawerAuthBadge from './DrawerAuthBadge/DrawerAuthBadge';
 import SignoutButton from "../AuthButtons/SignoutButton";
 import NavigationButtons from "../NavigationButtons/NavigationButtons";
-import {LPButton} from "../view-factories/button-factory";
+import LPButton from "../view-factories/LPButton";
 
 const Drawer = (props) => {
     var drawerClassName = 'drawer drawer-resp ';
