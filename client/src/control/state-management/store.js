@@ -9,11 +9,13 @@ let store;
 
 export const initAppStateStore = ()=>{
     let middlewares = [];
+
     if (process.env.NODE_ENV !== 'production') {
         middlewares.push(loggerMiddleware);
     }
+
     middlewares.push(thunkMiddleware);
-    store = createStore(rootReducer, Map(), applyMiddleware.apply(this, middlewares));
+    store = createStore(rootReducer, Map(), applyMiddleware(...middlewares));
 }
 
 export const getAppStateStore = () => {
