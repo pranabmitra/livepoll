@@ -18,6 +18,7 @@ const LPLinkButton = (props) => {
     );
 };
 
+// TODO: this shit is buggy
 const mapStateToProps = state => ({
     currentPath: state.get('routeState').location.pathname
 })
