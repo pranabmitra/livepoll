@@ -4,18 +4,18 @@ import {connect} from 'react-redux';
 import './HeaderAuthBadge.css';
 import SignInPopupButton from "../../AuthButtons/SignInPopupButton";
 import User from "../../../control/auth/auth-user";
-import {LPButton} from "../../view-factories/button-factory";
+import {LPLinkButton} from "../../view-factories/button-factory";
 import {ROUTES} from "../../../constants/routing";
 
 const HeaderUserBadge = (props) => (
-    <LPButton
+    <LPLinkButton
         btnClass='header-user-badge'
         btnIconClass='header-user-badge-icon'
         btnTextClass='header-user-badge-txt header-user-badge-txt-resp'
         href={ROUTES.PROFILE}
         iconUrl={props.user.getProfileImage()}>
         {props.user.getFullName()}
-    </LPButton>
+    </LPLinkButton>
 )
 
 const HeaderAuthBadge = (props) => (

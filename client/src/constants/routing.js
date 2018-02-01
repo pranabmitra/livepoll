@@ -12,10 +12,6 @@ export const NAV_BUTTONS_DATA = [
         ICON_URL: './images/icons/nav-home.png'
     },
     {
-        TITLE: 'Create Poll',
-        ICON_URL: './images/icons/nav-create-poll.png'
-    },
-    {
         TITLE: 'My Polls',
         HREF: ROUTES.MY_POLLS,
         ICON_URL: './images/icons/nav-my-polls.png'
@@ -24,5 +20,9 @@ export const NAV_BUTTONS_DATA = [
         TITLE: 'Polls Voted',
         HREF: ROUTES.POLLS_VOTED,
         ICON_URL: './images/icons/nav-polls-voted.png'
+    },
+    {
+        TITLE: 'Create Poll',
+        ICON_URL: './images/icons/nav-create-poll.png'
     },
 ];

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {NAV_BUTTONS_DATA} from "../../constants/routing";
-import {LPButton} from "../view-factories/button-factory";
+import {LPButton, LPLinkButton} from "../view-factories/button-factory";
 
 const NavigationButtons = (props) => {
     const {containerClass, buttonClass, iconClass, titleClass} = props;
@@ -9,17 +9,20 @@ const NavigationButtons = (props) => {
     return (
         <div className={containerClass}>
             {
-                NAV_BUTTONS_DATA.map((navButtonData)=>(
-                    <LPButton
-                        key={navButtonData.TITLE}
-                        href={navButtonData.HREF}
-                        btnClass={buttonClass}
-                        btnIconClass={iconClass}
-                        btnTextClass={titleClass}
-                        iconUrl={navButtonData.ICON_URL}>
+                NAV_BUTTONS_DATA.map((navButtonData)=>{
+                    const ButtonComponent = navButtonData.HREF ? LPLinkButton : LPButton;
+                    return (
+                        <ButtonComponent
+                            key={navButtonData.TITLE}
+                            href={navButtonData.HREF}
+                            btnClass={buttonClass}
+                            btnIconClass={iconClass}
+                            btnTextClass={titleClass}
+                            iconUrl={navButtonData.ICON_URL}>
 
-                        {navButtonData.TITLE}</LPButton>
-                ))
+                            {navButtonData.TITLE}</ButtonComponent>
+                    )
+                })
             }
         </div>
     )
