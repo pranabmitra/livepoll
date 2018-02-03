@@ -2,10 +2,10 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import './HeaderAuthBadge.css';
-import SignInPopupButton from "../../AuthButtons/SignInPopupButton";
+import SignInPopupButton from "../../view-factories/button-factory/AuthButtons/SignInPopupButton";
 import User from "../../../control/auth/auth-user";
 import {ROUTES} from "../../../constants/routing";
-import LPLinkButton from "../../view-factories/LPLinkButton";
+import LPLinkButton from "../../view-factories/button-factory/LPLinkButton";
 
 const HeaderUserBadge = (props) => (
     <LPLinkButton

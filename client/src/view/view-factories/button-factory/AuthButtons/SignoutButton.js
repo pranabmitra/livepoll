@@ -1,8 +1,8 @@
 import React from 'react';
 
 import './auth-buttons.css';
-import LPButton from "../view-factories/LPButton";
-import {signOut} from "../../control/auth/auth-functions";
+import {signOut} from "../../../../control/auth/auth-functions";
+import LPButton from "../LPButton";
 
 
 const SignoutButton = (props) => (

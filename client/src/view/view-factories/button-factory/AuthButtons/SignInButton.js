@@ -1,9 +1,9 @@
 import React from 'react';
 
-import {SIGNIN_METHODS} from "../../constants/auth";
+import {SIGNIN_METHODS} from "../../../../constants/auth";
 import './auth-buttons.css';
-import LPButton from "../view-factories/LPButton";
-import {signIn} from "../../control/auth/auth-functions";
+import {signIn} from "../../../../control/auth/auth-functions";
+import LPButton from "../LPButton";
 
 const SignInButton = (props) => {
     let icon,
