@@ -4,6 +4,8 @@ import {SIGNIN_METHODS} from "../../../../constants/auth";
 import './auth-buttons.css';
 import {signIn} from "../../../../control/auth/auth-functions";
 import LPButton from "../LPButton";
+import {showFloatingMsg} from "../../popups/utils";
+import {FLOATING_MSG_TYPES} from "../../../../constants/popups";
 
 const SignInButton = (props) => {
     let icon,
@@ -24,7 +26,11 @@ const SignInButton = (props) => {
             return;
     }
 
-    const onClick = () => signIn(props.signInMethod);
+    const onClick = () => {
+        signIn(props.signInMethod)
+            .then(() => showFloatingMsg('Sign in successful!', FLOATING_MSG_TYPES.SUCCESS))
+            .catch(() => showFloatingMsg('Signed in unsuccessful!', FLOATING_MSG_TYPES.ERROR));
+    }
 
     return (
         <LPButton

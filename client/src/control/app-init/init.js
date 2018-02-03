@@ -2,6 +2,7 @@ import * as firebase from 'firebase';
 import {getAppStateStore, initAppStateStore} from "../state-management/store";
 import {FIREBASE_CONFIG} from '../../constants/firebase';
 import {actionSignInSuccess, actionSignOutSuccess} from "../state-management/action-creators/auth-actions";
+import {actionCloseDrawer} from "../state-management/action-creators/view-state/drawer-actions";
 
 
 const initAppStateManagement = () => {
@@ -17,6 +18,7 @@ const initFirebase = () => {
         firebase.auth().onAuthStateChanged(firebaseUser => {
             if (firebaseUser) dispatch(actionSignInSuccess(firebaseUser));
             else dispatch(actionSignOutSuccess());
+            dispatch(actionCloseDrawer());
             resolve();
         });
     });

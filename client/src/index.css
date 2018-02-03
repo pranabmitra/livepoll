@@ -17,7 +17,6 @@ body {
 }
 
 #floating-msg-root{
-    height: 100%;
     width: 65%;
     position: fixed;
     z-index: 2000;
