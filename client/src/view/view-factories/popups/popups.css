@@ -1,0 +1,19 @@
+.floating-msg{
+    color: white;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    font-size: small;
+}
+
+.floating-msg-info{
+    background-color: #004878;
+}
+
+.floating-msg-error{
+    background-color: #8c1925;
+}
+
+
+.floating-msg-success{
+    background-color: #237a72;
+}

@@ -15,3 +15,27 @@ body {
     height: 100%;
     width: 100%;
 }
+
+#floating-msg-root{
+    height: 100%;
+    width: 65%;
+    position: fixed;
+    z-index: 2000;
+    left: 2em;
+}
+
+@media (orientation: portrait) and (max-width: 600px) {
+    .floating-msg-root-resp{
+        top: calc(6.2em + 1em);
+    }
+}
+@media (orientation: landscape) and (max-width: 800px) {
+    .floating-msg-root-resp{
+        top: calc(3.5em + 1em);
+    }
+}
+@media (orientation: landscape) and (min-width: 801px) {
+    .floating-msg-root-resp{
+        top: calc(5em + 1em);
+    }
+}
