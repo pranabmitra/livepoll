@@ -1,10 +1,9 @@
 import React from 'react';
-import {connect} from 'react-redux';
 
 import {SIGNIN_METHODS} from "../../constants/auth";
 import './auth-buttons.css';
-import {actionSignIn} from "../../control/state-management/action-creators/auth-actions";
 import LPButton from "../view-factories/LPButton";
+import {signIn} from "../../control/auth/auth-functions";
 
 const SignInButton = (props) => {
     let icon,
@@ -25,7 +24,7 @@ const SignInButton = (props) => {
             return;
     }
 
-    const onClick = () => props.signIn(props.signInMethod);
+    const onClick = () => signIn(props.signInMethod);
 
     return (
         <LPButton
@@ -39,12 +38,4 @@ const SignInButton = (props) => {
     )
 }
 
-const mapStateToProps = () => ({});
-
-const mapDispatchToProps = (dispatch) => ({
-    signIn: (signInMethod) => {
-        dispatch(actionSignIn(signInMethod));
-    }
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(SignInButton);
+export default SignInButton;

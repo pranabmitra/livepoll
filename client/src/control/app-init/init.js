@@ -1,7 +1,7 @@
 import * as firebase from 'firebase';
 import {getAppStateStore, initAppStateStore} from "../state-management/store";
 import {FIREBASE_CONFIG} from '../../constants/firebase';
-import {actionSignInSuccess} from "../state-management/action-creators/auth-actions";
+import {actionSignInSuccess, actionSignOutSuccess} from "../state-management/action-creators/auth-actions";
 
 
 const initAppStateManagement = () => {
@@ -14,9 +14,8 @@ const initFirebase = () => {
     const dispatch = getAppStateStore().dispatch;
 
     firebase.auth().onAuthStateChanged(firebaseUser => {
-        if (firebaseUser) {
-            dispatch(actionSignInSuccess(firebaseUser));
-        }
+        if (firebaseUser) dispatch(actionSignInSuccess(firebaseUser));
+        else dispatch(actionSignOutSuccess());
     });
     return Promise.resolve(1);
 }

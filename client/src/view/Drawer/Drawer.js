@@ -22,7 +22,7 @@ const Drawer = (props) => {
                     iconClass='drawer-nav-btn-icon drawer-nav-btn-icon-resp'
                     titleClass='drawer-nav-btn-txt'/>
                 <LPButton btnClass='fr'>Options</LPButton>
-                <SignoutButton className='drawer-signout-btn'/>
+                { props.isSignedIn && <SignoutButton className='drawer-signout-btn'/> }
             </div>
         </div>
     )
@@ -30,7 +30,8 @@ const Drawer = (props) => {
 
 const mapStateToProps = state => {
     return {
-        isOpened: state.getIn(['viewState', 'drawer', 'isOpened'])
+        isOpened: state.getIn(['viewState', 'drawer', 'isOpened']),
+        isSignedIn: state.getIn(['authState', 'isSignedIn'])
     }
 }
 const mapDispatchToProps = () => ({})
