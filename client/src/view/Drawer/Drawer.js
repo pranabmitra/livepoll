@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import './Drawer.css';
 import DrawerAuthBadge from './DrawerAuthBadge/DrawerAuthBadge';
 import SignoutButton from "../view-factories/button-factory/AuthButtons/SignoutButton";
-import NavigationButtons from "../NavigationButtons/NavigationButtons";
+import NavigationButtons from "../view-factories/button-factory/NavigationButtons/NavigationButtons";
 import LPButton from "../view-factories/button-factory/LPButton";
 
 const Drawer = (props) => {

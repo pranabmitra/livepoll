@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 
 import './Header.css';
-import NavigationButtons from '../NavigationButtons/NavigationButtons';
+import NavigationButtons from '../view-factories/button-factory/NavigationButtons/NavigationButtons';
 import HeaderAuthBadge from "./HeaderAuthBadge/HeaderAuthBadge";
 import SignoutButton from "../view-factories/button-factory/AuthButtons/SignoutButton";
 import {ROUTES} from "../../constants/routing";
