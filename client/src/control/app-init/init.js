@@ -13,11 +13,13 @@ const initFirebase = () => {
     firebase.initializeApp(FIREBASE_CONFIG);
     const dispatch = getAppStateStore().dispatch;
 
-    firebase.auth().onAuthStateChanged(firebaseUser => {
-        if (firebaseUser) dispatch(actionSignInSuccess(firebaseUser));
-        else dispatch(actionSignOutSuccess());
+    return new Promise(resolve => {
+        firebase.auth().onAuthStateChanged(firebaseUser => {
+            if (firebaseUser) dispatch(actionSignInSuccess(firebaseUser));
+            else dispatch(actionSignOutSuccess());
+            resolve();
+        });
     });
-    return Promise.resolve(1);
 }
 
 const initLivepollWebApp = () => {
