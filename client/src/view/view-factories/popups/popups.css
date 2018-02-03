@@ -3,6 +3,7 @@
     padding: 0.5em;
     margin-bottom: 0.5em;
     font-size: small;
+    border-radius: 5px;
 }
 
 .floating-msg-info{
