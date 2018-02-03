@@ -65,6 +65,7 @@
     border: 1px solid gray;
     outline: none;
     font-size: medium;
+    z-index: 1000;
 }
 @media (orientation: portrait) {
     .drawer-btn-resp{
