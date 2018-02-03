@@ -4,36 +4,25 @@ import {FIREBASE_CONFIG} from '../../constants/firebase';
 import {actionSignInSuccess} from "../state-management/action-creators/auth-actions";
 
 
-const initFirebase = () => {
-    firebase.initializeApp(FIREBASE_CONFIG)
-    return Promise.resolve(1);
-}
-
 const initAppStateManagement = () => {
     initAppStateStore();
     return Promise.resolve(1);
 }
 
-function initAuthChangeListener() {
+const initFirebase = () => {
+    firebase.initializeApp(FIREBASE_CONFIG);
     const dispatch = getAppStateStore().dispatch;
-    return new Promise(resolve => {
-        firebase.auth().onAuthStateChanged(firebaseUser => {
-            if (firebaseUser) {
-                dispatch(actionSignInSuccess(firebaseUser));
-            }
-            resolve(1);
-        });
-        if(firebase.auth().currentUser) {
-            dispatch(actionSignInSuccess(firebase.auth().currentUser));
-            resolve(1);
+
+    firebase.auth().onAuthStateChanged(firebaseUser => {
+        if (firebaseUser) {
+            dispatch(actionSignInSuccess(firebaseUser));
         }
     });
+    return Promise.resolve(1);
 }
 
 const initLivepollWebApp = () => {
-    return initFirebase()
-        .then(initAppStateManagement)
-        .then(initAuthChangeListener);
+    return initAppStateManagement().then(initFirebase);
 }
 
 export default initLivepollWebApp;
