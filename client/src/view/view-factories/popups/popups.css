@@ -5,16 +5,20 @@
     font-size: small;
     border-radius: 5px;
 }
-
 .floating-msg-info{
     background-color: #004878;
 }
-
 .floating-msg-error{
     background-color: #8c1925;
 }
-
-
 .floating-msg-success{
     background-color: #237a72;
+}
+
+
+.modal{
+    padding: 1em;
+    margin: auto;
+    display: inline-block;
+    box-shadow: 0 0 5px lightgrey;
 }

@@ -11,10 +11,12 @@ body {
     font-family: sans-serif;
 }
 
+
 #app-root{
     height: 100%;
     width: 100%;
 }
+
 
 #floating-msg-root{
     width: 65%;
@@ -22,7 +24,6 @@ body {
     z-index: 2000;
     left: 2em;
 }
-
 @media (orientation: portrait) and (max-width: 600px) {
     .floating-msg-root-resp{
         top: calc(6.2em + 1em);
@@ -39,11 +40,21 @@ body {
     }
 }
 
+
 .slide {
     margin-top: 100%;
     transition: all 1s;
 }
-
 .slide.up {
     margin-top: 0;
+}
+
+
+#modal-root{
+    position: fixed;
+    top: 20%;
+    z-index: 1000;
+    left: 1em;
+    right: 1em;
+    text-align: center;
 }
