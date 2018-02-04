@@ -18,7 +18,6 @@ body {
 
 #floating-msg-root{
     width: 65%;
-    height: 80%;
     position: fixed;
     z-index: 2000;
     left: 2em;
