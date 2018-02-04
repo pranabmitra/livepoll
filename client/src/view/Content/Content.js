@@ -13,9 +13,8 @@ const UnsupportedSection = () => (
 )
 const UnsupportedSection2 = () => (
     <div style={{margin: 'auto', width: '100%', float: 'left'}}>
-        <Modal>1111 1111 1111 1111</Modal>
+        <Modal>1111 1111 1111 1111 <br/> 1111 1111 1111 1111<br/> 1111 1111 1111 1111</Modal>
         <Modal>222 222 222</Modal>
-        <Modal>333</Modal>
     </div>
 )
 
