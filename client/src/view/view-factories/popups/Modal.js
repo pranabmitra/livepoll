@@ -8,6 +8,7 @@ class Modal extends React.Component {
         super(props);
         this.modalChildDomNode = document.createElement('div');
         this.modalChildDomNode.classList.add('modal');
+        if (this.props.className) this.modalChildDomNode.classList.add(this.props.className);
     }
 
     componentDidMount(){
