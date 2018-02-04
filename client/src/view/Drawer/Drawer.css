@@ -3,6 +3,7 @@
     background-color: white;
     overflow-y: auto;
     overflow-x: hidden;
+    z-index: 1500;
 }
 @media (orientation: portrait) {
     .drawer-resp{
