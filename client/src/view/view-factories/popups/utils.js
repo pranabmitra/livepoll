@@ -35,7 +35,7 @@ export const showFloatingMsg = (msg, type, duration = 700) => {
         floatingMsgElem
     )
 
-    setTimeout(()=>floatingMsgElem.firstChild.classList.add('up'), 50);
+    setTimeout(()=>floatingMsgElem.firstChild.classList.add('up'), 30);
 
     setTimeout(()=>{
         floatingMsgRoot.removeChild(floatingMsgElem)
