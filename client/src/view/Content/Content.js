@@ -13,7 +13,9 @@ const UnsupportedSection = () => (
 )
 const UnsupportedSection2 = () => (
     <div style={{margin: 'auto', width: '100%', float: 'left'}}>
-        <Modal>Modal Test</Modal>
+        <Modal>Modal Test XXXXXX XXXXXXXX XXXx</Modal>
+        {/*<Modal>Modal Test 2 YYYY</Modal>*/}
+        {/*<Modal>SDSA</Modal>*/}
     </div>
 )
 
