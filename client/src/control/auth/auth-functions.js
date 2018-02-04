@@ -1,10 +1,12 @@
 import * as firebase from 'firebase';
 
 import {SIGNIN_METHODS} from "../../constants/auth";
+import {isMobileDevice} from "../utils";
 
 
 export const signIn = (signInMethod) => {
-    var provider;
+    var provider,
+        signInFunction;
 
     switch (signInMethod) {
         case SIGNIN_METHODS.GOOGLE:
@@ -18,7 +20,8 @@ export const signIn = (signInMethod) => {
             return;
     }
 
-    return firebase.auth().signInWithPopup(provider).then(signInData => signInData.user);
+    signInFunction = isMobileDevice() ? 'signInWithRedirect' : 'signInWithPopup';
+    return firebase.auth()[signInFunction](provider).then(signInData => signInData.user);
 }
 
 
