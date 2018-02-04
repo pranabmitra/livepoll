@@ -42,7 +42,7 @@ body {
 
 
 .slide {
-    margin-top: 100%;
+    margin-top: 50%;
     transition: all 1s;
 }
 .slide.up {
