@@ -2,11 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import './popups.css';
+import '../../../index.css';
+
 import {FLOATING_MSG_TYPES} from "../../../constants/popups";
+
 
 const floatingMsgRoot = document.getElementById('floating-msg-root');
 
-export const showFloatingMsg = (msg, type, duration = 1000) => {
+export const showFloatingMsg = (msg, type, duration = 700) => {
     let floatingMsgElem = document.createElement('div');
     floatingMsgRoot.appendChild(floatingMsgElem);
 
@@ -26,11 +29,13 @@ export const showFloatingMsg = (msg, type, duration = 1000) => {
     }
 
     ReactDOM.render(
-        <div className={`floating-msg ${floatingMsgSpecialClass}`}>
+        <div className={`floating-msg slide ${floatingMsgSpecialClass}`}>
             {msg}
         </div>,
         floatingMsgElem
     )
+
+    setTimeout(()=>floatingMsgElem.firstChild.classList.add('up'), 50);
 
     setTimeout(()=>{
         floatingMsgRoot.removeChild(floatingMsgElem)

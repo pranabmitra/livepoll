@@ -18,6 +18,7 @@ body {
 
 #floating-msg-root{
     width: 65%;
+    height: 80%;
     position: fixed;
     z-index: 2000;
     left: 2em;
@@ -37,4 +38,13 @@ body {
     .floating-msg-root-resp{
         top: calc(5em + 1em);
     }
+}
+
+.slide {
+    margin-top: 100%;
+    transition: all 1s;
+}
+
+.slide.up {
+    margin-top: 0;
 }
