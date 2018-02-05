@@ -2,6 +2,8 @@ import * as firebase from 'firebase';
 
 import {SIGNIN_METHODS} from "../../constants/auth";
 import {isMobileDevice} from "../utils";
+import {FLOATING_MSG_TYPES} from "../../constants/popups";
+import {showFloatingMsg} from "../../view/shared-views/popups/utils";
 
 
 export const signIn = (signInMethod) => {
@@ -21,10 +23,19 @@ export const signIn = (signInMethod) => {
     }
 
     signInFunction = isMobileDevice() ? 'signInWithRedirect' : 'signInWithPopup';
-    return firebase.auth()[signInFunction](provider).then(signInData => signInData.user);
+
+    try {
+        return firebase.auth()[signInFunction](provider);
+    } catch (error) {
+        return showFloatingMsg('Sign in failed!', FLOATING_MSG_TYPES.ERROR);
+    }
 }
 
 
 export const signOut = () => {
-    return firebase.auth().signOut();
+    try {
+        return firebase.auth().signOut();
+    } catch (error) {
+        return Promise.reject(404);
+    }
 }

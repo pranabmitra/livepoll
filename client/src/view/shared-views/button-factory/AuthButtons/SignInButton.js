@@ -27,9 +27,7 @@ const SignInButton = (props) => {
     }
 
     const onClick = () => {
-        signIn(props.signInMethod)
-            .then(() => showFloatingMsg('Sign in successful!', FLOATING_MSG_TYPES.SUCCESS))
-            .catch(() => showFloatingMsg('Signed in unsuccessful!', FLOATING_MSG_TYPES.ERROR));
+        signIn(props.signInMethod);
     }
 
     return (
