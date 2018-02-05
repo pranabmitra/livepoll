@@ -1,0 +1,17 @@
+.modal-root {
+    position: fixed;
+    top: 0;
+    border: 1px solid green;
+    z-index: 1000;
+    text-align: center;
+}
+
+.modal-close-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px;
+    border: none;
+    font-size: small;
+    outline: none;
+}

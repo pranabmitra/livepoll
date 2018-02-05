@@ -14,29 +14,3 @@
 .floating-msg-success{
     background-color: #237a72;
 }
-
-
-.modal-vc{
-    position: fixed;
-    width: 100%;
-    top: 20%;
-}
-.modal-hc{
-    margin: 0 auto;
-    background-color: white;
-    display: inline-block;
-    box-shadow: 0 0 10px lightgrey;
-}
-.modal-final-wrap{
-    position: relative;
-    padding: 1em;
-}
-.modal-close-btn{
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 2px;
-    border: none;
-    font-size: small;
-    outline: none;
-}

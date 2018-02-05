@@ -6,6 +6,7 @@ import Header from './Header/Header';
 import Drawer from './Drawer/Drawer';
 import Content from './Content/Content';
 import FloatingButtons from './FloatingButtons/FloatingButtons';
+import Modals from "./Modals/Modals";
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
           <Drawer/>
           <Content/>
           <FloatingButtons/>
+          <Modals/>
       </div>
     );
   }
