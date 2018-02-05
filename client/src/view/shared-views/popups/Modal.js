@@ -8,8 +8,6 @@ class Modal extends React.Component {
         super(props);
         this.modalElem = document.createElement('div');
         this.modalElem.classList.add('modal-vc');
-
-        this.close = this.close.bind(this);
     }
 
     componentDidMount(){
