@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 
-import './button-factory.css';
+import './buttons.css';
 import ImageWithTextLabel from "./ImageWithTextLabel";
 
 const LPLinkButton = (props) => {

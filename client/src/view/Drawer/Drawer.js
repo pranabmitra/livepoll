@@ -3,9 +3,9 @@ import {connect} from 'react-redux';
 
 import './Drawer.css';
 import DrawerAuthBadge from './DrawerAuthBadge/DrawerAuthBadge';
-import SignoutButton from "../shared-views/button-factory/AuthButtons/SignoutButton";
-import NavigationButtons from "../shared-views/button-factory/NavigationButtons/NavigationButtons";
-import LPButton from "../shared-views/button-factory/LPButton";
+import SignoutButton from "../shared-views/buttons/AuthButtons/SignoutButton";
+import NavigationButtons from "../shared-views/buttons/NavigationButtons/NavigationButtons";
+import LPButton from "../shared-views/buttons/LPButton";
 
 const Drawer = (props) => {
     var drawerClassName = 'drawer drawer-resp ';

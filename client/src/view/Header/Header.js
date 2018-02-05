@@ -3,9 +3,9 @@ import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 
 import './Header.css';
-import NavigationButtons from '../shared-views/button-factory/NavigationButtons/NavigationButtons';
+import NavigationButtons from '../shared-views/buttons/NavigationButtons/NavigationButtons';
 import HeaderAuthBadge from "./HeaderAuthBadge/HeaderAuthBadge";
-import SignoutButton from "../shared-views/button-factory/AuthButtons/SignoutButton";
+import SignoutButton from "../shared-views/buttons/AuthButtons/SignoutButton";
 import {ROUTES} from "../../constants/routing";
 import {
     actionToggleDrawer

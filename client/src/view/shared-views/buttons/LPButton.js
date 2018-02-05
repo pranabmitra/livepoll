@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './button-factory.css';
+import './buttons.css';
 import ImageWithTextLabel from "./ImageWithTextLabel";
 
 const LPButton = (props) => {

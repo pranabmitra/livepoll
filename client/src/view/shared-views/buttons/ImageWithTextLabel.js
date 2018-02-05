@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './button-factory.css';
+import './buttons.css';
 
 const ImageWithTextLabel = (props) => (
     <React.Fragment>
