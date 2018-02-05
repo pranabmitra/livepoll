@@ -25,7 +25,8 @@ export const signIn = (signInMethod) => {
     signInFunction = isMobileDevice() ? 'signInWithRedirect' : 'signInWithPopup';
 
     try {
-        return firebase.auth()[signInFunction](provider);
+        return firebase.auth().signInWithPopup(provider)
+            .then((user)=>showFloatingMsg('Signed in as ' + user.displayName, FLOATING_MSG_TYPES.SUCCESS, 1000));
     } catch (error) {
         return showFloatingMsg('Sign in failed!', FLOATING_MSG_TYPES.ERROR);
     }

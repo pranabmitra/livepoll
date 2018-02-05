@@ -4,8 +4,6 @@ import {SIGNIN_METHODS} from "../../../../constants/auth";
 import './auth-buttons.css';
 import {signIn} from "../../../../control/auth/auth-functions";
 import LPButton from "../LPButton";
-import {showFloatingMsg} from "../../popups/utils";
-import {FLOATING_MSG_TYPES} from "../../../../constants/popups";
 
 const SignInButton = (props) => {
     let icon,
