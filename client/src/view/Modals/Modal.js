@@ -5,7 +5,7 @@ import './Modal.css';
 const getModalComponentByType = (type) => {
     switch (type) {
         default:
-            return (props) => <div>{props.children}</div>
+            return (props) => <div>XYZ</div>
     }
 }
 

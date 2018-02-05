@@ -10,6 +10,9 @@ import {ROUTES} from "../../constants/routing";
 import {
     actionToggleDrawer
 } from "../../control/state-management/action-creators/view-state/drawer-actions";
+import {actionOpenModal} from "../../control/state-management/action-creators/view-state/modal-actions";
+import {MODAL_COMPONENT_TYPES} from "../../constants/popups";
+import LPButton from "../shared-views/buttons/LPButton";
 
 const Header = (props) => (
     <div className='header header-resp fl' onClick={props.onClick}>
@@ -17,6 +20,7 @@ const Header = (props) => (
         <button className='drawer-btn drawer-btn-resp fr' onClick={props.toggleDrawer}>&equiv;</button>
         <Link className='app-title app-title-resp fl' to={ROUTES.HOME}>livepoll</Link>
         {props.isSignedIn && <SignoutButton className='header-signout-btn header-signout-btn-resp fr'/>}
+        <LPButton containerClass='fr' onClick={props.createAModal}>Modal</LPButton>
         <HeaderAuthBadge/>
         <NavigationButtons
             containerClass='header-nav-pane header-nav-pane-resp'
@@ -28,11 +32,18 @@ const Header = (props) => (
 )
 
 const mapStateToProps = (state)=>({
-    isSignedIn: state.getIn(['authState', 'isSignedIn'])
+    isSignedIn: state.getIn(['authState', 'isSignedIn']),
 })
 
 const mapDispatchToProps = (dispatch) => ({
-    toggleDrawer: () => dispatch(actionToggleDrawer())
+    toggleDrawer: () => dispatch(actionToggleDrawer()),
+    createAModal: () => {
+        dispatch(actionOpenModal({
+            type: MODAL_COMPONENT_TYPES.TEST,
+            options: { showClose: true },
+            childProps: {}
+        }))
+    }
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
