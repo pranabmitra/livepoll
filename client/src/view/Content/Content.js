@@ -3,7 +3,7 @@ import {Switch, Route} from 'react-router-dom';
 
 import './Content.css';
 import {ROUTES} from "../../constants/routing";
-import Modal from "../view-factories/popups/Modal";
+import Modal from "../shared-views/popups/Modal";
 
 
 const UnsupportedSection = () => (

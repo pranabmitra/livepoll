@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import './DrawerAuthBadge.css';
-import SignInButton from "../../view-factories/button-factory/AuthButtons/SignInButton";
+import SignInButton from "../../shared-views/button-factory/AuthButtons/SignInButton";
 import {SIGNIN_METHODS} from "../../../constants/auth";
 import User from "../../../control/auth/auth-user";
 
