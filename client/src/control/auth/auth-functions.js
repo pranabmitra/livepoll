@@ -26,7 +26,7 @@ export const signIn = (signInMethod) => {
 
     try {
         return firebase.auth().signInWithPopup(provider)
-            .then((user)=>showFloatingMsg('Signed in as ' + user.displayName, FLOATING_MSG_TYPES.SUCCESS, 1000));
+            .then(()=>showFloatingMsg('Signed in successful!', FLOATING_MSG_TYPES.SUCCESS, 1000));
     } catch (error) {
         return showFloatingMsg('Sign in failed!', FLOATING_MSG_TYPES.ERROR);
     }
