@@ -15,6 +15,13 @@ class Modal extends React.Component {
         this.child1.appendChild(this.child2);
 
         if (this.props.className) this.child2.classList.add(this.props.className);
+
+        this.close = this.close.bind(this);
+    }
+
+    close() {
+        ReactDOM.unmountComponentAtNode(this.child1);
+        modalRoot.removeChild(this.child1);
     }
 
     componentDidMount(){
@@ -27,7 +34,12 @@ class Modal extends React.Component {
 
     render() {
         return ReactDOM.createPortal(
-            this.props.children,
+            (
+                <div className='modal-final-wrap'>
+                    <button className='modal-close-btn' onClick={this.close}>X</button>
+                    {this.props.children}
+                </div>
+            ),
             this.child2,
         );
     }
