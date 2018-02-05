@@ -1,6 +1,8 @@
 import React from 'react';
+import {connect} from 'react-redux'
 
 import './Modal.css';
+import {actionCloseLastModal} from "../../control/state-management/action-creators/view-state/modal-actions";
 
 const getModalComponentByType = (type) => {
     switch (type) {
@@ -16,7 +18,7 @@ const Modal = props => {
         <div className='modal-vc'>
             <div className='modal-hc'>
                 <div className='modal-final-wrap'>
-                    { options.showClose && <button className='modal-close-btn'>X</button> }
+                    { options.showClose && <button className='modal-close-btn' onClick={props.close}>X</button> }
                     <ModalChild {...childProps}/>
                 </div>
             </div>
@@ -24,4 +26,7 @@ const Modal = props => {
     )
 }
 
-export default Modal;
+const mapDispatchToProps = dispatch => ({
+    close: ()=>dispatch(actionCloseLastModal())
+})
+export default connect(null, mapDispatchToProps)(Modal);
