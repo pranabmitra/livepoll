@@ -34,5 +34,4 @@ const mapStateToProps = state => {
         isSignedIn: state.getIn(['authState', 'isSignedIn'])
     }
 }
-const mapDispatchToProps = () => ({})
-export default connect(mapStateToProps, mapDispatchToProps)(Drawer);
+export default connect(mapStateToProps, null)(Drawer);
