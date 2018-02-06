@@ -14,6 +14,7 @@ export const signIn = (signInMethod) => {
             break;
 
         case SIGNIN_METHODS.FACEBOOK:
+            showFloatingMsg('Feature coming soon!', FLOATING_MSG_TYPES.INFO)
             return;
 
         default:
