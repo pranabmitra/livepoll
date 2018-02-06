@@ -18,7 +18,7 @@ const Modal = props => {
         <div className='modal-vc'>
             <div className='modal-hc'>
                 <div className='modal-final-wrap'>
-                    { options.showClose && <button className='modal-close-btn' onClick={props.close}>X</button> }
+                    { options.showCloseBtn && <button className='modal-close-btn' onClick={props.close}>X</button> }
                     <ModalChild {...childProps}/>
                 </div>
             </div>
