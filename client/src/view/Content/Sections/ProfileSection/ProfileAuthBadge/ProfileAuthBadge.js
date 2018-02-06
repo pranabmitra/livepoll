@@ -8,9 +8,6 @@ const ProfileAuthBadge = props => (
              style={{backgroundImage: `url(${props.user.getProfileImage()})`}}></div>
 
         <div className='prof-auth-badge-name prof-auth-badge-name-resp'>{props.user.getFullName()}</div>
-
-        <br/>
-        <div className='prof-auth-badge-signin-method'>( Signed in with {props.user.getAuthProviderName()} )</div>
     </div>
 )
 

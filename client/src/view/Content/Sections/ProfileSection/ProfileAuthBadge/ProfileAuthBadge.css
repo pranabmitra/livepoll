@@ -6,6 +6,7 @@
 
 .prof-auth-badge-img{
     float: left;
+    margin-right: 0.5em;
     border: 1px solid lightgray;
     background-size: cover;
     background-image: url("http://moziru.com/images/snoopy-clipart-heart-14.jpg");
@@ -36,7 +37,6 @@
     font-weight: bold;
     text-decoration: none;
     color: #222222;
-    margin-left: 0.5em;
 }
 @media (min-width: 1px) {
     .prof-auth-badge-name-resp{
