@@ -20,7 +20,6 @@ const Header = (props) => (
         <button className='drawer-btn drawer-btn-resp fr' onClick={props.toggleDrawer}>&equiv;</button>
         <Link className='app-title app-title-resp fl' to={ROUTES.HOME}>livepoll</Link>
         {props.isSignedIn && <SignoutButton className='header-signout-btn header-signout-btn-resp fr'/>}
-        <LPButton containerClass='fr' onClick={props.createAModal}>Modal</LPButton>
         <HeaderAuthBadge/>
         <NavigationButtons
             containerClass='header-nav-pane header-nav-pane-resp'
@@ -36,14 +35,7 @@ const mapStateToProps = (state)=>({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-    toggleDrawer: () => dispatch(actionToggleDrawer()),
-    createAModal: () => {
-        dispatch(actionOpenModal({
-            type: MODAL_COMPONENT_TYPES.TEST,
-            options: { showClose: true },
-            childProps: {}
-        }))
-    }
+    toggleDrawer: () => dispatch(actionToggleDrawer())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
