@@ -5,11 +5,19 @@ import {Link} from 'react-router-dom';
 import './buttons.css';
 import ImageWithTextLabel from "./ImageWithTextLabel";
 
+const isActiveRoute = (currentPath, targetPath) => {
+    if (targetPath === '/') {
+        return targetPath === currentPath;
+    } else {
+        return currentPath.indexOf(targetPath) !== -1;
+    }
+}
+
 const LPLinkButton = (props) => {
     let { btnClass, btnIconClass, iconUrl, children, btnTextClass, currentPath, href } = props;
 
     return (
-        <Link className={`lp-btn lp-btn-resp ${btnClass || ''} ${currentPath === href ? 'active-link-btn' : ''}`}
+        <Link className={`lp-btn lp-btn-resp ${btnClass || ''} ${isActiveRoute(currentPath, href) ? 'active-link-btn' : ''}`}
               to={href}>
             <ImageWithTextLabel iconClass={btnIconClass} iconUrl={iconUrl} textClass={btnTextClass}>
                 {children}
