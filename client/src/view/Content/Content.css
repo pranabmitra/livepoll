@@ -8,28 +8,28 @@
 @media (orientation: portrait) {
     .content-resp{
         margin-top: calc(6em + 20px);
-        margin-left: 10px;
-        width: calc(100% - 20px);
+        margin-left: 2em;
+        width: calc(100% - 4em);
         height: calc(100% - 6em - 20px - 10px);
     }
 }
 @media (orientation: landscape) and (max-width: 800px){
     .content-resp{
         margin-top: calc(3.5em + 30px);
-        margin-left: 15px;
-        width: calc(100% - 30px);
+        margin-left: 3em;
+        width: calc(100% - 6em);
         height: calc(100% - 4em - 30px - 10px);
     }
 }
 @media (orientation: landscape) and (max-width: 1200px){
     .content-resp{
-        margin-left: 20px;
-        width: calc(100% - 40px);
+        margin-left: 4em;
+        width: calc(100% - 4em);
     }
 }
 @media (orientation: landscape) and (min-width: 1201px){
     .content-resp{
-        margin-left: 25px;
-        width: calc(100% - 50px);
+        margin-left: 5em;
+        width: calc(100% - 5em);
     }
 }

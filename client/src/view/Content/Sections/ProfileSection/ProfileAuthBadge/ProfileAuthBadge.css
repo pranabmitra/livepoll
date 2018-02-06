@@ -1,0 +1,57 @@
+.prof-auth-badge{
+    float: left;
+    padding: 1em;
+}
+
+
+.prof-auth-badge-img{
+    float: left;
+    border: 1px solid lightgray;
+    background-size: cover;
+    background-image: url("http://moziru.com/images/snoopy-clipart-heart-14.jpg");
+}
+
+@media (min-width: 1px) {
+    .prof-auth-badge-img-resp{
+        width: 6em;
+        height: 6em;
+    }
+}
+@media (min-width: 501px) {
+    .prof-auth-badge-img-resp{
+        width: 8em;
+        height: 8em;
+    }
+}
+@media (min-width: 801px) {
+    .prof-auth-badge-img-resp{
+        width: 10em;
+        height: 10em;
+    }
+}
+
+
+.prof-auth-badge-name{
+    float: left;
+    font-weight: bold;
+    text-decoration: none;
+    color: #222222;
+    margin-left: 0.5em;
+}
+@media (min-width: 1px) {
+    .prof-auth-badge-name-resp{
+        font-size: x-large;
+    }
+}
+@media (min-width: 801px) {
+    .prof-auth-badge-name-resp{
+        font-size: xx-large;
+    }
+}
+
+.prof-auth-badge-signin-method{
+    color: #222222;
+    font-size: small;
+    float: left;
+    margin: 1em;
+}

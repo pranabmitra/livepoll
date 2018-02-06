@@ -1,15 +1,20 @@
 import React from 'react'
+import {connect} from 'react-redux'
 
 import './ProfileSection.css'
+import ProfileAuthBadge from "./ProfileAuthBadge/ProfileAuthBadge";
+import User from "../../../../control/auth/auth-user";
 
-class ProfileSection extends React.Component {
-    render() {
-        return (
-            <div>
-                My Profile (Coming Soon)
-            </div>
-        )
-    }
+const ProfileSection = props => {
+    return props.isSignedIn && (
+        <div>
+            <ProfileAuthBadge user={props.loggedInUser}/>
+        </div>
+    )
 }
 
-export default ProfileSection;
+const mapStateToProps = state => ({
+    isSignedIn: state.getIn(['authState', 'isSignedIn']),
+    loggedInUser: new User(state.getIn(['authState', 'signInData']))
+})
+export default connect(mapStateToProps, null)(ProfileSection);
