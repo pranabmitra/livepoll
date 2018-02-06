@@ -14,10 +14,16 @@ import {
 const Header = (props) => (
     <div className='header header-resp fl' onClick={props.onClick}>
         <br/>
-        <button className='drawer-btn drawer-btn-resp fr' onClick={props.toggleDrawer}>&equiv;</button>
+
+        <button className={`drawer-btn drawer-btn-resp fr ${props.isDrawerOpened ? 'drawer-btn-dark': ''}`}
+                onClick={props.toggleDrawer}>&equiv;
+        </button>
+
         <Link className='app-title app-title-resp fl' to={ROUTES.HOME}>livepoll</Link>
         {props.isSignedIn && <SignoutButton className='header-signout-btn header-signout-btn-resp fr'/>}
+
         <HeaderAuthBadge/>
+
         <NavigationButtons
             containerClass='header-nav-pane header-nav-pane-resp'
             buttonClass='header-nav-btn header-nav-btn-resp'
@@ -29,6 +35,7 @@ const Header = (props) => (
 
 const mapStateToProps = (state)=>({
     isSignedIn: state.getIn(['authState', 'isSignedIn']),
+    isDrawerOpened: state.getIn(['viewState', 'drawer', 'isOpened'])
 })
 
 const mapDispatchToProps = (dispatch) => ({
