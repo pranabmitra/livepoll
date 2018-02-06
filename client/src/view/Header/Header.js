@@ -1,26 +1,25 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Link} from 'react-router-dom';
 
 import './Header.css';
+
 import NavigationButtons from '../shared-views/buttons/NavigationButtons/NavigationButtons';
 import HeaderAuthBadge from "./HeaderAuthBadge/HeaderAuthBadge";
 import SignoutButton from "../shared-views/buttons/AuthButtons/SignoutButton";
-import {ROUTES} from "../../constants/routing";
-import {
-    actionToggleDrawer
-} from "../../control/state-management/action-creators/view-actions/drawer-actions";
+import AppTitle from './AppTitle/AppTitle';
+import DrawerButton from './DrawerButton/DrawerButton'
+
 
 const Header = (props) => (
     <div className='header header-resp fl' onClick={props.onClick}>
         <br/>
+        <DrawerButton/>
+        <AppTitle/>
 
-        <button className={`drawer-btn drawer-btn-resp fr ${props.isDrawerOpened ? 'drawer-btn-dark': ''}`}
-                onClick={props.toggleDrawer}>&equiv;
-        </button>
-
-        <Link className='app-title app-title-resp fl' to={ROUTES.HOME}>livepoll</Link>
-        {props.isSignedIn && <SignoutButton className='header-signout-btn header-signout-btn-resp fr'/>}
+        {
+            props.isSignedIn &&
+            <SignoutButton className='header-signout-btn header-signout-btn-resp fr'/>
+        }
 
         <HeaderAuthBadge/>
 
@@ -34,12 +33,7 @@ const Header = (props) => (
 )
 
 const mapStateToProps = (state)=>({
-    isSignedIn: state.getIn(['authState', 'isSignedIn']),
-    isDrawerOpened: state.getIn(['viewState', 'drawer', 'isOpened'])
+    isSignedIn: state.getIn(['authState', 'isSignedIn'])
 })
 
-const mapDispatchToProps = (dispatch) => ({
-    toggleDrawer: () => dispatch(actionToggleDrawer())
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default connect(mapStateToProps, null)(Header);

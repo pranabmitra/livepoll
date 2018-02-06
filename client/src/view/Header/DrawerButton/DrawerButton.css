@@ -1,0 +1,35 @@
+.drawer-btn{
+    color: gray;
+    background-color: white;
+    width: 2em;
+    height: 2em;
+    border-radius: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+    border: 1px solid gray;
+    outline: none;
+    font-size: medium;
+    z-index: 1000;
+}
+@media (orientation: portrait) {
+    .drawer-btn-resp{
+        float: right;
+    }
+}
+@media (orientation: landscape) and (max-width: 1000px) {
+    .drawer-btn-resp{
+        float: left;
+    }
+}
+@media (orientation: landscape) and (min-width: 1001px) {
+    .drawer-btn-resp{
+        display: none;
+    }
+}
+
+.drawer-btn-dark{
+    color: white;
+    font-weight: bolder;
+    background-color: #222222;
+    border: none;
+}
