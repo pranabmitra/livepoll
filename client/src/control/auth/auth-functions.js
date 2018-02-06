@@ -14,7 +14,9 @@ export const signIn = (signInMethod) => {
             break;
 
         case SIGNIN_METHODS.FACEBOOK:
-            showFloatingMsg('Feature coming soon!', FLOATING_MSG_TYPES.INFO)
+            provider = new firebase.auth.FacebookAuthProvider();
+            // TODO:: need to create FB app and set appSecret in firebase
+            // showFloatingMsg('Feature coming soon!', FLOATING_MSG_TYPES.INFO)
             return;
 
         default:
@@ -25,7 +27,19 @@ export const signIn = (signInMethod) => {
 
     try {
         return firebase.auth().signInWithPopup(provider)
-            .then(()=>showFloatingMsg('Signed in successful!', FLOATING_MSG_TYPES.SUCCESS, 1000));
+            .then(function onSuccess(result) {
+                const token = result.credential.accessToken;
+                const user = result.user;
+
+                showFloatingMsg('Signed in successful!', FLOATING_MSG_TYPES.SUCCESS, 1000)
+            })
+            .catch(function onError(error) {
+                var errorCode = error.code,
+                    errorMessage = error.message,
+                    credential = error.credential;
+
+                return showFloatingMsg(errorCode + ': Sign in failed for ' + credential + ' - ' + errorMessage, FLOATING_MSG_TYPES.ERROR);
+            });
     } catch (error) {
         return showFloatingMsg('Sign in failed!', FLOATING_MSG_TYPES.ERROR);
     }
