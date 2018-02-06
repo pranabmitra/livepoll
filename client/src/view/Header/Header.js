@@ -13,12 +13,12 @@ import DrawerButton from './DrawerButton/DrawerButton'
 const Header = (props) => (
     <div className='header header-resp fl' onClick={props.onClick}>
         <br/>
-        <DrawerButton className='place-drawer-btn'/>
-        <AppTitle className='place-app-title'/>
+        <DrawerButton className='header-place-drawer-btn'/>
+        <AppTitle className='header-place-app-title'/>
 
         {
             props.isSignedIn &&
-            <SignoutButton className='header-signout-btn header-signout-btn-resp fr'/>
+            <SignoutButton className='header-place-signout-btn header-place-signout-btn-resp'/>
         }
 
         <HeaderAuthBadge/>
