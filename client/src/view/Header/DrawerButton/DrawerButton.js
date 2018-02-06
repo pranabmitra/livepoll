@@ -5,7 +5,7 @@ import './DrawerButton.css'
 import {actionToggleDrawer} from "../../../control/state-management/action-creators/view-actions/drawer-actions";
 
 const DrawerButton = props => (
-    <button className={`drawer-btn drawer-btn-resp fr ${props.isDrawerOpened ? 'drawer-btn-dark': ''}`}
+    <button className={`drawer-btn drawer-btn-resp fr ${props.isDrawerOpened ? 'drawer-btn-dark': ''} ${props.className}`}
             onClick={props.toggleDrawer}>&equiv;
     </button>
 )

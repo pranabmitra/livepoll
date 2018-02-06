@@ -13,7 +13,7 @@ import DrawerButton from './DrawerButton/DrawerButton'
 const Header = (props) => (
     <div className='header header-resp fl' onClick={props.onClick}>
         <br/>
-        <DrawerButton/>
+        <DrawerButton className='place-drawer-btn'/>
         <AppTitle/>
 
         {
