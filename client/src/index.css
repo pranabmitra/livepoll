@@ -19,24 +19,29 @@ body {
 
 
 #floating-msg-root{
-    width: 65%;
     position: fixed;
     z-index: 2000;
     left: 2em;
 }
-@media (orientation: portrait) and (max-width: 600px) {
+@media (min-width: 1px) {
     .floating-msg-root-resp{
+        width: 60%;
         top: calc(6.2em + 1em);
+        font-size: small;
     }
 }
-@media (orientation: landscape) and (max-width: 800px) {
+@media (min-width: 601px) {
     .floating-msg-root-resp{
+        width: 50%;
         top: calc(3.5em + 1em);
+        font-size: medium;
     }
 }
-@media (orientation: landscape) and (min-width: 801px) {
+@media (min-width: 1001px) {
     .floating-msg-root-resp{
+        width: 30%;
         top: calc(5em + 1em);
+        font-size: large;
     }
 }
 

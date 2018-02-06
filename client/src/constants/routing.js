@@ -2,7 +2,8 @@ export const ROUTES = {
     HOME: '/',
     PROFILE: '/profile',
     MY_POLLS: '/mypolls',
-    POLLS_VOTED: '/voted'
+    POLLS_VOTED: '/voted',
+    CREATE_POLL: '/create'
 }
 
 export const NAV_BUTTONS_DATA = [
@@ -23,6 +24,7 @@ export const NAV_BUTTONS_DATA = [
     },
     {
         TITLE: 'Create Poll',
-        ICON_URL: '/images/icons/nav-create-poll.png'
+        ICON_URL: '/images/icons/nav-create-poll.png',
+        HREF: ROUTES.CREATE_POLL
     },
 ];

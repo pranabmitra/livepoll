@@ -3,6 +3,7 @@ import {Switch, Route} from 'react-router-dom';
 
 import './Content.css';
 import {ROUTES} from "../../constants/routing";
+import CreatePollForm from "../shared-views/CreatePollForm/CreatePollForm";
 
 
 const UnsupportedSection = () => (
@@ -14,10 +15,11 @@ const UnsupportedSection = () => (
 const Content = () => (
     <div className='content content-resp'>
         <Switch>
+            <Route exact path={ROUTES.HOME} component={UnsupportedSection}/>
             <Route path={ROUTES.PROFILE} component={UnsupportedSection}/>
             <Route path={ROUTES.MY_POLLS} component={UnsupportedSection}/>
-            <Route path={ROUTES.HOME} component={UnsupportedSection}/>
             <Route path={ROUTES.POLLS_VOTED} component={UnsupportedSection}/>
+            <Route path={ROUTES.CREATE_POLL} component={CreatePollForm}/>
         </Switch>
     </div>
 )

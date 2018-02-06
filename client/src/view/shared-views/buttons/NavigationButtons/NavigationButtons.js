@@ -2,7 +2,6 @@ import React from 'react';
 
 import {NAV_BUTTONS_DATA} from "../../../../constants/routing";
 import LPLinkButton from "../LPLinkButton";
-import LPButton from "../LPButton";
 
 const NavigationButtons = (props) => {
     const {containerClass, buttonClass, iconClass, titleClass} = props;
@@ -11,9 +10,8 @@ const NavigationButtons = (props) => {
         <div className={containerClass}>
             {
                 NAV_BUTTONS_DATA.map((navButtonData)=>{
-                    const ButtonComponent = navButtonData.HREF ? LPLinkButton : LPButton;
                     return (
-                        <ButtonComponent
+                        <LPLinkButton
                             key={navButtonData.TITLE}
                             href={navButtonData.HREF}
                             btnClass={buttonClass}
@@ -21,7 +19,7 @@ const NavigationButtons = (props) => {
                             btnTextClass={titleClass}
                             iconUrl={navButtonData.ICON_URL}>
 
-                            {navButtonData.TITLE}</ButtonComponent>
+                            {navButtonData.TITLE}</LPLinkButton>
                     )
                 })
             }

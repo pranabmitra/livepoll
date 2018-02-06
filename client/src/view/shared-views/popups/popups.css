@@ -2,8 +2,8 @@
     color: white;
     padding: 0.5em;
     margin-bottom: 0.5em;
-    font-size: small;
     border-radius: 5px;
+    float: left;
 }
 .floating-msg-info{
     background-color: #004878;
