@@ -1,27 +1,4 @@
-.header-user-badge{
-    float: right;
-    margin-right: 1em;
-    border: none !important;
-    padding: 4px !important;
-}
 
-.header-user-badge-icon{
-    float: left;
-    border: 1px solid lightgrey;
-    border-radius: 3px;
-}
-
-.header-user-badge-txt{
-    float: right;
-    font-weight: bold;
-    padding: 5px;
-}
-
-@media (max-width: 501px){
-    .header-user-badge-txt-resp{
-        display: none;
-    }
-}
 
 .header-signin-button-panel{
     float: right;

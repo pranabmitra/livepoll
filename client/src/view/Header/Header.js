@@ -8,6 +8,8 @@ import HeaderAuthBadge from "./HeaderAuthBadge/HeaderAuthBadge";
 import SignoutButton from "../shared-views/buttons/AuthButtons/SignoutButton";
 import AppTitle from './AppTitle/AppTitle';
 import DrawerButton from './DrawerButton/DrawerButton'
+import SmolUserBadge from './SmolUserBadge/SmolUserBadge'
+import User from "../../control/auth/auth-user";
 
 
 const Header = (props) => (
@@ -21,7 +23,11 @@ const Header = (props) => (
             <SignoutButton className='header-place-signout-btn header-place-signout-btn-resp'/>
         }
 
-        <HeaderAuthBadge/>
+        {/*<HeaderAuthBadge/>*/}
+        {
+            props.isSignedIn &&
+                <SmolUserBadge user={props.signedInUser}/>
+        }
 
         <NavigationButtons
             containerClass='header-nav-pane header-nav-pane-resp'
@@ -33,7 +39,8 @@ const Header = (props) => (
 )
 
 const mapStateToProps = (state)=>({
-    isSignedIn: state.getIn(['authState', 'isSignedIn'])
+    isSignedIn: state.getIn(['authState', 'isSignedIn']),
+    signedInUser: new User(state.getIn(['authState', 'signInData'])),
 })
 
 export default connect(mapStateToProps, null)(Header);

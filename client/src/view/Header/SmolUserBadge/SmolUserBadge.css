@@ -1,0 +1,24 @@
+.smol-user-badge{
+    float: right;
+    margin-right: 1em;
+    border: none !important;
+    padding: 4px !important;
+}
+
+.smol-user-badge-icon{
+    float: left;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+}
+
+.smol-user-badge-txt{
+    float: right;
+    font-weight: bold;
+    padding: 5px;
+}
+
+@media (max-width: 501px){
+    .smol-user-badge-txt-resp{
+        display: none;
+    }
+}
