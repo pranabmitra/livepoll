@@ -5,7 +5,7 @@ import './App.css';
 import Header from './Header/Header';
 import Drawer from './Drawer/Drawer';
 import Content from './Content/Content';
-import FloatingButtons from './FloatingButtons/FloatingButtons';
+import FloatingButtons from './shared-views/buttons/FloatingButtons/FloatingButtons';
 import Modals from "./Modals/Modals";
 
 class App extends Component {
