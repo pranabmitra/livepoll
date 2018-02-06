@@ -10,16 +10,19 @@
 @media (min-width: 1px) {
     .lp-btn-resp{
         padding: 5px;
+        margin: 1px;
     }
 }
 @media (min-width: 801px) and (min-height: 601px) {
     .lp-btn-resp{
         padding: 8px;
+        margin: 2px;
     }
 }
 @media (min-width: 1201px) and (min-height: 801px) {
     .lp-btn-resp{
         padding: 12px;
+        margin: 3px;
     }
 }
 

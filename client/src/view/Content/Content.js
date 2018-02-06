@@ -20,6 +20,7 @@ const Content = () => (
             <Route path={ROUTES.MY_POLLS} component={UnsupportedSection}/>
             <Route path={ROUTES.POLLS_VOTED} component={UnsupportedSection}/>
             <Route path={ROUTES.CREATE_POLL} component={CreatePollForm}/>
+            <Route component={_=><div>invalid route</div>}/>
         </Switch>
     </div>
 )
