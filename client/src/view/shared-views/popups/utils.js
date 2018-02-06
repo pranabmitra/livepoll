@@ -42,7 +42,3 @@ export const showFloatingMsg = (msg, type, duration = 700) => {
         floatingMsgRoot.removeChild(floatingMsgElem)
     }, duration * (floatingMsgRoot.childNodes.length + 1))
 }
-
-const modalRoot = document.getElementById('modal-root');
-
-export const closeLastModal = () => modalRoot.removeChild(modalRoot.lastChild);
