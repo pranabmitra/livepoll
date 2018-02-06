@@ -23,7 +23,7 @@ const HeaderUserBadge = (props) => (
 const HeaderAuthBadge = (props) => {
     const authBadge = <HeaderUserBadge user={props.user}/>;
     const signInArea = (
-        <div className='fr'>
+        <div className='header-signin-button-panel'>
             <LPButton iconUrl='/images/icons/google-logo.png' onClick={()=>signIn(SIGNIN_METHODS.GOOGLE)}/>
             &nbsp;
             <LPButton iconUrl='/images/icons/fb-logo.png' onClick={()=>signIn(SIGNIN_METHODS.FACEBOOK)}/>

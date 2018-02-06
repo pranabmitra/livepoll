@@ -22,3 +22,12 @@
         display: none;
     }
 }
+
+.header-signin-button-panel{
+    float: right;
+}
+@media (max-width: 350px) {
+    .header-signin-button-panel{
+        display: none;
+    }
+}
