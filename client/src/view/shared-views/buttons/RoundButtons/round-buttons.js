@@ -3,13 +3,13 @@ import {connect} from 'react-redux'
 
 import './round-buttons.css';
 import LPButton from "../LPButton";
-import {actionOpenModal} from "../../../../control/state-management/action-creators/view-state/modal-actions";
+import {actionOpenModal} from "../../../../control/state-management/action-creators/view-actions/modal-actions";
 import {MODAL_COMPONENT_TYPES} from "../../../../constants/popups";
 
 const cpbMapDispatchToProps = dispatch => ({
     openPollCreationForm: () => dispatch(
         actionOpenModal(MODAL_COMPONENT_TYPES.CREATE_POLL_FORM, {
-            closeOnEscape: true
+            onEscapeClose: true
         })
     )
 })

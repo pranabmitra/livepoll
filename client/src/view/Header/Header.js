@@ -9,7 +9,7 @@ import SignoutButton from "../shared-views/buttons/AuthButtons/SignoutButton";
 import {ROUTES} from "../../constants/routing";
 import {
     actionToggleDrawer
-} from "../../control/state-management/action-creators/view-state/drawer-actions";
+} from "../../control/state-management/action-creators/view-actions/drawer-actions";
 
 const Header = (props) => (
     <div className='header header-resp fl' onClick={props.onClick}>

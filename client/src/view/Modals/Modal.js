@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux'
 
 import './Modal.css';
-import {actionCloseLastModal} from "../../control/state-management/action-creators/view-state/modal-actions";
+import {actionCloseLastModal} from "../../control/state-management/action-creators/view-actions/modal-actions";
 import {getModalComponentByType} from "./utils";
 
 class Modal extends React.Component {
@@ -27,11 +27,11 @@ class Modal extends React.Component {
     }
 
     componentDidMount() {
-        if (this.props.options.closeOnEscape) this.setOnEscapeListener();
+        if (this.props.options.onEscapeClose) this.setOnEscapeListener();
     }
 
     componentWillUnmount() {
-        if (this.props.options.closeOnEscape) this.removeOnEscapeListener();
+        if (this.props.options.onEscapeClose) this.removeOnEscapeListener();
     }
 
     render() {

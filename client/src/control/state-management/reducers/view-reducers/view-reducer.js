@@ -1,10 +1,10 @@
-import {ACTION_CLOSE_DRAWER, ACTION_TOGGLE_DRAWER} from "../../action-creators/view-state/drawer-actions";
+import {ACTION_CLOSE_DRAWER, ACTION_TOGGLE_DRAWER} from "../../action-creators/view-actions/drawer-actions";
 import {reduceCloseDrawer, reduceToggleDrawer} from "./drawer";
 import {initialViewState} from "../../initial-states";
 import {
     ACTION_CLOSE_ALL_MODALS, ACTION_CLOSE_LAST_MODAL,
     ACTION_OPEN_MODAL
-} from "../../action-creators/view-state/modal-actions";
+} from "../../action-creators/view-actions/modal-actions";
 import {reduceCloseAllModals, reduceCloseLastModal, reduceOpenModal} from "./modal";
 
 
