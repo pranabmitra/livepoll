@@ -7,12 +7,11 @@ import {actionOpenModal} from "../../../../control/state-management/action-creat
 import {MODAL_COMPONENT_TYPES} from "../../../../constants/popups";
 
 const cpbMapDispatchToProps = dispatch => ({
-    openPollCreationForm: () => dispatch(actionOpenModal({
-        type: MODAL_COMPONENT_TYPES.CREATE_POLL_FORM,
-        options: {
-            closeOnEsc: true
-        }
-    }))
+    openPollCreationForm: () => dispatch(
+        actionOpenModal(MODAL_COMPONENT_TYPES.CREATE_POLL_FORM, {
+            closeOnEscape: true
+        })
+    )
 })
 export const CreatePollButton = connect(null, cpbMapDispatchToProps)((props)=>(
     <LPButton btnClass='btn-create-poll' btnTextClass='btn-create-poll-text' onClick={props.openPollCreationForm}>+</LPButton>
