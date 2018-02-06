@@ -14,7 +14,7 @@ const Header = (props) => (
     <div className='header header-resp fl' onClick={props.onClick}>
         <br/>
         <DrawerButton className='place-drawer-btn'/>
-        <AppTitle/>
+        <AppTitle className='place-app-title'/>
 
         {
             props.isSignedIn &&

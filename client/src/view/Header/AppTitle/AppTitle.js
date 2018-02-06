@@ -4,8 +4,8 @@ import {Link} from 'react-router-dom';
 import './AppTitle.css';
 import {ROUTES} from "../../../constants/routing";
 
-const AppTitle = () => (
-    <Link className='app-title app-title-resp fl'
+const AppTitle = (props) => (
+    <Link className={`app-title app-title-resp fl ${props.className}`}
           to={ROUTES.HOME}>
         livepoll
     </Link>
