@@ -1,14 +1,12 @@
 import * as firebase from 'firebase';
 
 import {SIGNIN_METHODS} from "../../constants/auth";
-import {isMobileDevice} from "../utils";
 import {FLOATING_MSG_TYPES} from "../../constants/popups";
 import {showFloatingMsg} from "../../view/shared-views/popups/utils";
 
 
 export const signIn = (signInMethod) => {
-    var provider,
-        signInFunction;
+    let provider;
 
     switch (signInMethod) {
         case SIGNIN_METHODS.GOOGLE:
@@ -22,7 +20,7 @@ export const signIn = (signInMethod) => {
             return;
     }
 
-    signInFunction = isMobileDevice() ? 'signInWithRedirect' : 'signInWithPopup';
+    // let signInFunction = isMobileDevice() ? 'signInWithRedirect' : 'signInWithPopup';
 
     try {
         return firebase.auth().signInWithPopup(provider)

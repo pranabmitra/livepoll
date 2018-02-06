@@ -2,10 +2,12 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import './HeaderAuthBadge.css';
-import SignInPopupButton from "../../shared-views/buttons/AuthButtons/SignInPopupButton";
 import User from "../../../control/auth/auth-user";
 import {ROUTES} from "../../../constants/routing";
 import LPLinkButton from "../../shared-views/buttons/LPLinkButton";
+import LPButton from "../../shared-views/buttons/LPButton";
+import {signIn} from "../../../control/auth/auth-functions";
+import {SIGNIN_METHODS} from "../../../constants/auth";
 
 const HeaderUserBadge = (props) => (
     <LPLinkButton
@@ -18,13 +20,23 @@ const HeaderUserBadge = (props) => (
     </LPLinkButton>
 )
 
-const HeaderAuthBadge = (props) => (
-    <React.Fragment>
-        {
-            props.isSignedIn ? <HeaderUserBadge user={props.user}/> : <SignInPopupButton className='fr'/>
-        }
-    </React.Fragment>
-)
+const HeaderAuthBadge = (props) => {
+    const authBadge = <HeaderUserBadge user={props.user}/>;
+    const signInArea = (
+        <div className='fr'>
+            <LPButton iconUrl='/images/icons/google-logo.png' onClick={()=>signIn(SIGNIN_METHODS.GOOGLE)}/>
+            &nbsp;
+            <LPButton iconUrl='/images/icons/fb-logo.png' onClick={()=>signIn(SIGNIN_METHODS.FACEBOOK)}/>
+        </div>
+    )
+    return (
+        <React.Fragment>
+            {
+                props.isSignedIn ? authBadge : signInArea
+            }
+        </React.Fragment>
+    )
+}
 
 const mapStateToProps = (state) => {
     var isSignedIn = state.getIn(['authState', 'isSignedIn']),

@@ -1,5 +1,4 @@
 import {fromJS} from 'immutable';
-import {MODAL_COMPONENT_TYPES} from "../../constants/popups";
 
 export const initialAuthState = fromJS({
     isSignedIn: false,

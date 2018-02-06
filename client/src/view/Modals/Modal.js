@@ -12,7 +12,7 @@ class Modal extends React.Component {
     }
 
     onEscapeClose(event) {
-        if (event.keyCode == 27) {
+        if (event.keyCode === 27) {
             event.preventDefault();
             this.props.close();
         }

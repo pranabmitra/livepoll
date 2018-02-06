@@ -10,9 +10,6 @@ import {ROUTES} from "../../constants/routing";
 import {
     actionToggleDrawer
 } from "../../control/state-management/action-creators/view-state/drawer-actions";
-import {actionOpenModal} from "../../control/state-management/action-creators/view-state/modal-actions";
-import {MODAL_COMPONENT_TYPES} from "../../constants/popups";
-import LPButton from "../shared-views/buttons/LPButton";
 
 const Header = (props) => (
     <div className='header header-resp fl' onClick={props.onClick}>

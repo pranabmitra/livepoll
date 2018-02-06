@@ -11,9 +11,9 @@ const ImageWithTextLabel = (props) => (
             )
         }
         {
-            props.iconUrl && <span>&nbsp;&nbsp;</span>
+            props.iconUrl && props.children && <span>&nbsp;&nbsp;</span>
         }
-        <div className={`lp-btn-txt lp-btn-txt-resp ${props.textClass || ''}`}>{props.children}</div>
+        {props.children && <div className={`lp-btn-txt lp-btn-txt-resp ${props.textClass || ''}`}>{props.children}</div>}
     </React.Fragment>
 )
 
