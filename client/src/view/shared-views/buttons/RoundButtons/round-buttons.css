@@ -1,0 +1,16 @@
+.btn-create-poll{
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 4em;
+    background-color: #cc145d;
+    color: white;
+    float: right;
+    padding: 0;
+    border: none !important;
+    font-size: x-large !important;
+    box-shadow: 0px 0px 5px gray;
+}
+.btn-create-poll-text{
+    font-size: x-large !important;
+    font-weight: bold;
+}

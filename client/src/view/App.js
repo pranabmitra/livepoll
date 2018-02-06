@@ -5,8 +5,8 @@ import './App.css';
 import Header from './Header/Header';
 import Drawer from './Drawer/Drawer';
 import Content from './Content/Content';
-import FloatingButtons from './shared-views/buttons/FloatingButtons/FloatingButtons';
 import Modals from "./Modals/Modals";
+import FloatingButtonList from './FloatingButtonList/FloatingButtonList';
 
 class App extends Component {
   render() {
@@ -15,7 +15,7 @@ class App extends Component {
           <Header/>
           <Drawer/>
           <Content/>
-          <FloatingButtons/>
+          <FloatingButtonList/>
           <Modals/>
       </div>
     );

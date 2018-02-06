@@ -1,0 +1,10 @@
+.flt-btns-panel{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+@media (orientation: landscape) and (min-width: 800px) {
+    .flt-btns-panel-resp{
+        display: none;
+    }
+}
