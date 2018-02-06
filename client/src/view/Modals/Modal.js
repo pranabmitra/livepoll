@@ -3,13 +3,7 @@ import {connect} from 'react-redux'
 
 import './Modal.css';
 import {actionCloseLastModal} from "../../control/state-management/action-creators/view-state/modal-actions";
-
-const getModalComponentByType = (type) => {
-    switch (type) {
-        default:
-            return (props) => <div>XYZ</div>
-    }
-}
+import {getModalComponentByType} from "./utils";
 
 class Modal extends React.Component {
     constructor(props) {
