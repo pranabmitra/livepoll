@@ -4,12 +4,14 @@ import {connect} from 'react-redux';
 import './Header.css';
 
 import NavigationButtons from '../shared-views/buttons/NavigationButtons/NavigationButtons';
-import HeaderAuthBadge from "./HeaderAuthBadge/HeaderAuthBadge";
 import SignoutButton from "../shared-views/buttons/AuthButtons/SignoutButton";
 import AppTitle from './AppTitle/AppTitle';
 import DrawerButton from './DrawerButton/DrawerButton'
 import SmolUserBadge from './SmolUserBadge/SmolUserBadge'
 import User from "../../control/auth/auth-user";
+import {signIn} from "../../control/auth/auth-functions";
+import {SIGNIN_METHODS} from "../../constants/auth";
+import LPButton from "../shared-views/buttons/LPButton";
 
 
 const Header = (props) => (
@@ -23,10 +25,17 @@ const Header = (props) => (
             <SignoutButton className='header-place-signout-btn header-place-signout-btn-resp'/>
         }
 
-        {/*<HeaderAuthBadge/>*/}
         {
             props.isSignedIn &&
                 <SmolUserBadge user={props.signedInUser}/>
+        }
+        {
+            !props.isSignedIn &&
+                <React.Fragment>
+                    <LPButton btnClass='fr' iconUrl='/images/icons/fb-logo.png' onClick={()=>signIn(SIGNIN_METHODS.FACEBOOK)}/>
+                    <span className='fr'>&nbsp;</span>
+                    <LPButton btnClass='fr' iconUrl='/images/icons/google-logo.png' onClick={()=>signIn(SIGNIN_METHODS.GOOGLE)}/>
+                </React.Fragment>
         }
 
         <NavigationButtons
