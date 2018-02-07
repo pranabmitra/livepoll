@@ -8,7 +8,7 @@ import LPButton from "../shared-views/buttons/LPButton";
 import {SIGNIN_METHODS} from "../../constants/auth";
 import TitledArea from "../shared-views/general/TitledArea/TitledArea";
 import SignInButton from "../shared-views/buttons/AuthButtons/SignInButton";
-import ImageWithTextLabel from "../shared-views/buttons/ImageWithTextLabel";
+import ImageWithTextLabel from "../shared-views/general/ImageWithTextLabel";
 import User from "../../control/auth/auth-user";
 
 const Drawer = (props) => {

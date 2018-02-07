@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './buttons.css';
-import ImageWithTextLabel from "./ImageWithTextLabel";
+import ImageWithTextLabel from "../general/ImageWithTextLabel";
 
 const LPButton = (props) => {
     let { btnClass, btnIconClass, iconUrl, children, btnTextClass, onClick} = props;

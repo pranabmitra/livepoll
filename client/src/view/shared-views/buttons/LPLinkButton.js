@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 
 import './buttons.css';
-import ImageWithTextLabel from "./ImageWithTextLabel";
+import ImageWithTextLabel from "../general/ImageWithTextLabel";
 
 const isActiveRoute = (currentPath, targetPath) => {
     if (targetPath === '/') {
