@@ -29,7 +29,7 @@ export const signIn = (signInMethod) => {
         return firebase.auth().signInWithPopup(provider)
             .then(function onSuccess(result) {
                 // const token = result.credential.accessToken;
-                const user = result.user;
+                // const user = result.user;
 
                 showFloatingMsg('Signed in successful!', FLOATING_MSG_TYPES.SUCCESS, 1000)
             })

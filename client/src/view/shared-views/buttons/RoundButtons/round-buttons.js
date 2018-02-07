@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {Route} from 'react-router-dom'
 
 import './round-buttons.css';
 import LPButton from "../LPButton";
@@ -13,7 +14,11 @@ const cpbMapDispatchToProps = dispatch => ({
         })
     )
 })
-export const CreatePollButton = connect(null, cpbMapDispatchToProps)((props)=>(
+export const CreatePollButtonWithoutRoute = connect(null, cpbMapDispatchToProps)((props)=>(
     <LPButton btnClass='btn-create-poll' btnTextClass='btn-create-poll-text' onClick={props.openPollCreationForm}>+</LPButton>
 ))
+
+export const CreatePollButton = ()=> (
+    <Route exact path='/' component={CreatePollButtonWithoutRoute} />
+)
 
