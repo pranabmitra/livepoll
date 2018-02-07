@@ -1,7 +1,6 @@
 import React from 'react';
 
 import {SIGNIN_METHODS} from "../../../../constants/auth";
-import './auth-buttons.css';
 import {signIn} from "../../../../control/auth/auth-functions";
 import LPButton from "../LPButton";
 
@@ -29,13 +28,10 @@ const SignInButton = (props) => {
     }
 
     return (
-        <LPButton
-            btnClass={props.className + ' signin-btn fl'}
-            btnTextClass='signin-btn-text'
-            btnIconClass='signin-icon'
-            iconUrl={icon}
-            onClick={onClick}>
-            {text}
+        <LPButton btnClass={props.className}
+                  iconUrl={icon}
+                  onClick={onClick}>
+            {props.showText && text}
         </LPButton>
     )
 }

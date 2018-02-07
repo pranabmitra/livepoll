@@ -12,6 +12,7 @@ import User from "../../control/auth/auth-user";
 import {signIn} from "../../control/auth/auth-functions";
 import {SIGNIN_METHODS} from "../../constants/auth";
 import LPButton from "../shared-views/buttons/LPButton";
+import SignInButton from "../shared-views/buttons/AuthButtons/SignInButton";
 
 
 const Header = (props) => (
@@ -32,9 +33,9 @@ const Header = (props) => (
         {
             !props.isSignedIn &&
                 <React.Fragment>
-                    <LPButton btnClass='fr' iconUrl='/images/icons/fb-logo.png' onClick={()=>signIn(SIGNIN_METHODS.FACEBOOK)}/>
+                    <SignInButton className='fr' signInMethod={SIGNIN_METHODS.FACEBOOK} showText={false}/>
                     <span className='fr'>&nbsp;</span>
-                    <LPButton btnClass='fr' iconUrl='/images/icons/google-logo.png' onClick={()=>signIn(SIGNIN_METHODS.GOOGLE)}/>
+                    <SignInButton className='fr' signInMethod={SIGNIN_METHODS.GOOGLE} showText={false}/>
                 </React.Fragment>
         }
 

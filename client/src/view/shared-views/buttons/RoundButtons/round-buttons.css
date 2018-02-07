@@ -13,4 +13,5 @@
 .btn-create-poll-text{
     font-size: x-large !important;
     font-weight: bold;
+    float: none !important;
 }
