@@ -17,10 +17,10 @@ export const signIn = (signInMethod) => {
             provider = new firebase.auth.FacebookAuthProvider();
             // TODO:: need to create FB app and set appSecret in firebase
             // showFloatingMsg('Feature coming soon!', FLOATING_MSG_TYPES.INFO)
-            return;
+            break;
 
         default:
-            return;
+            break;
     }
 
     // let signInFunction = isMobileDevice() ? 'signInWithRedirect' : 'signInWithPopup';
@@ -28,7 +28,7 @@ export const signIn = (signInMethod) => {
     try {
         return firebase.auth().signInWithPopup(provider)
             .then(function onSuccess(result) {
-                const token = result.credential.accessToken;
+                // const token = result.credential.accessToken;
                 const user = result.user;
 
                 showFloatingMsg('Signed in successful!', FLOATING_MSG_TYPES.SUCCESS, 1000)
