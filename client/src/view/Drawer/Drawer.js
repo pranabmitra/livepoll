@@ -21,7 +21,7 @@ const Drawer = (props) => {
             <div className='drawer-content'>
                 {
                     !props.isSignedIn && (
-                        <TitledArea className='drawer-auth-badge' title='Sign in with'>
+                        <TitledArea className='drawer-signin-btn-list' title='Sign in with'>
                             <SignInButton signInMethod={SIGNIN_METHODS.GOOGLE} showText={true}/>
                             <SignInButton signInMethod={SIGNIN_METHODS.FACEBOOK} showText={true}/>
                         </TitledArea>
@@ -30,7 +30,9 @@ const Drawer = (props) => {
                 {
                     props.isSignedIn && (
                         <ImageWithTextLabel
-                            className='drawer-auth-badge'
+                            className='drawer-auth-badge fl'
+                            iconClass='drawer-auth-badge-img'
+                            textClass='drawer-auth-badge-text'
                             iconUrl={props.signedInUser.getProfileImage()}>
                             {props.signedInUser.getFullName()}
                         </ImageWithTextLabel>
