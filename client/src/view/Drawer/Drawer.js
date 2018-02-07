@@ -17,7 +17,6 @@ const Drawer = (props) => {
     return (
         <div className={drawerClassName}>
             <div className='drawer-content'>
-                {/*<DrawerAuthBadge/>*/}
                 {
                     !props.isSignedIn && (
                         <TitledArea className='drawer-auth-badge' title='Sign in with'>
