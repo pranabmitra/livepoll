@@ -19,7 +19,10 @@ const LPLinkButton = (props) => {
     return (
         <Link className={`lp-btn lp-btn-resp ${btnClass || ''} ${isActiveRoute(currentPath, href) ? 'active-link-btn' : ''}`}
               to={href}>
-            <ImageWithTextLabel iconClass={btnIconClass} iconUrl={iconUrl} textClass={btnTextClass}>
+            <ImageWithTextLabel
+                iconClass={`lp-btn-img lp-btn-img-resp ${btnIconClass}`}
+                iconUrl={iconUrl}
+                textClass={`lp-btn-txt lp-btn-txt-resp ${btnTextClass}`}>
                 {children}
             </ImageWithTextLabel>
         </Link>

@@ -8,7 +8,10 @@ const LPButton = (props) => {
 
     return (
         <button className={`lp-btn lp-btn-resp ${btnClass || ''}`} onClick={onClick}>
-            <ImageWithTextLabel iconClass={btnIconClass} iconUrl={iconUrl} textClass={btnTextClass}>
+            <ImageWithTextLabel
+                iconClass={`lp-btn-img lp-btn-img-resp ${btnIconClass}`}
+                iconUrl={iconUrl}
+                textClass={`lp-btn-txt lp-btn-txt-resp ${btnTextClass}`}>
                 {children}
             </ImageWithTextLabel>
         </button>
