@@ -109,3 +109,25 @@
 .drawer-signout-btn{
     font-size: large;
 }
+
+.drawer-signin-btn-list{
+    border-bottom: 1px solid lightgray;
+}
+
+.drawer-auth-badge{
+    border-bottom: 1px solid lightgray;
+    padding: 0.5em;
+}
+
+.drawer-auth-badge-img{
+    width: 5em;
+    height: 5em;
+    background-size: cover;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+}
+
+.drawer-auth-badge-text{
+    font-size: large;
+    font-weight: bold;
+}

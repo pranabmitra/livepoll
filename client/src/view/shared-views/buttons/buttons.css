@@ -27,6 +27,7 @@
 }
 
 .lp-btn-txt{
+    float: right;
 }
 @media (min-width: 1px) {
     .lp-btn-txt-resp{
@@ -43,6 +44,7 @@
 
 .lp-btn-img{
     background-size: cover;
+    float: left;
 }
 @media (min-width: 1px) {
     .lp-btn-img-resp{
