@@ -9,9 +9,7 @@ import AppTitle from './AppTitle/AppTitle';
 import DrawerButton from './DrawerButton/DrawerButton'
 import SmolUserBadge from './SmolUserBadge/SmolUserBadge'
 import User from "../../control/auth/auth-user";
-import {signIn} from "../../control/auth/auth-functions";
 import {SIGNIN_METHODS} from "../../constants/auth";
-import LPButton from "../shared-views/buttons/LPButton";
 import SignInButton from "../shared-views/buttons/AuthButtons/SignInButton";
 
 

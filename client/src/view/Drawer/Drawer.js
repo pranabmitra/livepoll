@@ -2,10 +2,12 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import './Drawer.css';
-import DrawerAuthBadge from './DrawerAuthBadge/DrawerAuthBadge';
 import SignoutButton from "../shared-views/buttons/AuthButtons/SignoutButton";
 import NavigationButtons from "../shared-views/buttons/NavigationButtons/NavigationButtons";
 import LPButton from "../shared-views/buttons/LPButton";
+import {SIGNIN_METHODS} from "../../constants/auth";
+import TitledArea from "../shared-views/general/TitledArea/TitledArea";
+import SignInButton from "../shared-views/buttons/AuthButtons/SignInButton";
 
 const Drawer = (props) => {
     var drawerClassName = 'drawer drawer-resp ';
@@ -15,7 +17,15 @@ const Drawer = (props) => {
     return (
         <div className={drawerClassName}>
             <div className='drawer-content'>
-                <DrawerAuthBadge/>
+                {/*<DrawerAuthBadge/>*/}
+                {
+                    !props.isSignedIn && (
+                        <TitledArea className='drawer-auth-badge' title='Sign in with'>
+                            <SignInButton signInMethod={SIGNIN_METHODS.GOOGLE} showText={true}/>
+                            <SignInButton signInMethod={SIGNIN_METHODS.FACEBOOK} showText={true}/>
+                        </TitledArea>
+                    )
+                }
                 <NavigationButtons
                     containerClass='drawer-nav-container'
                     buttonClass='drawer-nav-btn drawer-nav-btn-resp'

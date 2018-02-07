@@ -5,15 +5,15 @@ import './DrawerAuthBadge.css';
 import SignInButton from "../../shared-views/buttons/AuthButtons/SignInButton";
 import {SIGNIN_METHODS} from "../../../constants/auth";
 import User from "../../../control/auth/auth-user";
+import TitledArea from "../../shared-views/general/TitledArea/TitledArea";
 
 const DrawerAuthBadge = (props) => {
     if (!props.isSignedIn) {
         return (
-            <div className='drawer-auth-badge'>
-                <span>Sign in with</span><br/>
-                <SignInButton className='drawer-signin-btn' signInMethod={SIGNIN_METHODS.GOOGLE} showText={true}/>
-                <SignInButton className='drawer-signin-btn' signInMethod={SIGNIN_METHODS.FACEBOOK} showText={true}/>
-            </div>
+            <TitledArea className='drawer-auth-badge' title='Sign in with'>
+                <SignInButton signInMethod={SIGNIN_METHODS.GOOGLE} showText={true}/>
+                <SignInButton signInMethod={SIGNIN_METHODS.FACEBOOK} showText={true}/>
+            </TitledArea>
         )
     }
 

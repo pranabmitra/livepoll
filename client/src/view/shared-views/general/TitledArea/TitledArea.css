@@ -1,10 +1,38 @@
 .titled-area{
-    padding: 1em;
+}
+@media (min-width: 1px) {
+    .titled-area-resp{
+        padding: 0.6em;
+    }
+}
+@media (min-width: 801px) {
+    .titled-area-resp{
+        padding: 1em;
+    }
+}
+@media (min-width: 1201px) {
+    .titled-area-resp{
+        padding: 1.5em;
+    }
 }
 
 .titled-area-header{
     margin: 0.5em;
-    font-size: large;
     font-weight: bold;
     color: darkslategrey;
+}
+@media (min-width: 1px) {
+    .titled-area-header-resp{
+        font-size: medium;
+    }
+}
+@media (min-width: 801px) {
+    .titled-area-header-resp{
+        font-size: large;
+    }
+}
+@media (min-width: 1201px) {
+    .titled-area-header-resp{
+        font-size: larger;
+    }
 }

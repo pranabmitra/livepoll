@@ -109,3 +109,7 @@
 .drawer-signout-btn{
     font-size: large;
 }
+
+.drawer-auth-badge{
+    border-bottom: 1px solid lightgray;
+}
