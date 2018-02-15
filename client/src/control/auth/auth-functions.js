@@ -2,7 +2,7 @@ import * as firebase from 'firebase';
 
 import {SIGNIN_METHODS} from "../../constants/auth";
 import {FLOATING_MSG_TYPES} from "../../constants/popups";
-import {showFloatingMsg} from "../../view/shared-views/popups/utils";
+import showFloatingMsg from "../../view/shared-views/popups/floating-msg";
 
 
 export const signIn = (signInMethod) => {

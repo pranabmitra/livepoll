@@ -3,8 +3,8 @@ import React from 'react';
 import './auth-buttons.css';
 import {signOut} from "../../../../control/auth/auth-functions";
 import LPButton from "../LPButton";
-import {showFloatingMsg} from "../../popups/utils";
 import {FLOATING_MSG_TYPES} from "../../../../constants/popups";
+import showFloatingMsg from "../../popups/floating-msg";
 
 const onClick = () => {
     signOut()
