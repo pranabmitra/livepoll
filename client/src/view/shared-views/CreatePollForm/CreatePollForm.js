@@ -32,7 +32,9 @@ const PollTitleInput = props => {
     const onChangeTitle = event => onChange(event.target.value);
     return (
         <EnhancedFormField meta={meta}>
-            <input type='text' className='no-border w100p' onChange={onChangeTitle} placeholder='Give a nice title'/>
+            <textarea className='no-border w100p xl-font marg5x'
+                   onChange={onChangeTitle}
+                   placeholder='Give a nice title'/>
         </EnhancedFormField>
     )
 }
