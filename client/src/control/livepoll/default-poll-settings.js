@@ -1,27 +1,41 @@
-import {LP_SETTING_VALUES} from "../../../constants/lp-settings";
-
-const defaultPollSettings = {
-    voteSettings: {
-        howToVote: LP_SETTING_VALUES.HOW_TO_VOTE.TICK,
-        multipleVotesAllowed: false,
-        voteSchedule: {
-            voteStartsOn: {
-                date: null,
-                time: null
-            },
-            voteEndsOn: {
-                date: null,
-                time: null
-            }
-        },
+export const LP_SETTING_VALUES = {
+    HOW_TO_VOTE: {
+        TICK: 'TICK',
+        NUMBER: 'NUMBER'
     },
-    pollSettings: {
-        whoCanAdd: LP_SETTING_VALUES.WHO_CAN_ADD.ALL,
-        whenCanAdd: LP_SETTING_VALUES.WHEN_CAN_ADD.RUNTIME,
-        title: null,
-        pollItemFormat: [],
-        howManyCanPeopleAdd: 1
+    WHO_CAN_ADD_ITEM: {
+        ALL: 'ALL',
+        ONLY_ADMIN: 'OA'
+    },
+    WHEN_CAN_ADD_ITEM: {
+        BEFORE_START: 'BS',
+        AT_RUNTIME: 'RT'
+    },
+    POLL_ITEM_CONTENT_TYPES: {
+        IMAGE: 'I',
+        YOUTUBE_VIDEO: 'V',
+        PARAGRAPH: 'P',
+        TITLE: 'T'
     }
 }
 
-export default defaultPollSettings
+
+export const defaultPollSettings = {
+    howToVote: LP_SETTING_VALUES.HOW_TO_VOTE.TICK,
+    multipleVotesAllowed: false,
+    voteSchedule: {
+        voteStartsOn: {
+            date: null,
+            time: null
+        },
+        voteEndsOn: {
+            date: null,
+            time: null
+        }
+    },
+    whoCanAdd: LP_SETTING_VALUES.WHO_CAN_ADD_ITEM.ALL,
+    whenCanAdd: LP_SETTING_VALUES.WHEN_CAN_ADD_ITEM.RUNTIME,
+    title: null,
+    pollItemFormat: [],
+    howManyCanPeopleAdd: 1
+}
