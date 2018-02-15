@@ -10,7 +10,7 @@ body {
     padding: 0;
     font-family: sans-serif;
 }
-a, button{
+a, button, input{
     text-decoration: none;
     outline: none;
 }
@@ -56,4 +56,20 @@ a, button{
 }
 .slide.up {
     margin-top: 0;
+}
+
+.no-border{
+    border: none;
+}
+
+.w100p{
+    width: 100%;
+}
+
+.fl{
+    float: left;
+}
+
+.fr{
+    float: right;
 }
