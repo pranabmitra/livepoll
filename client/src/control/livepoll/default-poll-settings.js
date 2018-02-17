@@ -34,8 +34,8 @@ export const defaultPollSettings = {
         }
     },
     whoCanAdd: LP_SETTING_VALUES.WHO_CAN_ADD_ITEM.ALL,
-    whenCanAdd: LP_SETTING_VALUES.WHEN_CAN_ADD_ITEM.RUNTIME,
-    title: null,
+    whenCanAdd: LP_SETTING_VALUES.WHEN_CAN_ADD_ITEM.AT_RUNTIME,
+    title: undefined,
     pollItemFormat: [],
     howManyCanPeopleAdd: 1
 }
