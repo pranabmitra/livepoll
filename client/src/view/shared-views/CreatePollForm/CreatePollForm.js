@@ -27,14 +27,21 @@ const EnhancedFormField = props => (
     </div>
 )
 
+const titleTextAreaStyle = {
+    border: 'none',
+    width: 'calc(100% - 10px)',
+    resize: 'none'
+}
 const PollTitleInput = props => {
     const {input: {value, onChange}, meta} = props;
     const onChangeTitle = event => onChange(event.target.value);
     return (
         <EnhancedFormField meta={meta}>
-            <textarea className='no-border w100p xl-font marg5x'
-                   onChange={onChangeTitle}
-                   placeholder='Give a nice title'/>
+            <textarea
+                className='xl-font marg5x'
+                style={titleTextAreaStyle}
+                onChange={onChangeTitle}
+                placeholder='Give a nice title'/>
         </EnhancedFormField>
     )
 }
