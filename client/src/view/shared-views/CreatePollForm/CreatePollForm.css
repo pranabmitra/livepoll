@@ -13,3 +13,10 @@
 .field-fullw{
     width: calc(100% - 3em);
 }
+
+.submit-btn{
+    background-color: #c91667;
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+}

@@ -9,6 +9,7 @@ import PollTitleInput from "./form-fields/PollTitleInput";
 import VoteScheduleInput from "./form-fields/VoteScheduleInput";
 import PollItemFormatInput from "./form-fields/PollItemFormatInput";
 import VoteMethodInput from "./form-fields/VoteMethodInput";
+import LPButton from "../buttons/LPButton";
 
 
 const CreatePollForm = (props) => {
@@ -64,6 +65,8 @@ const CreatePollForm = (props) => {
                 <Field className='boldf btm-border' name='howManyCanPeopleAdd' component='input' type='number' min={1} max={10}/>
                 <span>&nbsp;item/s</span>
             </div>
+
+            <button type='submit' className='field-with-mpb submit-btn'>Create your awesome poll</button>
         </form>
     )
 }
