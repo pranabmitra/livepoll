@@ -1,3 +1,5 @@
+import {LP_SETTING_VALUES} from "../../../control/livepoll/default-poll-settings";
+
 const validateVoteSchedule = voteSchedule => {
     if (!voteSchedule) return 'please fill up everything'
 
@@ -18,10 +20,30 @@ const validateVoteSchedule = voteSchedule => {
 const validateTitle = title => {
     if (!title) return 'Poll must have a title';
 }
+
+const validateHowToVote = howToVote => {
+    if (howToVote.get('method') === LP_SETTING_VALUES.HOW_TO_VOTE.NUMBER) {
+        let min = howToVote.get('min'),
+            max = howToVote.get('max');
+        if (min < 1)
+            return 'must be greater than 0'
+
+        if (max > 100)
+            return 'must be less than 100'
+
+        if (min >= max)
+            return 'min must be smaller than max';
+
+        if (max - min < 9)
+            return 'min must be smaller than max by at least 9';
+    }
+}
+
 const validateCreatePollForm = values => {
     return {
         title: validateTitle(values.get('title')),
-        voteSchedule: validateVoteSchedule(values.get('voteSchedule'))
+        voteSchedule: validateVoteSchedule(values.get('voteSchedule')),
+        howToVote: validateHowToVote(values.get('howToVote'))
     }
 }
 

@@ -8,6 +8,7 @@ import validateCreatePollForm from "./validation";
 import PollTitleInput from "./form-fields/PollTitleInput";
 import VoteScheduleInput from "./form-fields/VoteScheduleInput";
 import PollItemFormatInput from "./form-fields/PollItemFormatInput";
+import VoteMethodInput from "./form-fields/VoteMethodInput";
 
 
 const CreatePollForm = (props) => {
@@ -24,6 +25,10 @@ const CreatePollForm = (props) => {
             <Field name='pollItemFormat'
                    className='fl field-with-mpb fill-fullw'
                    component={PollItemFormatInput}/>
+
+            <Field name='howToVote'
+                   className='fl field-with-mpb fill-fullw'
+                   component={VoteMethodInput}/>
         </form>
     )
 }

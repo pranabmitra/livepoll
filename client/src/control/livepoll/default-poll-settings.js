@@ -1,7 +1,13 @@
 export const LP_SETTING_VALUES = {
     HOW_TO_VOTE: {
-        TICK: 'TICK',
-        NUMBER: 'NUMBER'
+        TICK: {
+            method: 'TICK'
+        },
+        NUMBER: {
+            method: 'NUMBER',
+            min: 1,
+            max: 100
+        }
     },
     WHO_CAN_ADD_ITEM: {
         ALL: 'ALL',
