@@ -9,7 +9,7 @@ import PollTitleInput from "./form-fields/PollTitleInput";
 import VoteScheduleInput from "./form-fields/VoteScheduleInput";
 import PollItemFormatInput from "./form-fields/PollItemFormatInput";
 import VoteMethodInput from "./form-fields/VoteMethodInput";
-import LPButton from "../buttons/LPButton";
+import ItemPerPersonInput from "./form-fields/ItemsPerPersonInput";
 
 
 const CreatePollForm = (props) => {
@@ -60,13 +60,10 @@ const CreatePollForm = (props) => {
                 <span><b>only before start</b></span>
             </div>
 
-            <div className='field-with-mpb field-fullw fl'>
-                <span>A person can only add &nbsp;</span>
-                <Field className='boldf btm-border' name='howManyCanPeopleAdd' component='input' type='number' min={1} max={10}/>
-                <span>&nbsp;item/s</span>
-            </div>
 
-            <button type='submit' className='field-with-mpb submit-btn'>Create your awesome poll</button>
+            <Field className='field-with-mpb field-fullw fl' name='howManyCanPeopleAdd' component={ItemPerPersonInput}/>
+
+            <button type='submit' className='field-with-mpb submit-btn'>CREATE YOUR POLL</button>
         </form>
     )
 }

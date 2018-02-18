@@ -15,8 +15,10 @@
 }
 
 .submit-btn{
-    background-color: #c91667;
+    background-color: #227a94;
     color: white;
     font-size: medium;
     font-weight: bold;
+    border-color: white;
+    color: white;
 }

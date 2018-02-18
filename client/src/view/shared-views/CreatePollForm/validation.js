@@ -39,11 +39,17 @@ const validateHowToVote = howToVote => {
     }
 }
 
+const validateHowManyCanPeopleAdd = amount => {
+    if (amount > 10)
+        return 'sorry, the limit is 10'
+}
+
 const validateCreatePollForm = values => {
     return {
         title: validateTitle(values.get('title')),
         voteSchedule: validateVoteSchedule(values.get('voteSchedule')),
-        howToVote: validateHowToVote(values.get('howToVote'))
+        howToVote: validateHowToVote(values.get('howToVote')),
+        howManyCanPeopleAdd: validateHowManyCanPeopleAdd(values.get('howManyCanPeopleAdd')),
     }
 }
 
