@@ -1,0 +1,11 @@
+.poll-title-input{
+    margin: auto;
+    width: 100%;
+}
+
+.vote-schedule-input{
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    margin: 0.5em;
+    padding: 1em;
+}

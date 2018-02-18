@@ -2,7 +2,7 @@ import React from 'react';
 
 import EnhancedFormField from "./EnhancedFormField";
 
-const VoteStartAndEndDate = props => {
+const VoteScheduleInput = props => {
     const {input: {value, onChange}, meta} = props;
 
     const onChangeStartDate = event => onChange(value.setIn(['voteStartsOn', 'date'], event.target.value));
@@ -11,7 +11,7 @@ const VoteStartAndEndDate = props => {
     const onChangeEndTime = event => onChange(value.setIn(['voteEndsOn', 'time'], event.target.value));
 
     return (
-        <EnhancedFormField meta={meta} className='fl'>
+        <EnhancedFormField meta={meta} className={props.className}>
             <table className='tal'>
                 <tbody>
                 <tr>
@@ -32,4 +32,4 @@ const VoteStartAndEndDate = props => {
     )
 }
 
-export default VoteStartAndEndDate;
+export default VoteScheduleInput;

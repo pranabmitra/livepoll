@@ -5,10 +5,10 @@ const inputErrorSpanStyle = {
     fontSize: 'small'
 }
 const EnhancedFormFieldStyle = {
-    border: '1px solid lightgray',
-    borderRadius: '5px',
-    margin: '5px',
-    padding: '5px'
+    // border: '1px solid lightgray',
+    // borderRadius: '5px',
+    // margin: '5px',
+    // padding: '5px'
 }
 const EnhancedFormField = props => (
     <div style={EnhancedFormFieldStyle} className={props.className}>
