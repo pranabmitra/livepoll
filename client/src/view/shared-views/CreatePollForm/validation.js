@@ -22,7 +22,7 @@ const validateTitle = title => {
 }
 
 const validateHowToVote = howToVote => {
-    if (howToVote.get('method') === LP_SETTING_VALUES.HOW_TO_VOTE.NUMBER) {
+    if (howToVote.get('method') === LP_SETTING_VALUES.HOW_TO_VOTE.NUMBER.method) {
         let min = howToVote.get('min'),
             max = howToVote.get('max');
         if (min < 1)
