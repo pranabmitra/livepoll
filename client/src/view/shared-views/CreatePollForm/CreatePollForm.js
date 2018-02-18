@@ -85,19 +85,19 @@ const VoteStartAndEndDate = props => {
 
     return (
         <EnhancedFormField meta={meta} className='fl'>
-            <table>
+            <table className='tal'>
                 <tbody>
                 <tr>
                     <th className='tal'>Starts on</th>
                     <th className='tal'>Ends on</th>
                 </tr>
                 <tr>
-                    <td><input className='no-border tac' type='date' onChange={onChangeStartDate}/></td>
-                    <td><input className='no-border tac' type='time' onChange={onChangeStartTime}/></td>
+                    <td><input className='no-border' type='date' onChange={onChangeStartDate}/></td>
+                    <td><input className='no-border' type='date' onChange={onChangeEndDate}/></td>
                 </tr>
                 <tr>
-                    <td><input className='no-border tac' type='date' onChange={onChangeEndDate}/></td>
-                    <td><input className='no-border tac' type='time' onChange={onChangeEndTime}/></td>
+                    <td><input className='no-border' type='time' onChange={onChangeStartTime}/></td>
+                    <td><input className='no-border' type='time' onChange={onChangeEndTime}/></td>
                 </tr>
                 </tbody>
             </table>
