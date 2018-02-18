@@ -1,0 +1,11 @@
+.poll-item-format-menu{
+    float: right;
+    width: 35%;
+    list-style: none;
+    text-align: left;
+}
+
+.poll-item-format-view{
+    float: left;
+    width: 65%;
+}

@@ -5,7 +5,7 @@ const ItemPerPersonInput = props => {
     const {input: {value, onChange}, meta} = props;
 
     const onChangeAmount = event => {
-        onChange(parseInt(event.target.value))
+        onChange(parseInt(event.target.value, 10))
     }
 
     return (

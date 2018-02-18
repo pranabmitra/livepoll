@@ -7,7 +7,7 @@ import {defaultPollSettings, LP_SETTING_VALUES} from "../../../control/livepoll/
 import validateCreatePollForm from "./validation";
 import PollTitleInput from "./form-fields/PollTitleInput";
 import VoteScheduleInput from "./form-fields/VoteScheduleInput";
-import PollItemFormatInput from "./form-fields/PollItemFormatInput";
+import PollItemFormatInput from "./form-fields/PollItemFormatInput/PollItemFormatInput";
 import VoteMethodInput from "./form-fields/VoteMethodInput";
 import ItemPerPersonInput from "./form-fields/ItemsPerPersonInput";
 

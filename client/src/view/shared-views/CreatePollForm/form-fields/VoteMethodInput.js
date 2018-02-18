@@ -22,10 +22,10 @@ const VoteMethodInput = props => {
         onChange(fromJS(LP_SETTING_VALUES.HOW_TO_VOTE.NUMBER));
     }
     const onSetMin = event => {
-        onChange(value.set('min', parseInt(event.target.value)))
+        onChange(value.set('min', parseInt(event.target.value, 10)))
     }
     const onSetMax = event => {
-        onChange(value.set('max', parseInt(event.target.value)))
+        onChange(value.set('max', parseInt(event.target.value, 10)))
     }
     return (
         <EnhancedFormField className={props.className} title='How to vote?' meta={meta}>
