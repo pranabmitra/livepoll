@@ -29,7 +29,7 @@ const validateHowToVote = howToVote => {
             return 'min must be greater than 0'
 
         if (max > 100)
-            return 'max must be less than 100'
+            return 'max must not exceed 100'
 
         if (min >= max)
             return 'min must be smaller than max';
