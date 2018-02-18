@@ -3,9 +3,13 @@
     width: 100%;
 }
 
-.vote-schedule-input{
+.field-with-mpb{
     border: 1px solid lightgrey;
     border-radius: 5px;
     margin: 0.5em;
     padding: 1em;
+}
+
+.fill-fullw{
+    width: calc(100% - 3em);
 }

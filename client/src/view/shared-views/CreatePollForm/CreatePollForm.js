@@ -16,10 +16,14 @@ const CreatePollForm = (props) => {
             <Field name='title'
                    className='fl poll-title-input'
                    component={PollTitleInput}/>
+
             <Field name='voteSchedule'
-                   className='fl vote-schedule-input'
+                   className='fl field-with-mpb'
                    component={VoteScheduleInput}/>
-            {/*<Field name='pollItemFormat' component={PollItemFormatInput}/>*/}
+
+            <Field name='pollItemFormat'
+                   className='fl field-with-mpb fill-fullw'
+                   component={PollItemFormatInput}/>
         </form>
     )
 }

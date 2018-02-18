@@ -4,15 +4,13 @@ const inputErrorSpanStyle = {
     color: 'red',
     fontSize: 'small'
 }
-const EnhancedFormFieldStyle = {
-    // border: '1px solid lightgray',
-    // borderRadius: '5px',
-    // margin: '5px',
-    // padding: '5px'
+const labelStyle = {
+    float: 'left',
+    fontWeight: 'bold'
 }
 const EnhancedFormField = props => (
-    <div style={EnhancedFormFieldStyle} className={props.className}>
-        {props.title && <label>{props.title}</label>}
+    <div className={props.className}>
+        {props.title && <label style={labelStyle}>{props.title}</label>}
         {props.children}
         {
             (props.meta.touched || props.meta.dirty)
