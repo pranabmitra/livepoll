@@ -16,6 +16,7 @@ class PollItemFormatInput extends React.Component{
         this.addAVideoSpace = this.addAVideoSpace.bind(this);
         this.addAParagraphSpace = this.addAParagraphSpace.bind(this);
         this.addAImageSpace = this.addAImageSpace.bind(this);
+        this.undoAdd = this.undoAdd.bind(this);
     }
 
     onChangeFreeStyleInput(event){
@@ -49,6 +50,13 @@ class PollItemFormatInput extends React.Component{
         );
     }
 
+    undoAdd(event) {
+        event.preventDefault();
+        this.props.input.onChange(
+            this.props.input.value.pop()
+        );
+    }
+
     render() {
         return (
             <EnhancedFormField className={this.props.className} title='Poll item structure' meta={this.props.meta}>
@@ -72,6 +80,14 @@ class PollItemFormatInput extends React.Component{
                                         <LPButton onClick={this.addAVideoSpace}>+video</LPButton>
                                     </li>
                                 </React.Fragment>
+                            )
+                        }
+                        {
+                            !this.state.freeStyleAllowed && this.props.input.value.size > 1 && (
+                                <li>
+                                    <LPButton btnClass='item-format-input-undo'
+                                              onClick={this.undoAdd}>-undo</LPButton>
+                                </li>
                             )
                         }
                     </ul>

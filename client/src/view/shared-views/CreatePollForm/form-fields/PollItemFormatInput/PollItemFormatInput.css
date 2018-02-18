@@ -16,3 +16,8 @@
     margin: 5px;
     border: 1px solid lightgrey;
 }
+
+.item-format-input-undo{
+    background-color: lightgrey;
+    color: #222222;
+}
