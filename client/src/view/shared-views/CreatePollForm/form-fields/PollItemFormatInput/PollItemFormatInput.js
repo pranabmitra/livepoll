@@ -22,21 +22,28 @@ class PollItemFormatInput extends React.Component{
         this.setState({
             freeStyleAllowed: event.target.checked
         })
+        this.props.input.onChange(
+            this.props.input.value.clear()
+                .push(LP_SETTING_VALUES.POLL_ITEM_CONTENT_TYPES.TITLE)
+        );
     }
 
-    addAParagraphSpace() {
+    addAParagraphSpace(event) {
+        event.preventDefault();
         this.props.input.onChange(
             this.props.input.value.push(LP_SETTING_VALUES.POLL_ITEM_CONTENT_TYPES.PARAGRAPH)
         );
     }
 
-    addAImageSpace() {
+    addAImageSpace(event) {
+        event.preventDefault();
         this.props.input.onChange(
             this.props.input.value.push(LP_SETTING_VALUES.POLL_ITEM_CONTENT_TYPES.IMAGE)
         );
     }
 
-    addAVideoSpace() {
+    addAVideoSpace(event) {
+        event.preventDefault();
         this.props.input.onChange(
             this.props.input.value.push(LP_SETTING_VALUES.POLL_ITEM_CONTENT_TYPES.YOUTUBE_VIDEO)
         );
@@ -53,7 +60,7 @@ class PollItemFormatInput extends React.Component{
                                    onChange={this.onChangeFreeStyleInput}/> freestyle
                         </li>
                         {
-                            !this.state.freeStyleAllowed && (
+                            !this.state.freeStyleAllowed && this.props.input.value.size <= 5 && (
                                 <React.Fragment>
                                     <li>
                                         <LPButton onClick={this.addAParagraphSpace}>+paragraph</LPButton>
@@ -70,7 +77,18 @@ class PollItemFormatInput extends React.Component{
                     </ul>
                     <div className='poll-item-format-view'>
                         {
-                            JSON.stringify(this.props.input.value.toJS())
+                            this.props.input.value.toJS().map((contentType, index) => (
+                                <div key={index} className='poll-item-content-type'>
+                                    {contentType}
+                                </div>
+                            ))
+                        }
+                        {
+                            this.state.freeStyleAllowed && (
+                                <div className='poll-item-content-type'>
+                                    anything can be added
+                                </div>
+                            )
                         }
                     </div>
                 </div>

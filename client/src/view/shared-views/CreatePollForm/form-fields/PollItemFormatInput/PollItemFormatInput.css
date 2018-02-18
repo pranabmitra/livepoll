@@ -7,5 +7,12 @@
 
 .poll-item-format-view{
     float: left;
-    width: 65%;
+    width: 55%;
+    padding: 5%;
+    text-align: center;
+}
+
+.poll-item-content-type{
+    margin: 5px;
+    border: 1px solid lightgrey;
 }

@@ -18,10 +18,10 @@ export const LP_SETTING_VALUES = {
         ANYTIME: 'RT'
     },
     POLL_ITEM_CONTENT_TYPES: {
-        IMAGE: 'I',
-        YOUTUBE_VIDEO: 'V',
-        PARAGRAPH: 'P',
-        TITLE: 'T'
+        IMAGE: 'image',
+        YOUTUBE_VIDEO: 'youtube video',
+        PARAGRAPH: 'paragraph',
+        TITLE: 'Title'
     }
 }
 
