@@ -11,11 +11,11 @@ export const LP_SETTING_VALUES = {
     },
     WHO_CAN_ADD_ITEM: {
         ALL: 'ALL',
-        ONLY_ADMIN: 'OA'
+        ONLY_CREATOR: 'OC'
     },
     WHEN_CAN_ADD_ITEM: {
         BEFORE_START: 'BS',
-        AT_RUNTIME: 'RT'
+        ANYTIME: 'RT'
     },
     POLL_ITEM_CONTENT_TYPES: {
         IMAGE: 'I',
@@ -40,7 +40,7 @@ export const defaultPollSettings = {
         }
     },
     whoCanAdd: LP_SETTING_VALUES.WHO_CAN_ADD_ITEM.ALL,
-    whenCanAdd: LP_SETTING_VALUES.WHEN_CAN_ADD_ITEM.AT_RUNTIME,
+    whenCanAdd: LP_SETTING_VALUES.WHEN_CAN_ADD_ITEM.ANYTIME,
     title: undefined,
     pollItemFormat: [],
     howManyCanPeopleAdd: 1

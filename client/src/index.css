@@ -61,6 +61,10 @@ a, button, input, textarea{
 .no-border{
     border: none;
 }
+.btm-border{
+    border: none;
+    border-bottom: 1px solid lightgrey;
+}
 
 .w100p{
     width: 100%;
@@ -98,4 +102,8 @@ a, button, input, textarea{
 
 .m-auto{
     margin: auto;
+}
+
+.boldf{
+    font-weight: bold;
 }
