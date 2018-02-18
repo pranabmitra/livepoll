@@ -26,10 +26,10 @@ const validateHowToVote = howToVote => {
         let min = howToVote.get('min'),
             max = howToVote.get('max');
         if (min < 1)
-            return 'must be greater than 0'
+            return 'min must be greater than 0'
 
         if (max > 100)
-            return 'must be less than 100'
+            return 'max must be less than 100'
 
         if (min >= max)
             return 'min must be smaller than max';
