@@ -12,7 +12,7 @@ const VoteScheduleInput = props => {
 
     return (
         <EnhancedFormField meta={meta} className={props.className}>
-            <table className='m-auto'>
+            <table className='m-auto' style={{maxWidth: '90%'}}>
                 <tbody>
                 <tr>
                     <td className='tal'>Starts on</td>
