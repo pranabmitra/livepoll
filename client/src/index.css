@@ -89,6 +89,10 @@ a, button, input, textarea{
     padding: 5px;
 }
 
+.no-pad{
+    padding: 0;
+}
+
 .tac{
     text-align: center;
 }

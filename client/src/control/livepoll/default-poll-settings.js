@@ -42,6 +42,6 @@ export const defaultPollSettings = {
     whoCanAdd: LP_SETTING_VALUES.WHO_CAN_ADD_ITEM.ALL,
     whenCanAdd: LP_SETTING_VALUES.WHEN_CAN_ADD_ITEM.ANYTIME,
     title: undefined,
-    pollItemFormat: [],
+    pollItemFormat: [LP_SETTING_VALUES.POLL_ITEM_CONTENT_TYPES.TITLE],
     howManyCanPeopleAdd: 1
 }
