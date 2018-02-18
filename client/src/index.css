@@ -95,3 +95,7 @@ a, button, input, textarea{
 .marg5x{
     margin: 5px;
 }
+
+.m-auto{
+    margin: auto;
+}

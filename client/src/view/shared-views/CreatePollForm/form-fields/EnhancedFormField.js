@@ -5,7 +5,7 @@ const inputErrorSpanStyle = {
     fontSize: 'small'
 }
 const labelStyle = {
-    fontWeight: 'bold',
+    fontWeight: 'normal',
     padding: '5px',
     margin: '0'
 }
