@@ -65,6 +65,9 @@ a, button, input, textarea{
 .w100p{
     width: 100%;
 }
+.w50p{
+    width: 50%;
+}
 
 .fl{
     float: left;
@@ -80,6 +83,13 @@ a, button, input, textarea{
 
 .pad5x{
     padding: 5px;
+}
+
+.tac{
+    text-align: center;
+}
+.tal{
+    text-align: left;
 }
 
 .marg5x{

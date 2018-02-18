@@ -25,17 +25,17 @@ export const defaultPollSettings = {
     multipleVotesAllowed: false,
     voteSchedule: {
         voteStartsOn: {
-            date: null,
-            time: null
+            date: undefined,
+            time: undefined
         },
         voteEndsOn: {
-            date: null,
-            time: null
+            date: undefined,
+            time: undefined
         }
     },
     whoCanAdd: LP_SETTING_VALUES.WHO_CAN_ADD_ITEM.ALL,
     whenCanAdd: LP_SETTING_VALUES.WHEN_CAN_ADD_ITEM.AT_RUNTIME,
-    title: undefined,
+    title: 'lol',
     pollItemFormat: [],
     howManyCanPeopleAdd: 1
 }
