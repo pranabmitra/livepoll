@@ -3,13 +3,32 @@ import {Switch, Route} from 'react-router-dom';
 
 import './Content.css';
 import {ROUTES} from "../../constants/routing";
-import CreatePollForm from "../shared-views/CreatePollForm/CreatePollForm";
-import HomeSection from "./Sections/HomeSection/HomeSection";
-import ProfileSection from "./Sections/ProfileSection/ProfileSection";
 import InvalidRouteSection from "./Sections/InvalidRouteSection/InvalidRouteSection";
-import MyPollsSection from "./Sections/MyPollsSection/MyPollsSection";
-import PollsVotedSection from "./Sections/PollsVotedSection/PollsVotedSection";
+import asyncComponent from "../shared-views/AsyncComponent";
 
+const HomeSection = asyncComponent(()=>{
+    return import('./Sections/HomeSection/HomeSection').then(
+        module => {
+            return module.default
+        }
+    )
+})
+
+const ProfileSection = asyncComponent(()=>{
+    return import('./Sections/ProfileSection/ProfileSection').then(module => module.default)
+})
+
+const MyPollsSection = asyncComponent(()=>{
+    return import('./Sections/MyPollsSection/MyPollsSection').then(module => module.default)
+})
+
+const PollsVotedSection = asyncComponent(()=>{
+    return import('./Sections/PollsVotedSection/PollsVotedSection').then(module => module.default)
+})
+
+const CreatePollForm = asyncComponent(()=>{
+    return import('../shared-views/CreatePollForm/CreatePollForm').then(module => module.default)
+})
 
 const Content = () => (
     <div className='content content-resp'>
