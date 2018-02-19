@@ -1,21 +1,9 @@
-.modal-vc{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    padding-top: 7em;
-    overflow-y: auto;
-}
-
-.modal-hc{
-    margin: 0 auto;
-    max-width: 80%;
-    background-color: white;
-    display: inline-block;
-    box-shadow: 0 0 5px grey;
-}
-
-.modal-final-wrap{
+.modal-wrap{
     position: relative;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 0 5px grey;
     padding: 1em;
+    overflow-y: auto;
 }
 

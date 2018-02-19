@@ -39,13 +39,9 @@ class Modal extends React.Component {
         const ModalChild = getModalComponentByType(type);
 
         return (
-            <div className='modal-vc'>
-                <div className='modal-hc'>
-                    <div className='modal-final-wrap'>
-                        { options.showCloseBtn && <button className='modal-close-btn' onClick={this.props.close}>X</button> }
-                        <ModalChild {...childProps}/>
-                    </div>
-                </div>
+            <div className='modal-wrap'>
+                { options.showCloseBtn && <button className='modal-close-btn' onClick={this.props.close}>X</button> }
+                <ModalChild {...childProps}/>
             </div>
         )
     }
