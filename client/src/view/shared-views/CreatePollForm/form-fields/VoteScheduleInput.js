@@ -16,14 +16,15 @@ const VoteScheduleInput = props => {
                 <div className='fl tal marg5x'>
                     <label>Starts on</label><br/>
                     <input className='no-border' type='date' onChange={onChangeStartDate}/><br/>
-                    <input className='no-border' type='date' onChange={onChangeEndDate}/><br/>
+                    <input className='no-border' type='time' onChange={onChangeStartTime}/><br/>
+
                 </div>
                 <div className='fr tal marg5x'>
                     <label>Ends on</label><br/>
-                    <input className='no-border' type='time' onChange={onChangeStartTime}/><br/>
+                    <input className='no-border' type='date' onChange={onChangeEndDate}/><br/>
                     <input className='no-border' type='time' onChange={onChangeEndTime}/><br/>
                 </div>
-            </div>
+            </div><br/>
         </EnhancedFormField>
     )
 }
