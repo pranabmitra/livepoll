@@ -12,22 +12,18 @@ const VoteScheduleInput = props => {
 
     return (
         <EnhancedFormField meta={meta} className={props.className}>
-            <table className='m-auto' style={{maxWidth: '90%'}}>
-                <tbody>
-                <tr>
-                    <td className='tal'>Starts on</td>
-                    <td className='tal'>Ends on</td>
-                </tr>
-                <tr>
-                    <td><input className='no-border' type='date' onChange={onChangeStartDate}/></td>
-                    <td><input className='no-border' type='date' onChange={onChangeEndDate}/></td>
-                </tr>
-                <tr>
-                    <td><input className='no-border' type='time' onChange={onChangeStartTime}/></td>
-                    <td><input className='no-border' type='time' onChange={onChangeEndTime}/></td>
-                </tr>
-                </tbody>
-            </table>
+            <div className='m-auto'>
+                <div className='fl tal marg5x'>
+                    <label>Starts on</label><br/>
+                    <input className='no-border' type='date' onChange={onChangeStartDate}/><br/>
+                    <input className='no-border' type='date' onChange={onChangeEndDate}/><br/>
+                </div>
+                <div className='fr tal marg5x'>
+                    <label>Ends on</label><br/>
+                    <input className='no-border' type='time' onChange={onChangeStartTime}/><br/>
+                    <input className='no-border' type='time' onChange={onChangeEndTime}/><br/>
+                </div>
+            </div>
         </EnhancedFormField>
     )
 }
