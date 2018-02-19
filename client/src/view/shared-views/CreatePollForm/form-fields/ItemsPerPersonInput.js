@@ -1,5 +1,5 @@
 import React from 'react';
-import EnhancedFormField from "./EnhancedFormField";
+import EnhancedFormField from "./EnhancedFormField/EnhancedFormField";
 
 const ItemPerPersonInput = props => {
     const {input: {value, onChange}, meta} = props;

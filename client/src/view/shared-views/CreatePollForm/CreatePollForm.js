@@ -16,19 +16,17 @@ const CreatePollForm = (props) => {
     return (
         <form>
             <Field name='title'
-                   className='fl poll-title-input'
+                   className='poll-title-input'
                    component={PollTitleInput}/>
 
             <Field name='voteSchedule'
-                   className='fl field-with-mpb field-fullw tac'
+                   className='tac'
                    component={VoteScheduleInput}/>
 
             <Field name='pollItemFormat'
-                   className='fl field-with-mpb field-fullw'
                    component={PollItemFormatInput}/>
 
             <Field name='howToVote'
-                   className='fl field-with-mpb field-fullw'
                    component={VoteMethodInput}/>
 
             <div className='field-with-mpb field-fullw fl'>
@@ -61,7 +59,7 @@ const CreatePollForm = (props) => {
             </div>
 
 
-            <Field className='field-with-mpb field-fullw fl' name='howManyCanPeopleAdd' component={ItemPerPersonInput}/>
+            <Field name='howManyCanPeopleAdd' component={ItemPerPersonInput}/>
 
             <button type='submit' className='field-with-mpb submit-btn'>CREATE YOUR POLL</button>
         </form>

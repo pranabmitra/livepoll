@@ -1,6 +1,6 @@
 import React from 'react';
 
-import EnhancedFormField from "./EnhancedFormField";
+import EnhancedFormField from "./EnhancedFormField/EnhancedFormField";
 
 const titleTextAreaStyle = {
     borderBottom: '1px solid lightgray',

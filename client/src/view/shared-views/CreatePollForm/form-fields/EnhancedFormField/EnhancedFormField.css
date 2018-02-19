@@ -1,0 +1,9 @@
+.input-error-span{
+    color: red;
+    font-size: small;
+}
+.enhanced-ff-label{
+    font-weight: normal;
+    padding: 5px;
+    margin: 0;
+}

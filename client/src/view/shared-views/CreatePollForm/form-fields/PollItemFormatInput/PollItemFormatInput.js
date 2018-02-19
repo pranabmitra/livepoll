@@ -1,7 +1,7 @@
 import React from 'react'
 
 import './PollItemFormatInput.css'
-import EnhancedFormField from "../EnhancedFormField";
+import EnhancedFormField from "../EnhancedFormField/EnhancedFormField";
 import LPButton from "../../../buttons/LPButton";
 import {LP_SETTING_VALUES} from "../../../../../control/livepoll/default-poll-settings";
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import {fromJS} from 'immutable'
 
-import EnhancedFormField from "./EnhancedFormField";
+import EnhancedFormField from "./EnhancedFormField/EnhancedFormField";
 import {LP_SETTING_VALUES} from "../../../../control/livepoll/default-poll-settings";
 
 const rangeInpStyle = {
