@@ -1,13 +1,15 @@
 .poll-item-format-menu{
     float: right;
-    width: 35%;
+    width: 30%;
     list-style: none;
     text-align: left;
+    border-left: 1px solid lightgrey;
+    padding: 2%;
 }
 
 .poll-item-format-view{
     float: left;
-    width: 55%;
+    width: 54%;
     padding: 5%;
     text-align: center;
 }

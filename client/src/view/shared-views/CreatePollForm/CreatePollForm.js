@@ -16,25 +16,27 @@ const CreatePollForm = (props) => {
     return (
         <form>
             <Field name='title'
-                   className='poll-title-input'
+                   className='poll-title-input btm-border'
                    component={PollTitleInput}/>
 
             <Field name='voteSchedule'
-                   className='tac'
+                   className='tac half-wid-landscape'
                    component={VoteScheduleInput}/>
 
             <Field name='pollItemFormat'
+                   className='fr-landscape half-wid-landscape'
                    component={PollItemFormatInput}/>
 
             <Field name='howToVote'
+                   className='half-wid-landscape'
                    component={VoteMethodInput}/>
 
-            <div className='field-with-mpb field-fullw fl'>
+            <div className='field-with-mpb field-fullw fl half-wid-landscape fr-landscape'>
                 <Field name='multipleVotesAllowed' component='input' type='checkbox'/>
                 <span>&nbsp;allow multiple votes</span>
             </div>
 
-            <div className='field-with-mpb field-fullw fl'>
+            <div className='field-with-mpb field-fullw fl half-wid-landscape'>
                 <span>Allow&nbsp;</span>
 
                 <Field name='whoCanAdd' component='input' type='radio' value={LP_SETTING_VALUES.WHO_CAN_ADD_ITEM.ALL}/>
@@ -46,7 +48,7 @@ const CreatePollForm = (props) => {
                 <span>&nbsp;<b>only creator</b> to add items</span>
             </div>
 
-            <div className='field-with-mpb field-fullw fl'>
+            <div className='field-with-mpb field-fullw fl half-wid-landscape fr-landscape'>
                 <span>Items can be added&nbsp;</span>
 
                 <Field name='whenCanAdd' component='input' type='radio' value={LP_SETTING_VALUES.WHEN_CAN_ADD_ITEM.ANYTIME}/>
@@ -59,7 +61,7 @@ const CreatePollForm = (props) => {
             </div>
 
 
-            <Field name='howManyCanPeopleAdd' component={ItemPerPersonInput}/>
+            <Field name='howManyCanPeopleAdd' className='half-wid-landscape' component={ItemPerPersonInput}/>
 
             <button type='submit' className='field-with-mpb submit-btn'>CREATE YOUR POLL</button>
         </form>

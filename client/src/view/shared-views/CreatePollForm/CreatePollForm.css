@@ -22,3 +22,12 @@
     border-color: white;
     color: white;
 }
+
+@media (orientation: landscape) {
+    .fr-landscape{
+        float: right;
+    }
+    .half-wid-landscape{
+        width: calc(50% - 3.5em);
+    }
+}

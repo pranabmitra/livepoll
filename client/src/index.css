@@ -66,8 +66,8 @@ tr,td{
     border: none;
 }
 .btm-border{
-    border: none;
-    border-bottom: 1px solid lightgrey;
+    border: none !important;
+    border-bottom: 1px solid lightgrey !important;
 }
 
 .w100p{

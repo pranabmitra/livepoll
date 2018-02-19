@@ -3,7 +3,6 @@ import React from 'react';
 import EnhancedFormField from "./EnhancedFormField/EnhancedFormField";
 
 const titleTextAreaStyle = {
-    borderBottom: '1px solid lightgray',
     width: 'calc(100% - 10px)',
     resize: 'none'
 }
