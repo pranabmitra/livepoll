@@ -24,6 +24,7 @@ const initFirebase = () => {
             dispatch(actionCloseDrawer());
             resolve();
         });
+        resolve();
     });
 }
 
