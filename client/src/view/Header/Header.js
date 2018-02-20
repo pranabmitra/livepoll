@@ -1,5 +1,4 @@
 import React from 'react';
-import {connect} from 'react-redux';
 
 import './Header.css';
 
@@ -8,7 +7,6 @@ import SignoutButton from "../shared-views/buttons/AuthButtons/SignoutButton";
 import AppTitle from './AppTitle/AppTitle';
 import DrawerButton from './DrawerButton/DrawerButton'
 import SmolUserBadge from './SmolUserBadge/SmolUserBadge'
-import User from "../../control/auth/auth-user";
 import {SIGNIN_METHODS} from "../../constants/auth";
 import SignInButton from "../shared-views/buttons/AuthButtons/SignInButton";
 
@@ -46,9 +44,4 @@ const Header = (props) => (
     </div>
 )
 
-const mapStateToProps = (state)=>({
-    isSignedIn: state.getIn(['authState', 'isSignedIn']),
-    signedInUser: new User(state.getIn(['authState', 'signInData'])),
-})
-
-export default connect(mapStateToProps, null)(Header);
+export default Header;

@@ -1,5 +1,4 @@
 import React from 'react';
-import {connect} from 'react-redux';
 
 import './Drawer.css';
 import SignoutButton from "../shared-views/buttons/AuthButtons/SignoutButton";
@@ -9,7 +8,7 @@ import {SIGNIN_METHODS} from "../../constants/auth";
 import TitledArea from "../shared-views/general/TitledArea/TitledArea";
 import SignInButton from "../shared-views/buttons/AuthButtons/SignInButton";
 import ImageWithTextLabel from "../shared-views/general/ImageWithTextLabel";
-import User from "../../control/auth/auth-user";
+
 
 const Drawer = (props) => {
     var drawerClassName = 'drawer drawer-resp ';
@@ -50,11 +49,4 @@ const Drawer = (props) => {
     )
 }
 
-const mapStateToProps = state => {
-    return {
-        isOpened: state.getIn(['viewState', 'drawer', 'isOpened']),
-        isSignedIn: state.getIn(['authState', 'isSignedIn']),
-        signedInUser: new User(state.getIn(['authState', 'signInData']))
-    }
-}
-export default connect(mapStateToProps, null)(Drawer);
+export default Drawer;

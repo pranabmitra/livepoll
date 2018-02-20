@@ -4,10 +4,7 @@ import {MODAL_COMPONENT_TYPES} from "../../constants/popups";
 import asyncComponent from "../shared-views/AsyncComponent";
 
 const CreatePollForm = asyncComponent(()=>{
-    return import('../shared-views/CreatePollForm/CreatePollForm')
-        .then(module => {
-            return module.default
-        })
+    return import('../shared-views/CreatePollForm/CreatePollForm').then(module => module.default)
 })
 
 export const getModalComponentByType = (type) => {

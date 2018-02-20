@@ -6,12 +6,9 @@ import {ROUTES} from "../../constants/routing";
 import InvalidRouteSection from "./Sections/InvalidRouteSection/InvalidRouteSection";
 import asyncComponent from "../shared-views/AsyncComponent";
 
+
 const HomeSection = asyncComponent(()=>{
-    return import('./Sections/HomeSection/HomeSection').then(
-        module => {
-            return module.default
-        }
-    )
+    return import('./Sections/HomeSection/HomeSection').then(module => module.default)
 })
 
 const ProfileSection = asyncComponent(()=>{
