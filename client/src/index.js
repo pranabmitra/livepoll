@@ -16,7 +16,7 @@ const renderLivepollWebApp = () => {
     ReactDOM.render(
         <Provider store={getAppStateStore()}>
             <ConnectedRouter history={createHistory()}>
-                <Route path='/' component={App}/>
+                <Route component={App}/>
             </ConnectedRouter>
         </Provider>
         , document.getElementById('app-root'));
