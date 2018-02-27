@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import { Field, reduxForm } from 'redux-form/immutable'
 import {fromJS} from 'immutable'
 
@@ -10,11 +11,12 @@ import VoteScheduleInput from "./form-fields/VoteScheduleInput";
 import PollItemFormatInput from "./form-fields/PollItemFormatInput/PollItemFormatInput";
 import VoteMethodInput from "./form-fields/VoteMethodInput";
 import ItemPerPersonInput from "./form-fields/ItemsPerPersonInput";
-
+import {actionCreateLivepoll} from "../../../control/state-management/action-creators/livepoll-actions";
 
 const CreatePollForm = (props) => {
+    const { error, handleSubmit, pristine, reset, submitting, submitPollCreationForm} = props;
     return (
-        <form>
+        <form onSubmit={handleSubmit(submitPollCreationForm)}>
             <Field name='title'
                    className='poll-title-input btm-border'
                    component={PollTitleInput}/>
@@ -63,14 +65,22 @@ const CreatePollForm = (props) => {
 
             <Field name='howManyCanPeopleAdd' className='half-wid-landscape' component={ItemPerPersonInput}/>
 
-            <button type='submit' className='field-with-mpb submit-btn'>CREATE YOUR POLL</button>
+            <button type='submit' disabled={submitting} className='field-with-mpb submit-btn'>CREATE YOUR POLL</button>
         </form>
     )
 }
 
-export default reduxForm({
+const PollCreationReduxForm = reduxForm({
     form: 'poll-creation-form',
     initialValues: fromJS(defaultPollSettings),
     validate: validateCreatePollForm
-})(CreatePollForm)
+})
+(CreatePollForm)
 
+const mapDispatchToProps = dispatch => ({
+    submitPollCreationForm: values => {
+        dispatch(actionCreateLivepoll(values));
+    }
+})
+
+export default connect(null, mapDispatchToProps)(PollCreationReduxForm)
