@@ -11,7 +11,7 @@ import VoteScheduleInput from "./form-fields/VoteScheduleInput";
 import PollItemFormatInput from "./form-fields/PollItemFormatInput/PollItemFormatInput";
 import VoteMethodInput from "./form-fields/VoteMethodInput";
 import ItemPerPersonInput from "./form-fields/ItemsPerPersonInput";
-import {actionCreateLivepoll} from "../../../control/state-management/action-creators/livepoll-actions";
+import {actionRequestCreateLivepoll} from "../../../control/state-management/action-creators/livepoll-actions";
 
 const CreatePollForm = (props) => {
     const { error, handleSubmit, pristine, reset, submitting, submitPollCreationForm} = props;
@@ -79,7 +79,7 @@ const PollCreationReduxForm = reduxForm({
 
 const mapDispatchToProps = dispatch => ({
     submitPollCreationForm: values => {
-        dispatch(actionCreateLivepoll(values));
+        dispatch(actionRequestCreateLivepoll(values));
     }
 })
 
