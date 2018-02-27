@@ -12,7 +12,6 @@ const floatingMsgStyle = {
     padding: '0.5em',
     marginBottom: '0.5em',
     borderRadius: '5px',
-    float: 'left'
 }
 const floatingMsgErrorStyle = {
     backgroundColor: '#8c1925'
@@ -44,7 +43,7 @@ const showFloatingMsg = (msg, type, duration = 700) => {
     }
 
     ReactDOM.render(
-        <div style={floatingMsgStyle} className={`slide ${floatingMsgSpecialStyle}`}>
+        <div style={Object.assign({}, floatingMsgStyle, floatingMsgSpecialStyle)} className='slide'>
             {msg}
         </div>,
         floatingMsgElem
