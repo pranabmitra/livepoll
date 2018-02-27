@@ -9,6 +9,20 @@ class Modal extends React.Component {
     constructor(props) {
         super(props);
         this.onEscapeClose = this.onEscapeClose.bind(this);
+
+        this.resultFunctions = {};
+
+        let options = this.props.options;
+        if (options.willMakeResult) {
+            for (let functionName in options.resultFunctions) {
+                if (options.resultFunctions.hasOwnProperty(functionName)) {
+                    this.resultFunctions[functionName] = ()=>{
+                        options.resultFunctions[functionName]();
+                        this.props.close();
+                    }
+                }
+            }
+        }
     }
 
     onEscapeClose(event) {
@@ -41,7 +55,7 @@ class Modal extends React.Component {
         return (
             <div className='modal-wrap'>
                 { options.showCloseBtn && <button className='modal-close-btn' onClick={this.props.close}>X</button> }
-                <ModalChild {...childProps}/>
+                <ModalChild {...childProps} {...this.resultFunctions}/>
             </div>
         )
     }

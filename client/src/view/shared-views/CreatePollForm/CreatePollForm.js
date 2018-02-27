@@ -12,11 +12,13 @@ import PollItemFormatInput from "./form-fields/PollItemFormatInput/PollItemForma
 import VoteMethodInput from "./form-fields/VoteMethodInput";
 import ItemPerPersonInput from "./form-fields/ItemsPerPersonInput";
 import {actionRequestCreateLivepoll} from "../../../control/state-management/action-creators/livepoll-actions";
+import {confirmationDialog} from "../popups/confirmation-dialog";
 
 const CreatePollForm = (props) => {
     const { error, handleSubmit, pristine, reset, submitting, submitPollCreationForm} = props;
     return (
         <form onSubmit={handleSubmit(submitPollCreationForm)}>
+            <h3>Create your awesome poll</h3>
             <Field name='title'
                    className='poll-title-input btm-border'
                    component={PollTitleInput}/>
@@ -79,7 +81,8 @@ const PollCreationReduxForm = reduxForm({
 
 const mapDispatchToProps = dispatch => ({
     submitPollCreationForm: values => {
-        dispatch(actionRequestCreateLivepoll(values));
+        confirmationDialog(dispatch, 'Are you sure?')
+            .then(() => dispatch(actionRequestCreateLivepoll(values)));
     }
 })
 
