@@ -81,7 +81,7 @@ const PollCreationReduxForm = reduxForm({
 
 const mapDispatchToProps = dispatch => ({
     submitPollCreationForm: values => {
-        confirmationDialog(dispatch, 'Are you sure?')
+        confirmationDialog('Are you sure?')
             .then(() => dispatch(actionRequestCreateLivepoll(values)));
     }
 })

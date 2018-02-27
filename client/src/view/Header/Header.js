@@ -9,6 +9,8 @@ import DrawerButton from './DrawerButton/DrawerButton'
 import SmolUserBadge from './SmolUserBadge/SmolUserBadge'
 import {SIGNIN_METHODS} from "../../constants/auth";
 import SignInButton from "../shared-views/buttons/AuthButtons/SignInButton";
+import showFloatingMsg from "../shared-views/popups/floating-msg";
+import {FLOATING_MSG_TYPES} from "../../constants/popups";
 
 
 const Header = (props) => (
@@ -34,6 +36,8 @@ const Header = (props) => (
                     <SignInButton className='fr' signInMethod={SIGNIN_METHODS.GOOGLE} showText={false}/>
                 </React.Fragment>
         }
+
+        <button onClick={()=>showFloatingMsg('test', FLOATING_MSG_TYPES.INFO)}>test</button>
 
         <NavigationButtons
             containerClass='header-nav-pane header-nav-pane-resp'

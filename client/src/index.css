@@ -28,7 +28,7 @@ tr,td{
 
 #floating-msg-root{
     position: fixed;
-    z-index: 2000;
+    z-index: 300;
     left: 2em;
 }
 @media (min-width: 1px) {
