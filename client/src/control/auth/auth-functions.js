@@ -26,7 +26,6 @@ export const signIn = (signInMethod) => {
     }
 }
 
-
 export const signOut = () => {
     try {
         return firebase.auth().signOut();
@@ -34,3 +33,7 @@ export const signOut = () => {
         return Promise.reject(404);
     }
 }
+
+export const signInWithGoogle = () => signIn(SIGNIN_METHODS.GOOGLE)
+
+export const signInWithFB = () => signIn(SIGNIN_METHODS.FACEBOOK)

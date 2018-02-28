@@ -7,8 +7,8 @@ import SignoutButton from "../shared-views/buttons/AuthButtons/SignoutButton";
 import AppTitle from './AppTitle/AppTitle';
 import DrawerButton from './DrawerButton/DrawerButton'
 import SmolUserBadge from './SmolUserBadge/SmolUserBadge'
-import {SIGNIN_METHODS} from "../../constants/auth";
-import SignInButton from "../shared-views/buttons/AuthButtons/SignInButton";
+import {signInWithFB, signInWithGoogle} from "../../control/auth/auth-functions";
+import LPButton from "../shared-views/buttons/LPButton";
 
 
 const Header = (props) => (
@@ -29,9 +29,15 @@ const Header = (props) => (
         {
             !props.isSignedIn &&
                 <React.Fragment>
-                    <SignInButton className='fr' signInMethod={SIGNIN_METHODS.FACEBOOK} showText={false}/>
+                    <LPButton btnClass='fr'
+                              iconUrl='/images/icons/google-logo.png'
+                              onClick={signInWithGoogle}/>
+
                     <span className='fr'>&nbsp;</span>
-                    <SignInButton className='fr' signInMethod={SIGNIN_METHODS.GOOGLE} showText={false}/>
+
+                    <LPButton btnClass='fr'
+                              iconUrl='/images/icons/fb-logo.png'
+                              onClick={signInWithFB}/>
                 </React.Fragment>
         }
 
