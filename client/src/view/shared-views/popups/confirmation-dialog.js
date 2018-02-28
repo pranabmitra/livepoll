@@ -18,8 +18,7 @@ export const confirmationDialog = (title) => (
         const modalChildProps = {
             title: title
         }
-        const appStore = getAppStateStore();
-        appStore.dispatch(actionOpenModal(
+        getAppStateStore().dispatch(actionOpenModal(
             MODAL_COMPONENT_TYPES.CONFIRMATION_DIALOG,
             modalOptions,
             modalChildProps,
