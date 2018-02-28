@@ -4,10 +4,9 @@ import './Drawer.css';
 import SignoutButton from "../shared-views/buttons/AuthButtons/SignoutButton";
 import NavigationButtons from "../shared-views/buttons/NavigationButtons/NavigationButtons";
 import LPButton from "../shared-views/buttons/LPButton";
-import {SIGNIN_METHODS} from "../../constants/auth";
 import TitledArea from "../shared-views/general/TitledArea/TitledArea";
-import SignInButton from "../shared-views/buttons/AuthButtons/SignInButton";
 import ImageWithTextLabel from "../shared-views/general/ImageWithTextLabel";
+import {signInWithFB, signInWithGoogle} from "../../control/auth/auth-functions";
 
 
 const Drawer = (props) => {
@@ -21,8 +20,8 @@ const Drawer = (props) => {
                 {
                     !props.isSignedIn && (
                         <TitledArea className='drawer-signin-btn-list' title='Sign in with'>
-                            <SignInButton signInMethod={SIGNIN_METHODS.GOOGLE} showText={true}/>
-                            <SignInButton signInMethod={SIGNIN_METHODS.FACEBOOK} showText={true}/>
+                            <LPButton iconUrl='/images/icons/google-logo.png' onClick={signInWithGoogle}>Google</LPButton>
+                            <LPButton iconUrl='/images/icons/fb-logo.png' onClick={signInWithFB}>Facebook</LPButton>
                         </TitledArea>
                     )
                 }
