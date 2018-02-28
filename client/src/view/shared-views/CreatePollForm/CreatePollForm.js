@@ -11,18 +11,24 @@ import VoteScheduleInput from "./form-fields/VoteScheduleInput";
 import PollItemFormatInput from "./form-fields/PollItemFormatInput/PollItemFormatInput";
 import VoteMethodInput from "./form-fields/VoteMethodInput";
 import ItemPerPersonInput from "./form-fields/ItemsPerPersonInput";
-import {actionRequestCreateLivepoll} from "../../../control/state-management/action-creators/livepoll-actions";
 import {confirmationDialog} from "../popups/confirmation-dialog";
 import {signInPopupConfirm} from "../popups/signin-popup-confirm";
+import {requestCreateLivepoll} from "../../../control/livepoll/creation/livepoll-creation";
+
 
 const CreatePollForm = (props) => {
-    const { handleSubmit, submitting, submitPollCreationForm} = props;
-    const submitFormAfterSigninConfirmation = () => {
-        if (!props.isSignedIn) signInPopupConfirm().then(submitPollCreationForm)
-        else submitPollCreationForm();
+    const { handleSubmit, submitting} = props;
+
+    const submitByConfirmation = values => confirmationDialog('Confirm poll creation')
+        .then(() => requestCreateLivepoll(values));
+
+    const submitAfterSigninCheck = () => {
+        if (!props.isSignedIn) signInPopupConfirm().then(submitByConfirmation)
+        else submitByConfirmation();
     }
+
     return (
-        <form onSubmit={handleSubmit(submitFormAfterSigninConfirmation)}>
+        <form onSubmit={handleSubmit(submitAfterSigninCheck)}>
             <h3>Create your awesome poll</h3>
             <Field name='title'
                    className='poll-title-input btm-border'
@@ -72,7 +78,9 @@ const CreatePollForm = (props) => {
 
             <Field name='howManyCanPeopleAdd' className='half-wid-landscape' component={ItemPerPersonInput}/>
 
-            <button type='submit' disabled={submitting} className='field-with-mpb submit-btn'>CREATE YOUR POLL</button>
+            <button type='submit' disabled={submitting} className='field-with-mpb submit-btn'>
+                {submitting ? 'Submitting...' : 'CREATE YOUR POLL'}
+            </button>
         </form>
     )
 }
@@ -87,11 +95,4 @@ const mapStateToProps = state => ({
     isSignedIn: state.getIn(['authState', 'isSignedIn'])
 })
 
-const mapDispatchToProps = dispatch => ({
-    submitPollCreationForm: values => {
-        confirmationDialog('Confirm poll creation')
-            .then(() => dispatch(actionRequestCreateLivepoll(values)));
-    }
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(PollCreationReduxForm)
+export default connect(mapStateToProps, null)(PollCreationReduxForm)

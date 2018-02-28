@@ -17,7 +17,3 @@ export const initialViewState = fromJS({
         // }
     ]
 });
-
-export const initialLivepollState = fromJS({
-
-})
