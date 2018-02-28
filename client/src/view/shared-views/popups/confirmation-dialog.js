@@ -19,7 +19,11 @@ export const confirmationDialog = (title) => (
             title: title
         }
         const appStore = getAppStateStore();
-        appStore.dispatch(actionOpenModal(MODAL_COMPONENT_TYPES.CONFIRMATION_DIALOG, modalOptions, modalChildProps))
+        appStore.dispatch(actionOpenModal(
+            MODAL_COMPONENT_TYPES.CONFIRMATION_DIALOG,
+            modalOptions,
+            modalChildProps,
+            'round-border'))
     })
 )
 

@@ -11,7 +11,7 @@ const cpbMapDispatchToProps = dispatch => ({
     openPollCreationForm: () => dispatch(
         actionOpenModal(MODAL_COMPONENT_TYPES.CREATE_POLL_FORM, {
             onEscapeClose: true
-        })
+        },{}, 'round-border')
     )
 })
 const CreatePollButtonWithoutRoute = connect(null, cpbMapDispatchToProps)((props)=>(

@@ -6,5 +6,6 @@
     padding: 1em;
     overflow-y: auto;
     top: 20%;
+    display: inline-block;
 }
 

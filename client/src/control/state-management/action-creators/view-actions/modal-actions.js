@@ -1,12 +1,13 @@
 import {DEFAULT_MODAL_OPTIONS} from "../../../../constants/popups";
 
 export const ACTION_OPEN_MODAL = 'ACTION_OPEN_MODAL';
-export const actionOpenModal = (type, options = {}, childProps = {}) => ({
+export const actionOpenModal = (type, options = {}, childProps = {}, className) => ({
     type: ACTION_OPEN_MODAL,
     modalData: {
         type,
         options: Object.assign({}, DEFAULT_MODAL_OPTIONS, options),
-        childProps
+        childProps,
+        className
     }
 })
 
