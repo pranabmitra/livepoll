@@ -13,11 +13,16 @@ import VoteMethodInput from "./form-fields/VoteMethodInput";
 import ItemPerPersonInput from "./form-fields/ItemsPerPersonInput";
 import {actionRequestCreateLivepoll} from "../../../control/state-management/action-creators/livepoll-actions";
 import {confirmationDialog} from "../popups/confirmation-dialog";
+import {signInPopupConfirm} from "../popups/signin-popup-confirm";
 
 const CreatePollForm = (props) => {
-    const { error, handleSubmit, pristine, reset, submitting, submitPollCreationForm} = props;
+    const { handleSubmit, submitting, submitPollCreationForm} = props;
+    const submitFormAfterSigninConfirmation = () => {
+        if (!props.isSignedIn) signInPopupConfirm().then(submitPollCreationForm)
+        else submitPollCreationForm();
+    }
     return (
-        <form onSubmit={handleSubmit(submitPollCreationForm)}>
+        <form onSubmit={handleSubmit(submitFormAfterSigninConfirmation)}>
             <h3>Create your awesome poll</h3>
             <Field name='title'
                    className='poll-title-input btm-border'
@@ -76,14 +81,17 @@ const PollCreationReduxForm = reduxForm({
     form: 'poll-creation-form',
     initialValues: fromJS(defaultPollSettings),
     validate: validateCreatePollForm
+})(CreatePollForm)
+
+const mapStateToProps = state => ({
+    isSignedIn: state.getIn(['authState', 'isSignedIn'])
 })
-(CreatePollForm)
 
 const mapDispatchToProps = dispatch => ({
     submitPollCreationForm: values => {
-        confirmationDialog('Are you sure?')
+        confirmationDialog('Confirm poll creation')
             .then(() => dispatch(actionRequestCreateLivepoll(values)));
     }
 })
 
-export default connect(null, mapDispatchToProps)(PollCreationReduxForm)
+export default connect(mapStateToProps, mapDispatchToProps)(PollCreationReduxForm)

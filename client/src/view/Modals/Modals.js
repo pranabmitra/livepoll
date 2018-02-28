@@ -4,11 +4,11 @@ import './Modals.css';
 import Modal from "./Modal";
 
 const Modals = props => (
-    <div className='modal-root'>
+    <React.Fragment>
         {
             (props.modals).map((modalData, index) => <Modal key={index} {...modalData}/>)
         }
-    </div>
+    </React.Fragment>
 )
 
 export default Modals;

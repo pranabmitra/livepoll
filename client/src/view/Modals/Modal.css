@@ -1,3 +1,17 @@
+.modal-root {
+    position: fixed;
+    top: 0;
+    z-index: 200;
+    text-align: center;
+    width: 80%;
+    height: 90%;
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    overflow-y: auto;
+}
+
+
 .modal-wrap{
     position: relative;
     background-color: white;
